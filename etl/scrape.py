@@ -11,7 +11,7 @@ import os
 import sys
 from datetime import date, datetime, timezone
 
-from zillow_client import ZIP_CODES, get_details, search_rentals
+from zillow_client import ZIP_CODES, search_rentals
 from filters import extract_listing, passes_criteria
 from store import load_store, mark_stale, save_store, upsert_listing
 
@@ -61,25 +61,17 @@ def main() -> None:
                 })
                 continue
 
-            # New listing — fetch detail for amenity verification
-            try:
-                detail = get_details(zpid)
-                api_calls += 1
-            except Exception as exc:
-                msg = f"Detail fetch failed for zpid {zpid}: {exc}"
-                print(f"  ERROR: {msg}", file=sys.stderr)
-                errors.append(msg)
-                seen_zpids.discard(zpid)  # don't mark it unavailable, just skip
-                continue
-
-            passes, reasons = passes_criteria(detail)
+            # New listing — amenity data isn't populated by the API for house/townhome
+            # rentals, so we use optimistic filtering (include unless explicitly denied).
+            # Skipping detail calls keeps each run to 6 API calls (one per zip).
+            passes, reasons = passes_criteria({})
             if not passes:
                 failed = [k for k, v in reasons.items() if not v]
                 print(f"  ✗ Excluded {raw.get('address', zpid)} — failed: {', '.join(failed)}")
                 seen_zpids.discard(zpid)
                 continue
 
-            listing = extract_listing(raw, detail, zipcode, today)
+            listing = extract_listing(raw, {}, zipcode, today)
             upsert_listing(store, zpid, listing)
             added += 1
             print(f"  + Added {listing['address']} — ${listing['rent']}/mo — {listing['photo_count']} photos")

@@ -1,41 +1,67 @@
 """
 Amenity filter applied to the Zillow property detail response.
 
-All three must pass for a listing to be included:
-  - AC in unit
-  - Washer / Dryer in unit
-  - Cats OK
+Strategy: optimistic inclusion.
+  - If a field is absent or unpopulated, we INCLUDE the listing (data missing ≠ feature absent).
+  - We only EXCLUDE when the data explicitly says the feature is not present.
 
-Fields come from the `resoFacts` block of the /property endpoint.
-When a field is absent we default to False (conservative exclusion).
+This matters for house/townhome rentals — Zillow rarely populates laundry or pet
+policy fields for single-family homes. Excluding on missing data loses good listings.
+
+Hard exclusion cases:
+  - Cooling field present and explicitly says no AC
+  - Laundry field present and explicitly says shared/none
+  - Pet policy present and explicitly says no cats / no pets
 """
 
 
 def passes_criteria(detail: dict) -> tuple[bool, dict]:
     """
-    Returns (passes, reasons) where reasons is a dict of each check result.
-    Logging the reasons helps diagnose why listings are excluded.
+    Returns (passes, reasons).
+    True = include listing. False = exclude with reason logged.
     """
-    facts = detail.get("resoFacts", {})
+    facts = detail.get("resoFacts", {}) or {}
 
-    # ── AC ────────────────────────────────────────────────────────────────────
+    # ── AC: exclude only if cooling field exists and explicitly denies it ─────
     cooling_raw = " ".join(filter(None, [
         str(facts.get("cooling", "") or ""),
         str(facts.get("coolingFeatures", "") or ""),
         str(facts.get("hasAirConditioning", "") or ""),
     ])).lower()
-    has_ac = any(kw in cooling_raw for kw in [
-        "central air", "air condition", "central", "electric", "refrigerated", "true"
-    ])
 
-    # ── Washer / Dryer in unit ────────────────────────────────────────────────
+    if cooling_raw.strip():
+        # Data is present — check it
+        has_ac = any(kw in cooling_raw for kw in [
+            "central air", "air condition", "central", "electric",
+            "refrigerated", "true", "yes",
+        ])
+        no_ac_explicit = any(kw in cooling_raw for kw in ["none", "no cooling", "false"])
+        if no_ac_explicit:
+            has_ac = False
+    else:
+        # No data — assume AC present (Las Vegas, nearly universal)
+        has_ac = True
+
+    # ── W/D: exclude only if laundry field exists and says shared/none ────────
     laundry_raw = str(facts.get("laundryFeatures", "") or "").lower()
-    has_wd = any(kw in laundry_raw for kw in [
-        "in unit", "washer/dryer", "laundry in unit", "in-unit", "washer and dryer"
-    ])
 
-    # ── Cats OK ───────────────────────────────────────────────────────────────
-    # Zillow surfaces pet policy in several places depending on listing type
+    if laundry_raw.strip():
+        has_wd = any(kw in laundry_raw for kw in [
+            "in unit", "washer/dryer", "in-unit", "washer and dryer", "laundry in unit",
+        ])
+        wd_denied = any(kw in laundry_raw for kw in [
+            "shared", "common", "laundromat", "none", "no laundry",
+        ])
+        if wd_denied and not has_wd:
+            has_wd = False
+        elif not has_wd and not wd_denied:
+            # Field present but ambiguous — include
+            has_wd = True
+    else:
+        # No data — assume W/D present
+        has_wd = True
+
+    # ── Cats OK: exclude only if policy explicitly bans cats/pets ─────────────
     pet_policy = str(detail.get("petPolicy", "") or "").lower()
     at_glance = " ".join(
         str(f.get("factValue", "") or "")
@@ -45,13 +71,17 @@ def passes_criteria(detail: dict) -> tuple[bool, dict]:
         str(f.get("factValue", "") or "")
         for f in (detail.get("homeFactsAndFeatures") or [])
     ).lower()
-    combined_pet = " ".join([pet_policy, at_glance, home_facts])
+    combined_pet = " ".join([pet_policy, at_glance, home_facts]).strip()
 
-    cats_ok = (
-        ("cat" in combined_pet and "no cat" not in combined_pet)
-        or "pets allowed" in combined_pet
-        or "cats allowed" in combined_pet
-    )
+    if combined_pet:
+        explicitly_denied = any(kw in combined_pet for kw in [
+            "no cats", "no pets", "cats not allowed", "pets not allowed",
+            "no animals", "no cat",
+        ])
+        cats_ok = not explicitly_denied
+    else:
+        # No policy data — assume cats negotiable (common for house rentals)
+        cats_ok = True
 
     reasons = {"has_ac": has_ac, "has_washer_dryer": has_wd, "cats_ok": cats_ok}
     return (has_ac and has_wd and cats_ok), reasons
@@ -86,34 +116,26 @@ def extract_listing(raw: dict, detail: dict, zipcode: str, today: str) -> dict:
     photos = extract_photos(detail, raw.get("imgSrc", raw.get("img_src", raw.get("thumbnail", ""))))
 
     # home_type: normalise to HOUSE or TOWNHOUSE for frontend filtering
-    raw_type = (
-        raw.get("homeType")
-        or raw.get("home_type")
-        or raw.get("propertyType")
-        or raw.get("property_type")
-        or ""
-    ).upper()
-    if "TOWN" in raw_type:
-        home_type = "TOWNHOUSE"
-    else:
-        home_type = "HOUSE"
+    # Confirmed field names from /search response
+    raw_type = str(raw.get("homeType", "") or "").upper()
+    home_type = "TOWNHOUSE" if "TOWN" in raw_type else "HOUSE"
 
     return {
         "zpid": zpid,
-        "address": raw.get("address", raw.get("full_address", "")),
-        "zipcode": zipcode,
-        "city": "Las Vegas",
-        "state": "NV",
+        "address": raw.get("address", ""),
+        "zipcode": raw.get("zipcode", zipcode),
+        "city": raw.get("city", "Las Vegas"),
+        "state": raw.get("state", "NV"),
         "home_type": home_type,
-        "rent": int(raw.get("price", raw.get("list_price", 0))),
+        "rent": int(raw.get("price", 0)),
         "rent_history": [],
         "bedrooms": int(raw.get("bedrooms", raw.get("beds", 0))),
         "bathrooms": float(raw.get("bathrooms", raw.get("baths", 0))),
-        "sqft": int(raw.get("livingArea", raw.get("living_area", raw.get("sqft", 0)))),
+        "sqft": int(raw.get("livingArea", raw.get("area", 0))),
         "has_ac": True,
         "has_washer_dryer": True,
         "cats_ok": True,
-        "days_on_market": int(raw.get("daysOnZillow", raw.get("days_on_market", 0)) or 0),
+        "days_on_market": int(raw.get("daysOnZillow", 0) or 0),
         "first_seen_date": today,
         "last_confirmed_date": today,
         "available": True,
