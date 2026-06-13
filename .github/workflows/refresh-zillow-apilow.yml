@@ -1,0 +1,63 @@
+name: Refresh Listings — Zillow Backup (APIllow)
+
+on:
+  schedule:
+    # Every 3 days at 10:00 UTC — 2 hours after primary Zillow (08:00) and 1 hour after
+    # Realtor (09:00) to avoid concurrent git pushes.
+    # ~10 runs/month × 2 calls/run = ~20 of 50 monthly API calls.
+    - cron: '0 10 */3 * *'
+  workflow_dispatch:
+
+jobs:
+  etl:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.3.0
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: etl/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r etl/requirements.txt
+
+      - name: Verify API key is set
+        run: |
+          if [ -z "$RAPIDAPI_KEY_APILOW" ]; then
+            echo "ERROR: RAPIDAPI_KEY_APILOW secret is not set or is empty"
+            exit 1
+          fi
+          echo "API key is present (length: ${#RAPIDAPI_KEY_APILOW})"
+        env:
+          RAPIDAPI_KEY_APILOW: ${{ secrets.RAPIDAPI_KEY_APILOW }}
+
+      - name: Run Zillow APIllow ETL
+        env:
+          RAPIDAPI_KEY_APILOW: ${{ secrets.RAPIDAPI_KEY_APILOW }}
+        run: python etl/scrape_zillow_apilow.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "homesearch-bot"
+          git config user.email "bot@homesearch.local"
+          git add public/data/listings.json public/data/meta.json public/data/photos/
+          git diff --cached --quiet \
+            && echo "No listing changes this run — nothing to commit." \
+            || git commit -m "data: refresh listings (zillow-apilow) $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Trigger Pages rebuild
+        run: |
+          curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-pages.yml/dispatches \
+            -d '{"ref":"main"}'

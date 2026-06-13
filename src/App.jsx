@@ -3,6 +3,7 @@ import InfoBanner from './components/InfoBanner'
 import SortBar from './components/SortBar'
 import PhotoFilterRadio from './components/PhotoFilterRadio'
 import PropertyTypeRadio from './components/PropertyTypeRadio'
+import ZipCodeFilter from './components/ZipCodeFilter'
 import ListingCard from './components/ListingCard'
 
 const BASE = import.meta.env.BASE_URL
@@ -12,7 +13,8 @@ export default function App() {
   const [meta, setMeta]         = useState(null)
   const [sort, setSort]               = useState({ field: 'rent', dir: 'asc' })
   const [photoFilter, setPhotoFilter] = useState('all')
-  const [typeFilter, setTypeFilter]   = useState('HOUSE')
+  const [typeFilter, setTypeFilter]   = useState('all')
+  const [zipFilter, setZipFilter]     = useState([])
   const [status, setStatus]     = useState('loading') // loading | ok | error
 
   useEffect(() => {
@@ -30,10 +32,15 @@ export default function App() {
 
   const lastRunDate = meta?.last_updated?.split('T')[0] ?? null
 
+  const availableZips = [...new Set(
+    listings.filter(l => l.available).map(l => l.zipcode).filter(Boolean)
+  )].sort()
+
   const visible = listings
     .filter(l => l.available)
     .filter(l => typeFilter === 'all' || (l.home_type ?? 'HOUSE') === typeFilter)
     .filter(l => photoFilter === 'all' || (l.photo_count ?? l.photos?.length ?? 0) >= 20)
+    .filter(l => zipFilter.length === 0 || zipFilter.includes(l.zipcode))
     .sort((a, b) => {
       const [va, vb] = sort.field === 'rent'
         ? [a.rent, b.rent]
@@ -46,13 +53,16 @@ export default function App() {
       <div className="max-w-6xl mx-auto px-4 pb-16">
         <InfoBanner meta={meta} visibleCount={visible.length} />
 
-        <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
-          <SortBar sort={sort} onSort={setSort} />
-          <div className="flex items-center gap-4 flex-wrap">
-            <PropertyTypeRadio value={typeFilter} onChange={setTypeFilter} />
-            <PhotoFilterRadio value={photoFilter} onChange={setPhotoFilter} />
-            <span className="text-xs text-pn-muted">{visible.length} listing{visible.length !== 1 ? 's' : ''}</span>
+        <div className="flex flex-col gap-3 mb-6">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <SortBar sort={sort} onSort={setSort} />
+            <div className="flex items-center gap-4 flex-wrap">
+              <PropertyTypeRadio value={typeFilter} onChange={setTypeFilter} />
+              <PhotoFilterRadio value={photoFilter} onChange={setPhotoFilter} />
+              <span className="text-xs text-pn-muted">{visible.length} listing{visible.length !== 1 ? 's' : ''}</span>
+            </div>
           </div>
+          <ZipCodeFilter selected={zipFilter} onChange={setZipFilter} zips={availableZips} />
         </div>
 
         {status === 'loading' && (

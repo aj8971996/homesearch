@@ -1,7 +1,7 @@
 const OPTIONS = [
+  { val: 'all',       label: 'Both'         },
   { val: 'HOUSE',     label: '🏠 Houses'   },
   { val: 'TOWNHOUSE', label: '🏘 Townhomes' },
-  { val: 'all',       label: 'Both'         },
 ]
 
 export default function PropertyTypeRadio({ value, onChange }) {
