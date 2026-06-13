@@ -14,20 +14,22 @@ export default function InfoBanner({ meta, visibleCount }) {
         <div className="flex flex-wrap gap-2">
           <Chip>{visibleCount} active listing{visibleCount !== 1 ? 's' : ''}</Chip>
           <Chip>Last refresh: {lastUpdated}</Chip>
-          <Chip>Refreshes every 3 days</Chip>
         </div>
       </div>
 
       <p className="text-xs text-pn-muted leading-relaxed max-w-3xl mb-3">
-        A personal family home search tool for West Las Vegas. Every listing shown already
-        qualifies — 3+ bedrooms, 2+ bathrooms, 1,300+&nbsp;sq&nbsp;ft, ≤&nbsp;$2,500/mo,
-        with AC, washer/dryer in unit, and cats OK. No manual filtering needed.
+        A personal family home search tool for West Las Vegas. All listings meet the same
+        criteria: 3+ bedrooms, 2+ bathrooms, 1,300+&nbsp;sq&nbsp;ft, up
+        to&nbsp;$2,500/mo, AC, washer/dryer in unit, and cats OK.
+        Active rentals are pulled from Zillow and Realtor.com every 3 days. A monthly
+        backup scan via Zillow (APIllow) also surfaces for-sale homes in the area whose
+        Zillow rent estimate falls within budget.
       </p>
 
       <div className="flex flex-wrap gap-5">
-        <MetaTag label="Source"    value="Zillow via OpenWebNinja API" />
+        <MetaTag label="Sources"   value="Zillow · Realtor.com · Zillow via APIllow" />
         <MetaTag label="Zip codes" value="89134 · 89144 · 89145 · 89128 · 89138 · 89135" />
-        <MetaTag label="Cadence"   value="Every 3 days · free API tier" />
+        <MetaTag label="Cadence"   value="Rentals every 3 days · APIllow monthly" />
       </div>
     </div>
   )
