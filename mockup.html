@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Search — Design Mockup</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ─── Semantic / fixed colours (not palette-dependent) ─── */
+    :root {
+      --price-up-bg:   rgba(239, 68,  68,  0.92);
+      --price-up-text: #ffffff;
+      --price-dn-bg:   rgba( 34, 197, 94,  0.92);
+      --price-dn-text: #ffffff;
+      --radius:        12px;
+      --radius-sm:      8px;
+      --radius-pill:  9999px;
+    }
+
+    /* ─── Palette: Purple Nurple ─── */
+    body.pal-purple {
+      --bg:           #191D32;
+      --surface:      #292F44;
+      --border:       #453A49;
+      --accent:       #BA2C73;
+      --accent-muted: rgba(186,44,115,.18);
+      --txt:          #F0EEF8;
+      --txt-sub:      #9097B8;
+      --txt-muted:    #5A6080;
+      --new-bg:       #BA2C73;
+      --new-txt:      #ffffff;
+      --shadow:       0 4px 28px rgba(0,0,0,.45);
+    }
+
+    /* ─── Palette: Galaxy Brain ─── */
+    body.pal-galaxy {
+      --bg:           #062726;
+      --surface:      #102B3F;
+      --border:       rgba(98,71,170,.40);
+      --accent:       #A06CD5;
+      --accent-muted: rgba(160,108,213,.15);
+      --txt:          #E2CFEA;
+      --txt-sub:      #8E72B0;
+      --txt-muted:    #4E3D66;
+      --new-bg:       #6247AA;
+      --new-txt:      #E2CFEA;
+      --shadow:       0 4px 28px rgba(0,0,0,.55);
+    }
+
+    /* ─── Palette: Business Purple ─── */
+    body.pal-business {
+      --bg:           #170312;
+      --surface:      #33032F;
+      --border:       #531253;
+      --accent:       #97D8B2;
+      --accent-muted: rgba(151,216,178,.12);
+      --txt:          #F4F0F4;
+      --txt-sub:      #A0ACAD;
+      --txt-muted:    #5C5A5C;
+      --new-bg:       #97D8B2;
+      --new-txt:      #170312;
+      --shadow:       0 4px 28px rgba(0,0,0,.55);
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--txt);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      transition: background .25s, color .25s;
+    }
+
+    /* ════════════════════════════════════════
+       PALETTE SWITCHER BAR
+    ════════════════════════════════════════ */
+    .switcher {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(0,0,0,.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .switcher-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.32);
+      margin-right: 4px;
+      white-space: nowrap;
+    }
+
+    .pal-btn {
+      padding: 5px 16px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255,255,255,.15);
+      background: transparent;
+      color: rgba(255,255,255,.55);
+      font-size: 12.5px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .18s;
+      white-space: nowrap;
+    }
+    .pal-btn:hover { border-color: rgba(255,255,255,.4); color: #fff; }
+    .pal-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+
+    /* ════════════════════════════════════════
+       LAYOUT
+    ════════════════════════════════════════ */
+    .page { max-width: 1200px; margin: 0 auto; padding: 0 20px 56px; }
+
+    /* ════════════════════════════════════════
+       INFO BANNER
+    ════════════════════════════════════════ */
+    .banner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 26px;
+      margin: 24px 0 18px;
+    }
+
+    .banner-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .banner h1 {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+    .banner h1 em { font-style: normal; color: var(--accent); }
+
+    .banner-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 11px;
+      border-radius: var(--radius-pill);
+      background: var(--accent-muted);
+      border: 1px solid var(--border);
+      font-size: 11.5px;
+      color: var(--txt-sub);
+      white-space: nowrap;
+    }
+    .chip .dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .banner-desc {
+      font-size: 12.5px;
+      color: var(--txt-muted);
+      line-height: 1.65;
+      max-width: 820px;
+    }
+
+    .banner-method {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .method-tag {
+      font-size: 11px;
+      color: var(--txt-muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .method-tag span { color: var(--accent); font-weight: 600; }
+
+    /* ════════════════════════════════════════
+       CONTROLS
+    ════════════════════════════════════════ */
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .ctrl-left, .ctrl-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .ctrl-label {
+      font-size: 11.5px;
+      color: var(--txt-muted);
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+
+    .sort-btn, .radio-btn {
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--txt-sub);
+      font-size: 12.5px;
+      cursor: pointer;
+      transition: all .15s;
+      border-radius: var(--radius-pill);
+    }
+    .sort-btn:hover, .radio-btn:hover { border-color: var(--accent); color: var(--txt); }
+    .sort-btn.active, .radio-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .radio-group { display: flex; gap: 4px; }
+
+    .results-count { font-size: 12px; color: var(--txt-muted); }
+
+    /* ════════════════════════════════════════
+       GRID
+    ════════════════════════════════════════ */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+    }
+
+    /* ════════════════════════════════════════
+       CARD
+    ════════════════════════════════════════ */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 40px rgba(0,0,0,.5);
+    }
+
+    /* ── Carousel ── */
+    .carousel {
+      position: relative;
+      height: 210px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .c-slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .28s ease;
+    }
+    .c-slide.active { opacity: 1; }
+
+    .c-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,.55);
+      user-select: none;
+    }
+    .c-icon { font-size: 36px; line-height: 1; }
+    .c-label {
+      font-size: 11.5px;
+      font-weight: 500;
+      background: rgba(0,0,0,.38);
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      backdrop-filter: blur(4px);
+    }
+
+    .c-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background: rgba(0,0,0,.55);
+      border: none;
+      color: #fff;
+      font-size: 17px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      transition: background .15s;
+    }
+    .c-arrow:hover { background: rgba(0,0,0,.82); }
+    .c-arrow.prev { left: 9px; }
+    .c-arrow.next { right: 9px; }
+
+    .c-dots {
+      position: absolute;
+      bottom: 9px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+      z-index: 3;
+    }
+    .c-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.35);
+      cursor: pointer;
+      transition: background .15s, transform .15s;
+    }
+    .c-dot.active { background: #fff; transform: scale(1.3); }
+
+    /* Pills overlaid on carousel */
+    .c-pills {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      z-index: 3;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: .025em;
+      white-space: nowrap;
+      backdrop-filter: blur(6px);
+    }
+
+    .pill-new {
+      background: var(--new-bg);
+      color: var(--new-txt);
+    }
+
+    .pill-dom {
+      background: rgba(0,0,0,.62);
+      color: rgba(255,255,255,.88);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .pill-up {
+      background: var(--price-up-bg);
+      color: var(--price-up-text);
+    }
+
+    .pill-dn {
+      background: var(--price-dn-bg);
+      color: var(--price-dn-text);
+    }
+
+    /* ── Card Body ── */
+    .card-body { padding: 16px 18px 18px; }
+
+    .rent-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .rent {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: var(--txt);
+      line-height: 1;
+    }
+    .rent-unit {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--txt-muted);
+      margin-left: 2px;
+    }
+
+    .address {
+      font-size: 12.5px;
+      color: var(--txt-sub);
+      margin-bottom: 13px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .stats-row {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 13px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      display: flex;
+      align-items: baseline;
+      gap: 2px;
+      font-size: 12.5px;
+      color: var(--txt-sub);
+      padding: 0 10px;
+      border-right: 1px solid var(--border);
+    }
+    .stat:first-child { padding-left: 0; }
+    .stat:last-child  { border-right: none; }
+    .stat strong { font-size: 13.5px; font-weight: 700; color: var(--txt); }
+
+    .amenities {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    .badge {
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--txt-muted);
+      background: var(--accent-muted);
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .zip-badge {
+      padding: 3px 9px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--txt-muted);
+      font-family: 'Courier New', monospace;
+      letter-spacing: .04em;
+    }
+
+    .view-btn {
+      padding: 7px 18px;
+      border-radius: var(--radius-pill);
+      background: var(--accent);
+      color: var(--new-txt, #fff);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity .15s, transform .15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .view-btn:hover { opacity: .85; transform: translateX(1px); }
+
+    /* ════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════ */
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+      .controls { flex-direction: column; align-items: flex-start; }
+      .banner-top { flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body class="pal-purple">
+
+  <!-- ── Palette Switcher ── -->
+  <div class="switcher">
+    <span class="switcher-label">Palette</span>
+    <button class="pal-btn active" onclick="setPalette('pal-purple', this)">Purple Nurple</button>
+    <button class="pal-btn"        onclick="setPalette('pal-galaxy', this)">Galaxy Brain</button>
+    <button class="pal-btn"        onclick="setPalette('pal-business', this)">Business Purple</button>
+  </div>
+
+  <div class="page">
+
+    <!-- ── Info Banner ── -->
+    <div class="banner">
+      <div class="banner-top">
+        <h1>Las Vegas <em>Home Search</em></h1>
+        <div class="banner-chips">
+          <span class="chip"><span class="dot"></span>24 active listings</span>
+          <span class="chip"><span class="dot"></span>Last refresh: Jun 10, 2026</span>
+          <span class="chip"><span class="dot"></span>Refreshes every 3 days</span>
+        </div>
+      </div>
+      <p class="banner-desc">
+        A personal family home search tool for West Las Vegas. Every listing shown already qualifies —
+        3+ bedrooms, 2+ bathrooms, 1,300+ sq&nbsp;ft, ≤&nbsp;$2,500/mo, with AC, washer/dryer in unit, and cats OK.
+        No filters needed. Data is pulled from Zillow via API and committed to this site automatically.
+      </p>
+      <div class="banner-method">
+        <span class="method-tag">Source: <span>Zillow via OpenWebNinja API</span></span>
+        <span class="method-tag">Zip codes: <span>89134 · 89144 · 89145 · 89128 · 89138 · 89135</span></span>
+        <span class="method-tag">Cadence: <span>Every 3 days (~10 runs/month, within free API tier)</span></span>
+      </div>
+    </div>
+
+    <!-- ── Controls ── -->
+    <div class="controls">
+      <div class="ctrl-left">
+        <span class="ctrl-label">Sort</span>
+        <button class="sort-btn active" onclick="activateBtn(this, '.sort-btn')">Rent ↑</button>
+        <button class="sort-btn"        onclick="activateBtn(this, '.sort-btn')">Rent ↓</button>
+        <button class="sort-btn"        onclick="activateBtn(this, '.sort-btn')">Sq Ft ↑</button>
+        <button class="sort-btn"        onclick="activateBtn(this, '.sort-btn')">Sq Ft ↓</button>
+      </div>
+      <div class="ctrl-right">
+        <div class="radio-group">
+          <button class="radio-btn active" onclick="activateBtn(this, '.radio-btn')">All listings</button>
+          <button class="radio-btn"        onclick="activateBtn(this, '.radio-btn')">20+ photos</button>
+        </div>
+        <span class="results-count">6 of 24 listings</span>
+      </div>
+    </div>
+
+    <!-- ── Listing Grid ── -->
+    <div class="grid" id="grid"></div>
+
+  </div><!-- /page -->
+
+  <script>
+    /* ── Mock data ── */
+    const LISTINGS = [
+      {
+        id: 1,
+        address: '8421 Desert Bloom Dr',
+        zip: '89134',
+        rent: 2100,
+        prevRent: 2350,
+        beds: 3, baths: 2, sqft: 1450,
+        dom: 12,
+        isNew: false,
+        photos: 24,
+        slides: [
+          'linear-gradient(135deg,#2a1f3d 0%,#1e3040 100%)',
+          'linear-gradient(135deg,#1e3040 0%,#2d1e3a 100%)',
+          'linear-gradient(135deg,#2d1e3a 0%,#1a2d3e 100%)',
+          'linear-gradient(135deg,#1a2d3e 0%,#2a1f3d 100%)',
+        ]
+      },
+      {
+        id: 2,
+        address: '3318 Summerlin Pkwy, Unit 201',
+        zip: '89144',
+        rent: 2450,
+        prevRent: null,
+        beds: 4, baths: 3, sqft: 1820,
+        dom: 0,
+        isNew: true,
+        photos: 8,
+        slides: [
+          'linear-gradient(135deg,#1e2d1a 0%,#2d1a2a 100%)',
+          'linear-gradient(135deg,#2d1a2a 0%,#1a2040 100%)',
+          'linear-gradient(135deg,#1a2040 0%,#1e2d1a 100%)',
+        ]
+      },
+      {
+        id: 3,
+        address: '1205 Pinto Canyon Rd',
+        zip: '89128',
+        rent: 1875,
+        prevRent: 1750,
+        beds: 3, baths: 2, sqft: 1310,
+        dom: 28,
+        isNew: false,
+        photos: 31,
+        slides: [
+          'linear-gradient(135deg,#2d1a1a 0%,#1a2d2a 100%)',
+          'linear-gradient(135deg,#1a2d2a 0%,#2a1e2d 100%)',
+          'linear-gradient(135deg,#2a1e2d 0%,#1e2a1a 100%)',
+          'linear-gradient(135deg,#1e2a1a 0%,#2d1a1a 100%)',
+        ]
+      },
+      {
+        id: 4,
+        address: '9002 Marble Canyon Way',
+        zip: '89135',
+        rent: 2200,
+        prevRent: null,
+        beds: 3, baths: 2.5, sqft: 1600,
+        dom: 5,
+        isNew: false,
+        photos: 17,
+        slides: [
+          'linear-gradient(135deg,#1a1e2d 0%,#2a1a1e 100%)',
+          'linear-gradient(135deg,#2a1a1e 0%,#1e2d1a 100%)',
+          'linear-gradient(135deg,#1e2d1a 0%,#1a1e2d 100%)',
+        ]
+      },
+      {
+        id: 5,
+        address: '4477 Cascata Ridge Ln',
+        zip: '89138',
+        rent: 2495,
+        prevRent: 2600,
+        beds: 4, baths: 2, sqft: 1950,
+        dom: 45,
+        isNew: false,
+        photos: 22,
+        slides: [
+          'linear-gradient(135deg,#1a2a1e 0%,#2d1e1a 100%)',
+          'linear-gradient(135deg,#2d1e1a 0%,#1e1a2d 100%)',
+          'linear-gradient(135deg,#1e1a2d 0%,#2a2d1e 100%)',
+          'linear-gradient(135deg,#2a2d1e 0%,#1a2a1e 100%)',
+        ]
+      },
+      {
+        id: 6,
+        address: '712 Regency Park Ct',
+        zip: '89145',
+        rent: 1950,
+        prevRent: null,
+        beds: 3, baths: 2, sqft: 1380,
+        dom: 0,
+        isNew: true,
+        photos: 12,
+        slides: [
+          'linear-gradient(135deg,#2a1a2d 0%,#1a2a2d 100%)',
+          'linear-gradient(135deg,#1a2a2d 0%,#2d2a1a 100%)',
+          'linear-gradient(135deg,#2d2a1a 0%,#2a1a2d 100%)',
+        ]
+      },
+    ];
+
+    /* ── Carousel state ── */
+    const state = {};
+
+    function $ (r) { return document.querySelectorAll(r); }
+    function fmt (n) { return '$' + n.toLocaleString(); }
+
+    /* ── Build carousel HTML ── */
+    function carousel (l) {
+      const n = l.slides.length;
+      const slides = l.slides.map((bg, i) => `
+        <div class="c-slide${i === 0 ? ' active' : ''}" data-lid="${l.id}" data-i="${i}"
+             style="background:${bg}">
+          <div class="c-placeholder">
+            <span class="c-icon">🏠</span>
+            <span class="c-label">Photo ${i + 1} of ${l.photos}</span>
+          </div>
+        </div>`).join('');
+
+      const dots = l.slides.map((_, i) => `
+        <span class="c-dot${i === 0 ? ' active' : ''}"
+              onclick="goTo(${l.id},${i},${n})"></span>`).join('');
+
+      let pricePill = '';
+      if (l.prevRent !== null) {
+        const d = l.rent - l.prevRent;
+        pricePill = d < 0
+          ? `<span class="pill pill-dn">↓ Down ${fmt(Math.abs(d))}/mo</span>`
+          : `<span class="pill pill-up">↑ Up ${fmt(d)}/mo</span>`;
+      }
+
+      const domPill = l.isNew
+        ? `<span class="pill pill-new">✦ New</span>`
+        : `<span class="pill pill-dom">${l.dom} days on market</span>`;
+
+      return `
+        <div class="carousel" id="car-${l.id}">
+          ${slides}
+          <button class="c-arrow prev" onclick="step(${l.id},${n},-1)">‹</button>
+          <button class="c-arrow next" onclick="step(${l.id},${n}, 1)">›</button>
+          <div class="c-pills">${domPill}${pricePill}</div>
+          <div class="c-dots">${dots}</div>
+        </div>`;
+    }
+
+    /* ── Build card HTML ── */
+    function card (l) {
+      const baths = l.baths % 1 ? l.baths.toFixed(1) : l.baths;
+      return `
+        <div class="card">
+          ${carousel(l)}
+          <div class="card-body">
+            <div class="rent-row">
+              <div class="rent">${fmt(l.rent)}<span class="rent-unit">/mo</span></div>
+            </div>
+            <div class="address">📍 ${l.address}</div>
+            <div class="stats-row">
+              <span class="stat"><strong>${l.beds}</strong>&nbsp;bed</span>
+              <span class="stat"><strong>${baths}</strong>&nbsp;bath</span>
+              <span class="stat"><strong>${l.sqft.toLocaleString()}</strong>&nbsp;sq&nbsp;ft</span>
+              <span class="stat"><strong>${l.photos}</strong>&nbsp;photos</span>
+            </div>
+            <div class="amenities">
+              <span class="badge">❄️ AC</span>
+              <span class="badge">🫧 W/D In Unit</span>
+              <span class="badge">🐱 Cats OK</span>
+            </div>
+            <div class="card-footer">
+              <span class="zip-badge">${l.zip}</span>
+              <a class="view-btn" href="#">View on Zillow →</a>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    /* ── Render all cards ── */
+    function render () {
+      document.getElementById('grid').innerHTML = LISTINGS.map(card).join('');
+    }
+
+    /* ── Carousel navigation ── */
+    function goTo (lid, idx, n) {
+      state[lid] = idx;
+      sync(lid, n);
+    }
+
+    function step (lid, n, dir) {
+      state[lid] = ((state[lid] || 0) + dir + n) % n;
+      sync(lid, n);
+    }
+
+    function sync (lid, n) {
+      const el  = document.getElementById('car-' + lid);
+      const cur = state[lid];
+      el.querySelectorAll('.c-slide').forEach((s, i) => s.classList.toggle('active', i === cur));
+      el.querySelectorAll('.c-dot').forEach((d, i)  => d.classList.toggle('active', i === cur));
+    }
+
+    /* ── Palette switch ── */
+    function setPalette (cls, btn) {
+      document.body.className = cls;
+      document.querySelectorAll('.pal-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    /* ── Generic button group activator ── */
+    function activateBtn (btn, selector) {
+      btn.closest('.controls').querySelectorAll(selector)
+        .forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    render();
+  </script>
+</body>
+</html>
