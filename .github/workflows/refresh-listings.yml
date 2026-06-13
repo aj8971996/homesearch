@@ -37,10 +37,15 @@ jobs:
         env:
           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
 
-      - name: Run ETL scraper
+      - name: Run Zillow ETL
         env:
           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
         run: python etl/scrape.py
+
+      - name: Run Realtor.com ETL
+        env:
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+        run: python etl/scrape_realty.py
 
       - name: Commit updated data
         run: |
