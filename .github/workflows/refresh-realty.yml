@@ -1,0 +1,53 @@
+name: Refresh Listings — Realtor.com
+
+on:
+  schedule:
+    # Every 3 days at 09:00 UTC — 1 hour after Zillow to avoid git push conflicts.
+    # ~2 calls/run × 10 runs/month = 20 of ~100 free-tier calls.
+    - cron: '0 9 */3 * *'
+  workflow_dispatch:
+
+jobs:
+  etl:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.3.0
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: etl/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r etl/requirements.txt
+
+      - name: Verify API key is set
+        run: |
+          if [ -z "$RAPIDAPI_KEY" ]; then
+            echo "ERROR: RAPIDAPI_KEY secret is not set or is empty"
+            exit 1
+          fi
+          echo "API key is present (length: ${#RAPIDAPI_KEY})"
+        env:
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+
+      - name: Run Realtor.com ETL
+        env:
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+        run: python etl/scrape_realty.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "homesearch-bot"
+          git config user.email "bot@homesearch.local"
+          git add public/data/listings.json public/data/meta.json
+          git diff --cached --quiet \
+            && echo "No listing changes this run — nothing to commit." \
+            || git commit -m "data: refresh listings (realtor) $(date -u +%Y-%m-%d)"
+          git push

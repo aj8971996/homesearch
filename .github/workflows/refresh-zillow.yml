@@ -1,17 +1,16 @@
-name: Refresh Listings
+name: Refresh Listings — Zillow
 
 on:
   schedule:
-    # Every 3 days at 08:00 UTC (~3am PT). Keeps us around 80 API calls/month
-    # against the 100/month free tier cap, leaving 20 calls of headroom.
+    # Every 3 days at 08:00 UTC. ~6 calls/run × 10 runs/month = 60 of 100 free-tier calls.
     - cron: '0 8 */3 * *'
-  workflow_dispatch: # allow manual trigger for testing / validation
+  workflow_dispatch:
 
 jobs:
   etl:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # needed to commit updated JSON back to the repo
+      contents: write
 
     steps:
       - name: Checkout repo
@@ -42,11 +41,6 @@ jobs:
           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
         run: python etl/scrape.py
 
-      - name: Run Realtor.com ETL
-        env:
-          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
-        run: python etl/scrape_realty.py
-
       - name: Commit updated data
         run: |
           git config user.name  "homesearch-bot"
@@ -54,5 +48,5 @@ jobs:
           git add public/data/listings.json public/data/meta.json
           git diff --cached --quiet \
             && echo "No listing changes this run — nothing to commit." \
-            || git commit -m "data: refresh listings $(date -u +%Y-%m-%d)"
+            || git commit -m "data: refresh listings (zillow) $(date -u +%Y-%m-%d)"
           git push
