@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-13T19:42:29.654795+00:00",
+  "last_updated": "2026-06-13T20:17:37.262701+00:00",
   "total_active": 110,
   "added_this_run": 0,
   "removed_this_run": 0,
@@ -16,5 +16,8 @@
   "realty_detail_calls": 0,
   "apilow_added_this_run": 14,
   "apilow_removed_this_run": 0,
-  "apilow_api_calls": 15
+  "apilow_api_calls": 15,
+  "zillow_scraper_added": 0,
+  "zillow_scraper_removed": 0,
+  "zillow_scraper_api_calls": 3
 }
