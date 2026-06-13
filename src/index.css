@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  background-color: #191D32;
+  color: #F0EEF8;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
