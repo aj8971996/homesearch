@@ -50,44 +50,70 @@ def _build_dedup_index(store: dict) -> dict[str, str]:
     return idx
 
 
+def _url_slug(url: str) -> str:
+    """Extract the Zillow property slug from a listing URL for use as a stable ID."""
+    slug = re.search(r'/([A-Za-z0-9]{4,})/?$', url.rstrip('/'))
+    return slug.group(1) if slug else ""
+
+
 def _extract_listing(raw: dict, today: str) -> dict | None:
     """
     Map a /bylocation result to our storage schema.
     Returns None to skip.
 
-    Debug logging is verbose on first runs to surface any field-name
-    differences between API versions.
+    Actual response structure (confirmed from live data):
+      - zpid:          null for apartment/building-level listings
+      - address:       "Street, City, State" (no zip code)
+      - beds:          int (not bedrooms); baths/sqft often null
+      - photo_url:     single thumbnail string (not imgSrc or photos[])
+      - url:           full Zillow URL (no prefix needed)
+      - property_type: "APARTMENT" for multi-family; "SINGLE_FAMILY" etc for houses
+      - latitude/longitude: present — used for area filtering since zip is absent
     """
-    # ── zpid ─────────────────────────────────────────────────────────────────
+    # ── Home type — reject non-house types before anything else ───────────────
+    raw_type = str(raw.get("property_type") or raw.get("homeType") or "").upper()
+    _EXCLUDED_TYPES = ("APARTMENT", "CONDO", "MULTI", "MANUFACTURED", "LOT", "LAND")
+    if any(t in raw_type for t in _EXCLUDED_TYPES):
+        return None  # silent — bulk of results are apartments
+    if "TOWN" in raw_type:
+        home_type = "TOWNHOUSE"
+    elif raw_type == "" or any(kw in raw_type for kw in ("SINGLE", "HOUSE", "RESIDENTIAL", "FAMILY")):
+        home_type = "HOUSE"
+    else:
+        print(f"  [debug] unrecognised property_type={raw_type!r} — defaulting to HOUSE")
+        home_type = "HOUSE"
+
+    # ── Area gate via lat/lng (zip not present in response) ───────────────────
+    # Bounding box covering all 6 target zip codes (Summerlin / NW Las Vegas).
+    lat = float(raw.get("latitude") or 0)
+    lng = float(raw.get("longitude") or 0)
+    if not (36.05 <= lat <= 36.35 and -115.43 <= lng <= -115.24):
+        return None  # silent
+
+    # ── Stable ID from URL slug (zpid is null for building-level listings) ────
+    listing_url = str(raw.get("url") or "").strip()
     zpid_raw = str(raw.get("zpid") or "").strip()
-    if not zpid_raw or zpid_raw == "0":
-        print(f"  [debug] skip — no valid zpid")
+    if not zpid_raw or zpid_raw in ("0", "None"):
+        zpid_raw = _url_slug(listing_url)
+    if not zpid_raw:
+        print(f"  [debug] skip — cannot derive ID for {listing_url!r}")
         return None
 
-    # ── Zip code gate ─────────────────────────────────────────────────────────
-    # Field name may be zipCode, zipcode, or zip
-    zipcode = str(
-        raw.get("zipCode") or raw.get("zipcode") or raw.get("zip") or ""
-    ).strip()
-    if zipcode not in TARGET_ZIPS:
-        return None  # silent — most Las Vegas results will be outside our 6 zips
+    # ── Numeric fields (baths and sqft are often null in this API) ────────────
+    beds = int(raw.get("beds") or raw.get("bedrooms") or 0)
+    baths = float(raw.get("baths") or raw.get("bathrooms") or 0)
+    sqft  = int(raw.get("sqft") or raw.get("livingArea") or 0)
+    rent  = int(raw.get("price") or 0)
 
-    # ── Numeric fields ────────────────────────────────────────────────────────
-    beds  = int(raw.get("bedrooms") or raw.get("beds") or 0)
-    baths = float(raw.get("bathrooms") or raw.get("baths") or 0)
-    sqft  = int(
-        raw.get("livingArea") or raw.get("sqft") or raw.get("livingAreaValue") or 0
-    )
-    rent  = int(raw.get("price") or raw.get("listPrice") or 0)
-
-    print(f"  [debug] candidate: zpid={zpid_raw!r} zip={zipcode!r} "
-          f"beds={beds} baths={baths} sqft={sqft} rent=${rent} "
-          f"addr={raw.get('streetAddress') or raw.get('address', '')!r}")
+    print(f"  [debug] candidate: id={zpid_raw!r} type={raw_type!r} "
+          f"beds={beds} baths={baths or 'null'} sqft={sqft or 'null'} "
+          f"rent=${rent} addr={raw.get('address', '')!r}")
 
     if beds < MIN_BEDS:
         print(f"    [skip] beds={beds} < {MIN_BEDS}")
         return None
-    if baths < MIN_BATHS:
+    # baths/sqft: only filter when the API actually returns a value
+    if baths > 0 and baths < MIN_BATHS:
         print(f"    [skip] baths={baths} < {MIN_BATHS}")
         return None
     if rent == 0 or rent > MAX_RENT:
@@ -97,39 +123,18 @@ def _extract_listing(raw: dict, today: str) -> dict | None:
         print(f"    [skip] sqft={sqft} < {MIN_SQFT}")
         return None
 
-    # ── Home type ─────────────────────────────────────────────────────────────
-    raw_type = str(raw.get("homeType") or raw.get("propertyType") or "").upper()
-    print(f"    [debug] homeType={raw_type!r}")
-    if "TOWN" in raw_type:
-        home_type = "TOWNHOUSE"
-    elif any(kw in raw_type for kw in ("SINGLE", "HOUSE", "RESIDENTIAL", "FAMILY")):
-        home_type = "HOUSE"
-    else:
-        print(f"    [debug] unrecognised homeType={raw_type!r} — defaulting to HOUSE")
-        home_type = "HOUSE"
+    # ── Address (pre-formatted "Street, City, State" — no zip) ───────────────
+    full_address = str(raw.get("address") or "").strip()
+    parts = [p.strip() for p in full_address.split(",")]
+    city  = parts[1].strip() if len(parts) > 1 else "Las Vegas"
+    state = parts[2].strip().split()[0] if len(parts) > 2 else "NV"
+    # Zip is absent from the API response; leave blank (dedup uses address+zip key)
+    zipcode = ""
 
-    # ── Address ───────────────────────────────────────────────────────────────
-    street = str(raw.get("streetAddress") or raw.get("address") or "").strip()
-    city   = str(raw.get("city") or "Las Vegas").strip()
-    state  = str(raw.get("state") or "NV").strip()
-    full_address = f"{street}, {city}, {state} {zipcode}".strip(", ")
-
-    # ── Photos ────────────────────────────────────────────────────────────────
-    # API may return imgSrc (thumbnail) or a photos list
-    thumbnail = str(raw.get("imgSrc") or raw.get("img_src") or "").strip()
-    raw_photos = raw.get("photos") or raw.get("images") or []
-    if isinstance(raw_photos, list) and raw_photos:
-        photos = [str(p.get("url") or p.get("src") or p) for p in raw_photos if p]
-    elif thumbnail:
-        photos = [thumbnail]
-    else:
-        photos = []
-    print(f"    [debug] {len(photos)} photo(s)")
-
-    # ── Listing URL ───────────────────────────────────────────────────────────
-    detail_url = str(raw.get("detailUrl") or raw.get("url") or "").strip()
-    if detail_url and not detail_url.startswith("http"):
-        detail_url = f"https://www.zillow.com{detail_url}"
+    # ── Photo ─────────────────────────────────────────────────────────────────
+    thumbnail = str(raw.get("photo_url") or "").strip()
+    photos = [thumbnail] if thumbnail else []
+    print(f"    [debug] {len(photos)} photo(s)  lat={lat} lng={lng}")
 
     return {
         "zpid":                f"zillow_scraper_{zpid_raw}",
@@ -152,7 +157,7 @@ def _extract_listing(raw: dict, today: str) -> dict | None:
         "available":           True,
         "photo_count":         len(photos),
         "photos":              photos,
-        "listing_url":         detail_url,
+        "listing_url":         listing_url,
         "description":         str(raw.get("description") or ""),
         "source":              "zillow_scraper",
     }
@@ -215,13 +220,10 @@ def main() -> None:
     if raw_results:
         r0 = raw_results[0]
         print(f"  [debug] first result top-level keys: {list(r0.keys())}")
-        for k in ("zpid", "streetAddress", "address", "city", "state",
-                  "zipCode", "zipcode", "price", "listPrice",
-                  "bedrooms", "beds", "bathrooms", "baths",
-                  "livingArea", "sqft", "homeType", "propertyType",
-                  "daysOnZillow", "detailUrl", "url", "imgSrc"):
-            if k in r0:
-                print(f"    {k}: {r0[k]!r}")
+        for k in ("zpid", "address", "url", "photo_url", "price",
+                  "beds", "baths", "sqft", "property_type", "status",
+                  "latitude", "longitude", "brokerage"):
+            print(f"    {k}: {r0.get(k)!r}")
         print()
 
     skipped_filter = skipped_dedup = 0
