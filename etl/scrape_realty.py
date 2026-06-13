@@ -65,7 +65,7 @@ def _build_dedup_index(store: dict) -> dict[str, str]:
 
 def _extract_realty_listing(r: dict, today: str) -> dict | None:
     """
-    Normalise a single DataCrawler search-rent result into our storage schema.
+    Normalise a Realty US search-rent result into our storage schema.
     Returns None if the listing should be skipped (wrong type, missing data, etc.)
     """
     # ── Property type ──────────────────────────────────────────────────────────
@@ -80,7 +80,7 @@ def _extract_realty_listing(r: dict, today: str) -> dict | None:
 
     # ── Beds / baths / sqft ───────────────────────────────────────────────────
     beds = desc.get("beds") or desc.get("beds_min") or 0
-    baths = desc.get("baths_consolidated") or desc.get("baths_min") or 0
+    baths = desc.get("baths_consolidated") or desc.get("baths_full_calc") or desc.get("baths") or desc.get("baths_min") or 0
     sqft = desc.get("sqft") or desc.get("sqft_min") or 0
 
     try:
@@ -225,12 +225,6 @@ def main() -> None:
         if ((r.get("location") or {}).get("address") or {}).get("postal_code", "") in TARGET_ZIPS
     ]
     print(f"  [realty] {len(in_target)} in target zips (of {len(raw_results)} total)")
-
-    # Debug: print first result's raw structure so we can verify field names match parser
-    if in_target:
-        import json as _json
-        print(f"  [debug] sample result keys: {list(in_target[0].keys())}")
-        print(f"  [debug] sample result:\n{_json.dumps(in_target[0], indent=2, default=str)}")
 
     skipped_dedup = skipped_filter = 0
 
