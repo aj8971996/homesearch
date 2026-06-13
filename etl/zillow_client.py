@@ -10,13 +10,12 @@ _HEADERS = {
 
 ZIP_CODES = ["89134", "89144", "89145", "89128", "89138", "89135"]
 
-# Endpoint names — update these once confirmed from the RapidAPI docs sidebar
-_SEARCH_ENDPOINT  = "/search-for-rent-listings"
-_DETAIL_ENDPOINT  = "/property-details"
+_SEARCH_ENDPOINT = "/search"
+_DETAIL_ENDPOINT = "/property-details"
 
 
 def search_rentals(zipcode: str) -> list[dict]:
-    """Search for rental listings in a zip code. Prints raw response on error for debugging."""
+    """Search for rental listings in a zip code."""
     resp = httpx.get(
         f"{_BASE}{_SEARCH_ENDPOINT}",
         headers=_HEADERS,
@@ -32,13 +31,20 @@ def search_rentals(zipcode: str) -> list[dict]:
         timeout=30,
     )
     if not resp.is_success:
-        print(f"  [{zipcode}] HTTP {resp.status_code} — body: {resp.text[:400]}")
+        print(f"  [{zipcode}] HTTP {resp.status_code} — body: {resp.text[:600]}")
         resp.raise_for_status()
+
     data = resp.json()
-    # Print top-level keys so we can verify the response shape
-    print(f"  [{zipcode}] response keys: {list(data.keys())}")
-    props = data.get("data", data.get("props", data.get("results", [])))
+    print(f"  [{zipcode}] top-level keys: {list(data.keys())}")
+
+    # Try common result-list field names across OpenWebNinja API versions
+    props = data.get("data", data.get("props", data.get("results", data.get("listings", []))))
     print(f"  [{zipcode}] {len(props)} raw results")
+
+    # Log the first result's keys so we can map field names in extract_listing
+    if props:
+        print(f"  [{zipcode}] first result keys: {list(props[0].keys())}")
+
     return props
 
 
@@ -51,6 +57,11 @@ def get_details(zpid: str) -> dict:
         timeout=30,
     )
     if not resp.is_success:
-        print(f"  [detail {zpid}] HTTP {resp.status_code} — body: {resp.text[:400]}")
+        print(f"  [detail {zpid}] HTTP {resp.status_code} — body: {resp.text[:600]}")
         resp.raise_for_status()
-    return resp.json()
+
+    data = resp.json()
+    # Log detail keys on first call so we can map amenity fields
+    detail = data.get("data", data) if isinstance(data.get("data"), dict) else data
+    print(f"  [detail {zpid}] keys: {list(detail.keys())[:20]}")
+    return detail
