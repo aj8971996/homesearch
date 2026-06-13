@@ -143,4 +143,5 @@ def extract_listing(raw: dict, detail: dict, zipcode: str, today: str) -> dict:
         "photos": photos,
         "listing_url": f"https://www.zillow.com{detail_url}" if detail_url.startswith("/") else detail_url,
         "description": str(detail.get("description", "") or ""),
+        "source": "zillow",
     }

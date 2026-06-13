@@ -7,8 +7,11 @@ export default function ListingCard({ listing, lastRunDate }) {
     address, zipcode, rent, rent_history,
     bedrooms, bathrooms, sqft,
     days_on_market, first_seen_date,
-    photos, photo_count, listing_url,
+    photos, photo_count, listing_url, source,
   } = listing
+
+  const SOURCE_LABELS = { zillow: 'Zillow', realtor: 'Realtor.com' }
+  const sourceLabel = SOURCE_LABELS[source] ?? 'Listing'
 
   const baths  = bathrooms % 1 ? bathrooms.toFixed(1) : String(bathrooms)
   const isNew  = Boolean(lastRunDate && first_seen_date === lastRunDate)
@@ -73,7 +76,7 @@ export default function ListingCard({ listing, lastRunDate }) {
               className="px-4 py-1.5 rounded-pill bg-pn-accent text-white text-xs font-bold
                 hover:opacity-85 transition-opacity"
             >
-              View on Zillow →
+              View on {sourceLabel} →
             </a>
           ) : (
             <span className="text-xs text-pn-muted">No link</span>
