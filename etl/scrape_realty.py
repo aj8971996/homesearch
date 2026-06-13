@@ -52,17 +52,13 @@ def _extract_photos_from_detail(detail: dict, zpid: str, first_call: bool) -> li
         inner = detail.get("data") or {}
         if isinstance(inner, dict):
             print(f"  [detail] data keys: {list(inner.keys())}")
+        if detail.get("message"):
+            print(f"  [detail] message: {detail['message']}")
+        if detail.get("errors"):
+            print(f"  [detail] errors: {detail['errors']}")
 
-    data = detail.get("data") or detail
-
-    # Try common photo paths in order of likelihood
-    photos_raw = (
-        data.get("photos") or
-        (data.get("listing_details") or {}).get("photos") or
-        (data.get("details") or {}).get("photos") or
-        detail.get("photos") or
-        []
-    )
+    data = detail.get("data") or {}
+    photos_raw = data.get("photos") or []
 
     photos: list[str] = []
     for p in (photos_raw or []):
@@ -143,9 +139,16 @@ def _extract_realty_listing(r: dict, today: str) -> dict | None:
     postal = addr_obj.get("postal_code", "") or ""
     full_address = f"{street}, {city}, {state} {postal}".strip(", ")
 
-    # Use the search result's photo_count — thumbnails are NOT stored inline.
-    # Full-size photos are fetched via properties/detail and stored separately.
     photo_count = int(r.get("photo_count") or 0)
+
+    # Extract thumbnail URLs from the search result directly.
+    # Note: detail endpoint returns the same s.jpg thumbnails, so we skip it.
+    photos_raw = r.get("photos") or []
+    search_photos: list[str] = [
+        p["href"].replace("http://", "https://")
+        for p in photos_raw
+        if isinstance(p, dict) and p.get("href")
+    ]
 
     list_date = r.get("list_date") or ""
     try:
@@ -183,6 +186,7 @@ def _extract_realty_listing(r: dict, today: str) -> dict | None:
         "last_confirmed_date": today,
         "available": True,
         "photo_count": photo_count,
+        "search_photos": search_photos,  # extracted at search time, stripped before store
         "listing_url": listing_url,
         "description": str(desc.get("text", "") or ""),
         "source": "realtor",
@@ -209,6 +213,7 @@ def main() -> None:
     added = removed = search_calls = detail_calls = 0
     errors: list[str] = []
     first_detail_call = True
+    DETAIL_CAP = 20  # max detail calls per run to protect quota
 
     print(f"=== Realty ETL — {today} ===\n")
 
@@ -249,6 +254,8 @@ def main() -> None:
         seen_zpids.add(zpid)
         is_new = not store.get(zpid)
 
+        search_photos = listing.pop("search_photos", [])  # strip before storing
+
         if is_new:
             upsert_listing(store, zpid, listing)
             dedup[dedup_key] = zpid
@@ -264,22 +271,27 @@ def main() -> None:
             })
             print(f"  ~ Re-confirmed {listing['address']}")
 
-        # Fetch full-size photos via detail endpoint if not already stored
         if not _photos_exist(zpid):
-            property_id = zpid[len("realty_"):]
-            try:
-                detail = get_listing_detail(property_id)
-                detail_calls += 1
-                photos = _extract_photos_from_detail(detail, zpid, first_detail_call)
-                first_detail_call = False
-                if photos:
+            if search_photos:
+                # Photos available from search result — save them, no detail call needed
+                _save_photos(zpid, search_photos, today)
+                print(f"  [photos] {len(search_photos)} from search for {zpid}")
+            elif detail_calls < DETAIL_CAP:
+                # No search photos — fall back to detail endpoint (capped per run)
+                raw_property_id = zpid[len("realty_"):]
+                raw_listing_id = str(r.get("listing_id") or "")
+                try:
+                    detail = get_listing_detail(raw_property_id, raw_listing_id)
+                    detail_calls += 1
+                    photos = _extract_photos_from_detail(detail, zpid, first_detail_call)
+                    first_detail_call = False
                     _save_photos(zpid, photos, today)
-                else:
-                    print(f"  [detail] no photos found for {zpid} — check response shape")
-            except Exception as exc:
-                msg = f"detail fetch failed for {zpid}: {exc}"
-                print(f"  [detail] ERROR: {msg}", file=sys.stderr)
-                errors.append(msg)
+                    if not photos:
+                        print(f"  [detail] no photos in response for {zpid}")
+                except Exception as exc:
+                    msg = f"detail fetch failed for {zpid}: {exc}"
+                    print(f"  [detail] ERROR: {msg}", file=sys.stderr)
+                    errors.append(msg)
 
     removed = _mark_realty_stale(store, seen_zpids)
     save_store(store, LISTINGS_FILE)

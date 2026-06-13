@@ -9,11 +9,14 @@ _HEADERS = {
 }
 
 
-def get_listing_detail(property_id: str) -> dict:
+def get_listing_detail(property_id: str, listing_id: str = "") -> dict:
+    params: dict = {"propertyId": property_id}
+    if listing_id:
+        params["listingId"] = listing_id
     resp = httpx.get(
         f"{_BASE}/properties/detail",
         headers=_HEADERS,
-        params={"property_id": property_id},
+        params=params,
         timeout=30,
     )
     if not resp.is_success:
