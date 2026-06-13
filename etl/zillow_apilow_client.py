@@ -4,11 +4,14 @@ import httpx
 
 _HOST = "zillow-property-data1.p.rapidapi.com"
 _BASE = f"https://{_HOST}"
-_HEADERS = {
+_BASE_HEADERS = {
     "x-rapidapi-host": _HOST,
     "x-rapidapi-key": os.environ["RAPIDAPI_KEY_APILOW"],
-    "Content-Type": "application/json",
 }
+# POST /v1/properties   → submit batch job (getPropertyData)
+# GET  /v1/batch-results → poll for results (getBatchResults)
+_POST_PATH = "/v1/properties"
+_GET_PATH  = "/v1/batch-results"
 
 # "for_rent" matches Zillow's for-rent section.
 # If the API returns 0 results, verify the correct type value
@@ -32,10 +35,10 @@ def _submit_job() -> tuple[str, list[dict]]:
         "type": _TYPE,
         "max_items": _MAX_ITEMS,
     }
-    print(f"  [apilow] POST /v1/properties — search={_SEARCH!r} type={_TYPE!r} max_items={_MAX_ITEMS}")
+    print(f"  [apilow] POST {_POST_PATH} — search={_SEARCH!r} type={_TYPE!r} max_items={_MAX_ITEMS}")
     resp = httpx.post(
-        f"{_BASE}/v1/properties",
-        headers=_HEADERS,
+        f"{_BASE}{_POST_PATH}",
+        headers={**_BASE_HEADERS, "Content-Type": "application/json"},
         json=payload,
         timeout=30,
     )
@@ -73,10 +76,10 @@ def _poll_for_results(job_id: str) -> tuple[list[dict], int]:
 
     while time.time() < deadline:
         poll_count += 1
-        print(f"  [apilow] GET poll #{poll_count} — job_id={job_id!r}")
+        print(f"  [apilow] GET {_GET_PATH} poll #{poll_count} — job_id={job_id!r}")
         resp = httpx.get(
-            f"{_BASE}/v1/properties",
-            headers=_HEADERS,
+            f"{_BASE}{_GET_PATH}",
+            headers=_BASE_HEADERS,
             params={"job_id": job_id},
             timeout=30,
         )
