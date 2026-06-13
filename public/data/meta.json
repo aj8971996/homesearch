@@ -1,7 +1,11 @@
 {
-  "last_updated": null,
+  "last_updated": "2026-06-13T16:38:26.786737+00:00",
   "total_active": 0,
   "added_this_run": 0,
   "removed_this_run": 0,
-  "api_calls_used": 0
+  "api_calls_used": 0,
+  "realty_added_this_run": 0,
+  "realty_removed_this_run": 0,
+  "realty_api_calls_used": 1,
+  "errors": []
 }
