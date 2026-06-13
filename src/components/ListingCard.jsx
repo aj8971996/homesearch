@@ -10,7 +10,7 @@ export default function ListingCard({ listing, lastRunDate }) {
     photo_count, listing_url, source,
   } = listing
 
-  const SOURCE_LABELS = { zillow: 'Zillow', zillow_apilow: 'Zillow', realtor: 'Realtor.com' }
+  const SOURCE_LABELS = { zillow: 'Zillow', zillow_apilow: 'Zillow', zillow_scraper: 'Zillow', realtor: 'Realtor.com' }
   const sourceLabel = SOURCE_LABELS[source] ?? 'Listing'
 
   const baths = bathrooms % 1 ? bathrooms.toFixed(1) : String(bathrooms)

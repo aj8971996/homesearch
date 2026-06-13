@@ -21,13 +21,14 @@ export default function InfoBanner({ meta, visibleCount }) {
         A personal family home search tool for West Las Vegas. All listings meet the same
         criteria: 3+ bedrooms, 2+ bathrooms, 1,300+&nbsp;sq&nbsp;ft, up
         to&nbsp;$2,500/mo, AC, washer/dryer in unit, and cats OK.
-        Active rentals are pulled from Zillow and Realtor.com every 3 days. A monthly
-        backup scan via Zillow (APIllow) also surfaces for-sale homes in the area whose
-        Zillow rent estimate falls within budget.
+        Active rentals are pulled from Zillow and Realtor.com every 3 days. A Zillow
+        scraper API adds additional for-rent listings on the same cadence. A monthly
+        backup scan via Zillow (APIllow) also surfaces for-sale homes whose Zillow
+        rent estimate falls within budget.
       </p>
 
       <div className="flex flex-wrap gap-5">
-        <MetaTag label="Sources"   value="Zillow · Realtor.com · Zillow via APIllow" />
+        <MetaTag label="Sources"   value="Zillow · Zillow Scraper · Realtor.com · Zillow via APIllow" />
         <MetaTag label="Zip codes" value="89134 · 89144 · 89145 · 89128 · 89138 · 89135" />
         <MetaTag label="Cadence"   value="Rentals every 3 days · APIllow monthly" />
       </div>
