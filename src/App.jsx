@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import InfoBanner from './components/InfoBanner'
 import SortBar from './components/SortBar'
 import PhotoFilterRadio from './components/PhotoFilterRadio'
+import PropertyTypeRadio from './components/PropertyTypeRadio'
 import ListingCard from './components/ListingCard'
 
 const BASE = import.meta.env.BASE_URL
@@ -9,8 +10,9 @@ const BASE = import.meta.env.BASE_URL
 export default function App() {
   const [listings, setListings] = useState([])
   const [meta, setMeta]         = useState(null)
-  const [sort, setSort]         = useState({ field: 'rent', dir: 'asc' })
+  const [sort, setSort]               = useState({ field: 'rent', dir: 'asc' })
   const [photoFilter, setPhotoFilter] = useState('all')
+  const [typeFilter, setTypeFilter]   = useState('HOUSE')
   const [status, setStatus]     = useState('loading') // loading | ok | error
 
   useEffect(() => {
@@ -30,6 +32,7 @@ export default function App() {
 
   const visible = listings
     .filter(l => l.available)
+    .filter(l => typeFilter === 'all' || (l.home_type ?? 'HOUSE') === typeFilter)
     .filter(l => photoFilter === 'all' || (l.photo_count ?? l.photos?.length ?? 0) >= 20)
     .sort((a, b) => {
       const [va, vb] = sort.field === 'rent'
@@ -46,6 +49,7 @@ export default function App() {
         <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
           <SortBar sort={sort} onSort={setSort} />
           <div className="flex items-center gap-4 flex-wrap">
+            <PropertyTypeRadio value={typeFilter} onChange={setTypeFilter} />
             <PhotoFilterRadio value={photoFilter} onChange={setPhotoFilter} />
             <span className="text-xs text-pn-muted">{visible.length} listing{visible.length !== 1 ? 's' : ''}</span>
           </div>

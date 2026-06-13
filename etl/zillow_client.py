@@ -22,7 +22,7 @@ def search_rentals(zipcode: str) -> list[dict]:
         params={
             "location": zipcode,
             "status_type": "ForRent",
-            "home_type": "Houses,Apartments,Condos,Townhomes,MultiFamily",
+            "home_type": "HOUSES,TOWNHOMES",
             "rentMaxPrice": 2500,
             "bedsMin": 3,
             "bathsMin": 2,

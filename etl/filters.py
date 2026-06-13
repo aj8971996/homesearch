@@ -81,30 +81,44 @@ def extract_photos(detail: dict, fallback_img: str) -> list[str]:
 def extract_listing(raw: dict, detail: dict, zipcode: str, today: str) -> dict:
     """Normalise a raw search result + its detail into our storage schema."""
     zpid = str(raw.get("zpid", ""))
-    detail_url = raw.get("detailUrl", "") or ""
+    detail_url = raw.get("detailUrl", raw.get("detail_url", raw.get("propertyUrl", ""))) or ""
 
-    photos = extract_photos(detail, raw.get("imgSrc", ""))
+    photos = extract_photos(detail, raw.get("imgSrc", raw.get("img_src", raw.get("thumbnail", ""))))
+
+    # home_type: normalise to HOUSE or TOWNHOUSE for frontend filtering
+    raw_type = (
+        raw.get("homeType")
+        or raw.get("home_type")
+        or raw.get("propertyType")
+        or raw.get("property_type")
+        or ""
+    ).upper()
+    if "TOWN" in raw_type:
+        home_type = "TOWNHOUSE"
+    else:
+        home_type = "HOUSE"
 
     return {
         "zpid": zpid,
-        "address": raw.get("address", ""),
+        "address": raw.get("address", raw.get("full_address", "")),
         "zipcode": zipcode,
         "city": "Las Vegas",
         "state": "NV",
-        "rent": int(raw.get("price", 0)),
+        "home_type": home_type,
+        "rent": int(raw.get("price", raw.get("list_price", 0))),
         "rent_history": [],
-        "bedrooms": int(raw.get("bedrooms", 0)),
-        "bathrooms": float(raw.get("bathrooms", 0)),
-        "sqft": int(raw.get("livingArea", 0)),
+        "bedrooms": int(raw.get("bedrooms", raw.get("beds", 0))),
+        "bathrooms": float(raw.get("bathrooms", raw.get("baths", 0))),
+        "sqft": int(raw.get("livingArea", raw.get("living_area", raw.get("sqft", 0)))),
         "has_ac": True,
         "has_washer_dryer": True,
         "cats_ok": True,
-        "days_on_market": int(raw.get("daysOnZillow", 0) or 0),
+        "days_on_market": int(raw.get("daysOnZillow", raw.get("days_on_market", 0)) or 0),
         "first_seen_date": today,
         "last_confirmed_date": today,
         "available": True,
         "photo_count": len(photos),
         "photos": photos,
-        "listing_url": f"https://www.zillow.com{detail_url}" if detail_url else "",
+        "listing_url": f"https://www.zillow.com{detail_url}" if detail_url.startswith("/") else detail_url,
         "description": str(detail.get("description", "") or ""),
     }
