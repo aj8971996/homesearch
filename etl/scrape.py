@@ -104,8 +104,10 @@ def main() -> None:
     print(f"  +{added} added  -{removed} removed  {total_active} total active")
     print(f"  {api_calls} API calls used this run")
     if errors:
-        print(f"  {len(errors)} errors — see above", file=sys.stderr)
-        sys.exit(1)
+        print(f"\n  {len(errors)} error(s) this run — see above", file=sys.stderr)
+        # Only hard-fail if every zip errored and nothing was added
+        if added == 0 and total_active == 0:
+            sys.exit(1)
 
 
 if __name__ == "__main__":

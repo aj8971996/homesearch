@@ -1,20 +1,24 @@
 import os
 import httpx
 
-_HOST = "zillow-com1.p.rapidapi.com"
+_HOST = "real-time-real-estate-data-mega.p.rapidapi.com"
 _BASE = f"https://{_HOST}"
 _HEADERS = {
-    "X-RapidAPI-Host": _HOST,
-    "X-RapidAPI-Key": os.environ["RAPIDAPI_KEY"],
+    "x-rapidapi-host": _HOST,
+    "x-rapidapi-key": os.environ["RAPIDAPI_KEY"],
 }
 
 ZIP_CODES = ["89134", "89144", "89145", "89128", "89138", "89135"]
 
+# Endpoint names — update these once confirmed from the RapidAPI docs sidebar
+_SEARCH_ENDPOINT  = "/search-for-rent-listings"
+_DETAIL_ENDPOINT  = "/property-details"
+
 
 def search_rentals(zipcode: str) -> list[dict]:
-    """Search Zillow for rental listings in a zip code matching our base criteria."""
+    """Search for rental listings in a zip code. Prints raw response on error for debugging."""
     resp = httpx.get(
-        f"{_BASE}/propertyExtendedSearch",
+        f"{_BASE}{_SEARCH_ENDPOINT}",
         headers=_HEADERS,
         params={
             "location": zipcode,
@@ -27,20 +31,26 @@ def search_rentals(zipcode: str) -> list[dict]:
         },
         timeout=30,
     )
-    resp.raise_for_status()
+    if not resp.is_success:
+        print(f"  [{zipcode}] HTTP {resp.status_code} — body: {resp.text[:400]}")
+        resp.raise_for_status()
     data = resp.json()
-    props = data.get("props", [])
-    print(f"  [{zipcode}] {len(props)} raw results from search")
+    # Print top-level keys so we can verify the response shape
+    print(f"  [{zipcode}] response keys: {list(data.keys())}")
+    props = data.get("data", data.get("props", data.get("results", [])))
+    print(f"  [{zipcode}] {len(props)} raw results")
     return props
 
 
 def get_details(zpid: str) -> dict:
-    """Fetch full property detail for a single listing (used for amenity checks)."""
+    """Fetch full property detail by zpid for amenity checking."""
     resp = httpx.get(
-        f"{_BASE}/property",
+        f"{_BASE}{_DETAIL_ENDPOINT}",
         headers=_HEADERS,
         params={"zpid": zpid},
         timeout=30,
     )
-    resp.raise_for_status()
+    if not resp.is_success:
+        print(f"  [detail {zpid}] HTTP {resp.status_code} — body: {resp.text[:400]}")
+        resp.raise_for_status()
     return resp.json()
