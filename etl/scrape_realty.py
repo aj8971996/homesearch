@@ -1,20 +1,15 @@
 """
-Realtor.com ETL (DataCrawler US Realtor API) — fetches rental listings,
-normalises them into our storage schema, deduplicates against Zillow entries
-already in the store, and writes updated listings.json + meta.json.
+Realtor.com ETL (Realty US API) — fetches rental listings, normalises them,
+deduplicates against Zillow entries, and writes:
+  - public/data/listings.json   (listing metadata, no inline photos)
+  - public/data/photos/{zpid}.json  (full-size photo URLs, fetched once per listing)
+  - public/data/meta.json
 
-Run manually:
-    RAPIDAPI_KEY=<key> python etl/scrape_realty.py
-
-Or via GitHub Actions (see refresh-listings.yml).
-
-Dedup strategy:
-    - Zillow syndicates many listings to Realtor.com; they appear in both APIs.
-    - We key Realtor entries as "realty_<property_id>" to namespace them.
-    - Before inserting, we check whether the normalised address already exists
-      in the store under a Zillow zpid; if so, we skip (Zillow entry wins).
-    - Mark-stale only touches "realty_*" entries — Zillow entries are managed
-      by scrape.py.
+Photo strategy:
+  - Search results only return thumbnail URLs (s.jpg) — not usable for display.
+  - properties/detail is called once per new listing (or any listing missing photos)
+    to obtain full-size photo URLs, which are saved to the per-listing photo file.
+  - Re-confirmation runs skip the detail call if the photo file already exists.
 """
 
 import json
@@ -23,35 +18,70 @@ import re
 import sys
 from datetime import date, datetime, timezone
 
-from realty_client import search_rentals
+from realty_client import search_rentals, get_listing_detail
 from raw_store import save_raw
 from store import load_store, save_store, upsert_listing
 
-ROOT = os.path.join(os.path.dirname(__file__), "..")
+ROOT         = os.path.join(os.path.dirname(__file__), "..")
 LISTINGS_FILE = os.path.join(ROOT, "public", "data", "listings.json")
-META_FILE = os.path.join(ROOT, "public", "data", "meta.json")
+META_FILE    = os.path.join(ROOT, "public", "data", "meta.json")
+PHOTOS_DIR   = os.path.join(ROOT, "public", "data", "photos")
 
-# Minimum sqft — skip only when sqft is known AND below threshold (optimistic on missing)
 MIN_SQFT = 1300
 MAX_RENT = 2500
 MIN_BEDS = 3
 MIN_BATHS = 2.0
 
 
+# ── Photo store helpers ────────────────────────────────────────────────────────
+
+def _photo_path(zpid: str) -> str:
+    return os.path.join(PHOTOS_DIR, f"{zpid}.json")
+
+def _photos_exist(zpid: str) -> bool:
+    return os.path.exists(_photo_path(zpid))
+
+def _save_photos(zpid: str, photos: list[str], today: str) -> None:
+    os.makedirs(PHOTOS_DIR, exist_ok=True)
+    with open(_photo_path(zpid), "w") as f:
+        json.dump({"zpid": zpid, "photos": photos, "fetched_date": today}, f, indent=2)
+
+def _extract_photos_from_detail(detail: dict, zpid: str, first_call: bool) -> list[str]:
+    if first_call:
+        print(f"  [detail] response top-level keys: {list(detail.keys())}")
+        inner = detail.get("data") or {}
+        if isinstance(inner, dict):
+            print(f"  [detail] data keys: {list(inner.keys())}")
+
+    data = detail.get("data") or detail
+
+    # Try common photo paths in order of likelihood
+    photos_raw = (
+        data.get("photos") or
+        (data.get("listing_details") or {}).get("photos") or
+        (data.get("details") or {}).get("photos") or
+        detail.get("photos") or
+        []
+    )
+
+    photos: list[str] = []
+    for p in (photos_raw or []):
+        href = (p.get("href") or p.get("url") or p.get("src") or "").strip()
+        if href:
+            photos.append(href.replace("http://", "https://"))
+
+    print(f"  [detail] {len(photos)} photos for {zpid}")
+    return photos
+
+
 # ── Normalisation helpers ──────────────────────────────────────────────────────
 
 def _normalise_address(raw: str) -> str:
-    """Lower-case, collapse whitespace, strip punctuation for dedup matching."""
     s = raw.lower()
     s = re.sub(r"[^\w\s]", "", s)
     return re.sub(r"\s+", " ", s).strip()
 
-
 def _build_dedup_index(store: dict) -> dict[str, str]:
-    """
-    Build a map of normalised_address|postal_code → zpid for all store entries.
-    Used to detect Zillow-syndicated duplicates before inserting Realty records.
-    """
     idx: dict[str, str] = {}
     for zpid, listing in store.items():
         addr = _normalise_address(listing.get("address", ""))
@@ -60,13 +90,7 @@ def _build_dedup_index(store: dict) -> dict[str, str]:
             idx[f"{addr}|{postal}"] = zpid
     return idx
 
-
 def _extract_realty_listing(r: dict, today: str) -> dict | None:
-    """
-    Normalise a Realty US search-rent result into our storage schema.
-    Returns None if the listing should be skipped (wrong type, missing data, etc.)
-    """
-    # ── Property type ──────────────────────────────────────────────────────────
     desc = r.get("description") or {}
     raw_type = str(desc.get("type", "") or "").lower()
     if "single_family" in raw_type or "single family" in raw_type or raw_type == "home":
@@ -74,25 +98,25 @@ def _extract_realty_listing(r: dict, today: str) -> dict | None:
     elif "town" in raw_type:
         home_type = "TOWNHOUSE"
     else:
-        print(f"  [skip] unrecognised type={raw_type!r} — {r.get('property_id')} {((r.get('location') or {}).get('address') or {}).get('line','')}")
+        print(f"  [skip] unrecognised type={raw_type!r} — {r.get('property_id')} "
+              f"{((r.get('location') or {}).get('address') or {}).get('line','')}")
         return None
 
-    # ── Beds / baths / sqft ───────────────────────────────────────────────────
-    beds = desc.get("beds") or desc.get("beds_min") or 0
-    baths = desc.get("baths_consolidated") or desc.get("baths_full_calc") or desc.get("baths") or desc.get("baths_min") or 0
-    sqft = desc.get("sqft") or desc.get("sqft_min") or 0
+    beds  = desc.get("beds") or desc.get("beds_min") or 0
+    baths = (desc.get("baths_consolidated") or desc.get("baths_full_calc")
+             or desc.get("baths") or desc.get("baths_min") or 0)
+    sqft  = desc.get("sqft") or desc.get("sqft_min") or 0
 
     try:
-        beds = int(beds)
+        beds  = int(beds)
         baths = float(baths)
-        sqft = int(sqft)
+        sqft  = int(sqft)
     except (TypeError, ValueError):
         beds = baths = sqft = 0
 
     if beds < MIN_BEDS or baths < MIN_BATHS:
         return None
 
-    # ── Rent ──────────────────────────────────────────────────────────────────
     list_price = r.get("list_price")
     if list_price is None:
         list_price = r.get("list_price_min") or 0
@@ -104,44 +128,25 @@ def _extract_realty_listing(r: dict, today: str) -> dict | None:
     if rent == 0 or rent > MAX_RENT:
         return None
 
-    # ── Sqft — optimistic: skip only if known AND below threshold ─────────────
     if sqft > 0 and sqft < MIN_SQFT:
         return None
 
-    # ── Cats ──────────────────────────────────────────────────────────────────
     pet_policy = r.get("pet_policy") or {}
-    cats_val = pet_policy.get("cats")       # True / False / None
-    if cats_val is False:
-        return None  # explicitly banned
+    if pet_policy.get("cats") is False:
+        return None
 
-    # ── Address ───────────────────────────────────────────────────────────────
     location = r.get("location") or {}
     addr_obj = (location.get("address") or {})
     street = addr_obj.get("line", "") or ""
     city   = addr_obj.get("city", "Las Vegas") or "Las Vegas"
     state  = addr_obj.get("state_code", "NV") or "NV"
     postal = addr_obj.get("postal_code", "") or ""
-
     full_address = f"{street}, {city}, {state} {postal}".strip(", ")
 
-    # ── Photos ────────────────────────────────────────────────────────────────
-    def _upgrade_photo(href: str) -> str:
-        # rdcpix.com URLs end in {id}s.jpg (small thumbnail); strip the 's' for full size
-        if href.endswith("s.jpg"):
-            href = href[:-5] + ".jpg"
-        return href
+    # Use the search result's photo_count — thumbnails are NOT stored inline.
+    # Full-size photos are fetched via properties/detail and stored separately.
+    photo_count = int(r.get("photo_count") or 0)
 
-    photos: list[str] = []
-    for p in (r.get("photos") or []):
-        href = (p.get("href") or "").strip()
-        if href:
-            photos.append(_upgrade_photo(href))
-    if not photos:
-        primary = (r.get("primary_photo") or {}).get("href", "") or ""
-        if primary:
-            photos.append(_upgrade_photo(primary))
-
-    # ── Days on market ────────────────────────────────────────────────────────
     list_date = r.get("list_date") or ""
     try:
         listed_on = date.fromisoformat(list_date[:10])
@@ -149,14 +154,13 @@ def _extract_realty_listing(r: dict, today: str) -> dict | None:
     except (ValueError, TypeError):
         dom = 0
 
-    # ── IDs ───────────────────────────────────────────────────────────────────
     property_id = str(r.get("property_id") or r.get("listing_id") or "")
     if not property_id:
         return None
     zpid = f"realty_{property_id}"
 
     listing_url = r.get("href") or ""
-    if not listing_url.startswith("http") and listing_url:
+    if listing_url and not listing_url.startswith("http"):
         listing_url = f"https://www.realtor.com{listing_url}"
 
     return {
@@ -171,22 +175,19 @@ def _extract_realty_listing(r: dict, today: str) -> dict | None:
         "bedrooms": beds,
         "bathrooms": baths,
         "sqft": sqft,
-        "has_ac": True,        # Las Vegas: nearly universal, optimistic
+        "has_ac": True,
         "has_washer_dryer": True,
-        "cats_ok": cats_val is not False,
+        "cats_ok": pet_policy.get("cats") is not False,
         "days_on_market": dom,
         "first_seen_date": today,
         "last_confirmed_date": today,
         "available": True,
-        "photo_count": len(photos),
-        "photos": photos,
+        "photo_count": photo_count,
         "listing_url": listing_url,
         "description": str(desc.get("text", "") or ""),
         "source": "realtor",
     }
 
-
-# ── Mark-stale (Realty-only) ──────────────────────────────────────────────────
 
 def _mark_realty_stale(store: dict, seen_zpids: set) -> int:
     count = 0
@@ -205,21 +206,20 @@ def main() -> None:
     dedup = _build_dedup_index(store)
 
     seen_zpids: set[str] = set()
-    added = removed = api_calls = 0
+    added = removed = search_calls = detail_calls = 0
     errors: list[str] = []
+    first_detail_call = True
 
     print(f"=== Realty ETL — {today} ===\n")
 
     try:
-        raw_results, api_calls = search_rentals()
+        raw_results, search_calls = search_rentals()
     except Exception as exc:
         msg = f"Realty search failed: {exc}"
         print(f"  ERROR: {msg}", file=sys.stderr)
         errors.append(msg)
         raw_results = []
 
-    # Persist raw API response immediately — before any filtering or transformation.
-    # Re-runs can call load_latest_raw("realty") to reprocess without hitting the API.
     if raw_results:
         path = save_raw("realty", raw_results)
         print(f"  [raw] saved {len(raw_results)} results → {path}")
@@ -228,7 +228,7 @@ def main() -> None:
     for r in raw_results:
         t = str(((r.get("description") or {}).get("type") or "unknown")).lower()
         type_counts[t] = type_counts.get(t, 0) + 1
-    print(f"  [realty] type breakdown: {type_counts}")
+    print(f"  [realty] type breakdown: {type_counts}\n")
 
     skipped_dedup = skipped_filter = 0
 
@@ -239,42 +239,55 @@ def main() -> None:
             continue
 
         zpid = listing["zpid"]
-
-        # Dedup: skip if the same address is already tracked under a Zillow entry
         dedup_key = f"{_normalise_address(listing['address'])}|{listing['zipcode']}"
+
         existing_zpid = dedup.get(dedup_key)
         if existing_zpid and not existing_zpid.startswith("realty_"):
             skipped_dedup += 1
             continue
 
         seen_zpids.add(zpid)
+        is_new = not store.get(zpid)
 
-        if store.get(zpid):
+        if is_new:
+            upsert_listing(store, zpid, listing)
+            dedup[dedup_key] = zpid
+            added += 1
+            print(f"  + Added {listing['address']} — ${listing['rent']}/mo")
+        else:
             upsert_listing(store, zpid, {
                 "zpid": zpid,
                 "rent": listing["rent"],
                 "days_on_market": listing["days_on_market"],
                 "last_confirmed_date": today,
                 "photo_count": listing["photo_count"],
-                "photos": listing["photos"],
             })
             print(f"  ~ Re-confirmed {listing['address']}")
-        else:
-            upsert_listing(store, zpid, listing)
-            # Register in dedup index for intra-run collision avoidance
-            dedup[dedup_key] = zpid
-            added += 1
-            print(f"  + Added {listing['address']} — ${listing['rent']}/mo — {listing['photo_count']} photos")
+
+        # Fetch full-size photos via detail endpoint if not already stored
+        if not _photos_exist(zpid):
+            property_id = zpid[len("realty_"):]
+            try:
+                detail = get_listing_detail(property_id)
+                detail_calls += 1
+                photos = _extract_photos_from_detail(detail, zpid, first_detail_call)
+                first_detail_call = False
+                if photos:
+                    _save_photos(zpid, photos, today)
+                else:
+                    print(f"  [detail] no photos found for {zpid} — check response shape")
+            except Exception as exc:
+                msg = f"detail fetch failed for {zpid}: {exc}"
+                print(f"  [detail] ERROR: {msg}", file=sys.stderr)
+                errors.append(msg)
 
     removed = _mark_realty_stale(store, seen_zpids)
     save_store(store, LISTINGS_FILE)
 
-    print(f"\n  {skipped_filter} skipped (type/beds/rent filter)")
-    print(f"  {skipped_dedup} skipped (duplicate of Zillow entry)")
+    print(f"\n  {skipped_filter} skipped (filter)  {skipped_dedup} skipped (dedup)")
 
     total_active = sum(1 for l in store.values() if l.get("available"))
 
-    # Merge with any existing meta (Zillow run may have written it first)
     existing_meta: dict = {}
     if os.path.exists(META_FILE):
         with open(META_FILE) as f:
@@ -286,7 +299,8 @@ def main() -> None:
         "total_active": total_active,
         "realty_added_this_run": added,
         "realty_removed_this_run": removed,
-        "realty_api_calls_used": api_calls,
+        "realty_search_calls": search_calls,
+        "realty_detail_calls": detail_calls,
         "errors": (existing_meta.get("errors") or []) + errors,
     }
     os.makedirs(os.path.dirname(META_FILE), exist_ok=True)
@@ -295,7 +309,7 @@ def main() -> None:
 
     print(f"\n=== Done ===")
     print(f"  +{added} added  -{removed} removed  {total_active} total active")
-    print(f"  {api_calls} Realty API calls used this run")
+    print(f"  {search_calls} search call(s)  {detail_calls} detail call(s)")
     if errors:
         print(f"\n  {len(errors)} error(s) — see above", file=sys.stderr)
         if added == 0 and total_active == 0:

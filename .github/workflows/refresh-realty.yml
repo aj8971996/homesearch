@@ -47,7 +47,7 @@ jobs:
         run: |
           git config user.name  "homesearch-bot"
           git config user.email "bot@homesearch.local"
-          git add public/data/listings.json public/data/meta.json
+          git add public/data/listings.json public/data/meta.json public/data/photos/
           git diff --cached --quiet \
             && echo "No listing changes this run — nothing to commit." \
             || git commit -m "data: refresh listings (realtor) $(date -u +%Y-%m-%d)"

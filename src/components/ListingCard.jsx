@@ -1,92 +1,89 @@
-import PhotoCarousel from './PhotoCarousel'
+import PhotoViewer from './PhotoViewer'
 import DaysOnMarketPill from './DaysOnMarketPill'
 import PriceChangePill from './PriceChangePill'
 
 export default function ListingCard({ listing, lastRunDate }) {
   const {
-    address, zipcode, rent, rent_history,
+    zpid, address, zipcode, rent, rent_history,
     bedrooms, bathrooms, sqft,
     days_on_market, first_seen_date,
-    photos, photo_count, listing_url, source,
+    photo_count, listing_url, source,
   } = listing
 
   const SOURCE_LABELS = { zillow: 'Zillow', realtor: 'Realtor.com' }
   const sourceLabel = SOURCE_LABELS[source] ?? 'Listing'
 
-  const baths  = bathrooms % 1 ? bathrooms.toFixed(1) : String(bathrooms)
-  const isNew  = Boolean(lastRunDate && first_seen_date === lastRunDate)
+  const baths = bathrooms % 1 ? bathrooms.toFixed(1) : String(bathrooms)
+  const isNew = Boolean(lastRunDate && first_seen_date === lastRunDate)
 
   return (
     <div className="bg-pn-surface border border-pn-border rounded-xl overflow-hidden
       shadow-card hover:-translate-y-0.5 hover:shadow-card-hover transition-all duration-200">
 
-      {/* Photo carousel + pill overlay */}
-      <div className="relative">
-        <PhotoCarousel
-          photos={photos ?? []}
-          photoCount={photo_count ?? photos?.length ?? 0}
-          listingUrl={listing_url}
-          sourceLabel={sourceLabel}
-        />
-        <div className="absolute top-2 left-2 flex flex-col items-start gap-1.5 z-20">
-          <DaysOnMarketPill daysOnMarket={days_on_market ?? 0} isNew={isNew} />
-          <PriceChangePill rent={rent} rentHistory={rent_history} />
-        </div>
-      </div>
+      <div className="p-4 flex flex-col gap-3">
 
-      {/* Card body */}
-      <div className="p-4">
-        {/* Rent */}
-        <div className="mb-1">
-          <span className="text-3xl font-extrabold tracking-tight text-pn-txt">
-            ${rent.toLocaleString()}
-          </span>
-          <span className="text-sm text-pn-muted ml-1">/mo</span>
+        {/* Rent + status pills */}
+        <div className="flex items-start justify-between gap-2">
+          <div>
+            <span className="text-3xl font-extrabold tracking-tight text-pn-txt">
+              ${rent.toLocaleString()}
+            </span>
+            <span className="text-sm text-pn-muted ml-1">/mo</span>
+          </div>
+          <div className="flex flex-col items-end gap-1 pt-1">
+            <DaysOnMarketPill daysOnMarket={days_on_market ?? 0} isNew={isNew} />
+            <PriceChangePill rent={rent} rentHistory={rent_history} />
+          </div>
         </div>
 
         {/* Address */}
-        <p className="text-xs text-pn-sub mb-3 flex items-start gap-1">
+        <p className="text-xs text-pn-sub flex items-start gap-1">
           <span className="mt-0.5 flex-shrink-0">📍</span>
           <span>{address}</span>
         </p>
 
         {/* Stats row */}
-        <div className="flex items-center flex-wrap mb-3 text-xs text-pn-sub">
+        <div className="flex items-center flex-wrap text-xs text-pn-sub">
           <Stat val={bedrooms} label="bed" />
           <Sep />
           <Stat val={baths} label="bath" />
           <Sep />
-          <Stat val={sqft.toLocaleString()} label="sq ft" />
-          <Sep />
-          <Stat val={photo_count ?? photos?.length ?? 0} label="photos" />
+          <Stat val={sqft ? sqft.toLocaleString() : '—'} label="sq ft" />
         </div>
 
-        {/* Amenity badges — all listings shown have passed these checks */}
-        <div className="flex flex-wrap gap-1.5 mb-4">
+        {/* Amenity badges */}
+        <div className="flex flex-wrap gap-1.5">
           <Badge>❄️ AC</Badge>
           <Badge>🫧 W/D In Unit</Badge>
           <Badge>🐱 Cats OK</Badge>
         </div>
 
-        {/* Footer */}
-        <div className="flex items-center justify-between">
-          <span className="text-[11px] font-mono text-pn-muted border border-pn-border px-2 py-0.5 rounded">
-            {zipcode}
-          </span>
-          {listing_url ? (
-            <a
-              href={listing_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-1.5 rounded-pill bg-pn-accent text-white text-xs font-bold
-                hover:opacity-85 transition-opacity"
-            >
-              View on {sourceLabel} →
-            </a>
-          ) : (
-            <span className="text-xs text-pn-muted">No link</span>
-          )}
+        {/* Footer — photos button + listing link */}
+        <div className="flex items-center justify-between gap-2 pt-1">
+          <PhotoViewer
+            zpid={zpid}
+            photoCount={photo_count ?? 0}
+            listingUrl={listing_url}
+            sourceLabel={sourceLabel}
+          />
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] font-mono text-pn-muted border border-pn-border px-2 py-0.5 rounded">
+              {zipcode}
+            </span>
+            {listing_url && (
+              <a
+                href={listing_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-1.5 rounded-pill bg-pn-accent text-white text-xs font-bold
+                  hover:opacity-85 transition-opacity"
+              >
+                View on {sourceLabel} →
+              </a>
+            )}
+          </div>
         </div>
+
       </div>
     </div>
   )

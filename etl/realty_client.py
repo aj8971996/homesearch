@@ -9,6 +9,19 @@ _HEADERS = {
 }
 
 
+def get_listing_detail(property_id: str) -> dict:
+    resp = httpx.get(
+        f"{_BASE}/properties/detail",
+        headers=_HEADERS,
+        params={"property_id": property_id},
+        timeout=30,
+    )
+    if not resp.is_success:
+        print(f"  [detail] HTTP {resp.status_code} for {property_id} — {resp.text[:300]}")
+        resp.raise_for_status()
+    return resp.json()
+
+
 def search_rentals() -> tuple[list[dict], int]:
     """
     Fetch rentals from Realty US API.
