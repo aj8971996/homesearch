@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-06-13T16:53:55.388021+00:00",
-  "total_active": 17,
+  "last_updated": "2026-06-13T16:59:38.433479+00:00",
+  "total_active": 96,
   "added_this_run": 0,
   "removed_this_run": 0,
   "api_calls_used": 0,
-  "realty_added_this_run": 0,
+  "realty_added_this_run": 79,
   "realty_removed_this_run": 0,
   "realty_api_calls_used": 1,
   "errors": []
