@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-13T17:49:59.556730+00:00",
+  "last_updated": "2026-06-13T18:09:17.985794+00:00",
   "total_active": 96,
   "added_this_run": 0,
   "removed_this_run": 0,
@@ -9,5 +9,5 @@
   "realty_api_calls_used": 1,
   "errors": [],
   "realty_search_calls": 1,
-  "realty_detail_calls": 96
+  "realty_detail_calls": 0
 }
