@@ -1,0 +1,43 @@
+name: Refresh Listings
+
+on:
+  schedule:
+    # Every 3 days at 08:00 UTC (~3am PT). Keeps us around 80 API calls/month
+    # against the 100/month free tier cap, leaving 20 calls of headroom.
+    - cron: '0 8 */3 * *'
+  workflow_dispatch: # allow manual trigger for testing / validation
+
+jobs:
+  etl:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # needed to commit updated JSON back to the repo
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: etl/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r etl/requirements.txt
+
+      - name: Run ETL scraper
+        env:
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+        run: python etl/scrape.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "homesearch-bot"
+          git config user.email "bot@homesearch.local"
+          git add public/data/listings.json public/data/meta.json
+          git diff --cached --quiet \
+            && echo "No listing changes this run — nothing to commit." \
+            || git commit -m "data: refresh listings $(date -u +%Y-%m-%d)"
+          git push
