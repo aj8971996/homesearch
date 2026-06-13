@@ -38,7 +38,7 @@ def search_rentals() -> tuple[list[dict], int]:
             headers=_HEADERS,
             params={
                 **_BOUNDS,
-                "listType": "for-rent",
+                "listType": "for_rent",
                 "page":     page,
             },
             timeout=30,

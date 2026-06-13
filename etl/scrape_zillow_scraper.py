@@ -70,6 +70,11 @@ def _extract_listing(raw: dict, today: str) -> dict | None:
       - property_type: "APARTMENT" for multi-family; "SINGLE_FAMILY" etc for houses
       - latitude/longitude: present — used for area filtering since zip is absent
     """
+    # ── Status guard — skip FOR_SALE results if the listType param is ignored ──
+    status = str(raw.get("status") or "").upper()
+    if status and "RENT" not in status:
+        return None  # silent — not a rental listing
+
     # ── Home type — reject non-house types before anything else ───────────────
     raw_type = str(raw.get("property_type") or raw.get("homeType") or "").upper()
     _EXCLUDED_TYPES = ("APARTMENT", "CONDO", "MULTI", "MANUFACTURED", "LOT", "LAND")
