@@ -31,7 +31,10 @@ TARGET_ZIPS = {"89134", "89144", "89145", "89128", "89138", "89135"}
 MIN_BEDS    = 3
 MIN_BATHS   = 2.0
 MIN_SQFT    = 1300
-MAX_RENT    = 2500
+# Slightly above the $2500 hard cap used by primary ETLs: rent_zestimate is an
+# estimate, not an asking price, so a small buffer avoids discarding properties
+# that would actually list at or under $2500.
+MAX_RENT    = 2800
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────

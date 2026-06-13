@@ -17,9 +17,9 @@ _GET_PATH  = "/v1/results"
 # Jobs submitted with "for_rent" never complete — the API appears to only
 # support for-sale listings. We fetch sale data and filter by rent_zestimate
 # (the API's estimated monthly rent for each property) instead of list price.
-_SEARCH    = "Las Vegas, NV"
+_SEARCH    = "Summerlin Las Vegas NV"  # targets our 6 zip codes (89128/34/35/38/44/45)
 _TYPE      = "sale"
-_MAX_ITEMS = 25       # start conservative; docs example uses 5
+_MAX_ITEMS = 50
 
 _POLL_INTERVAL = 10   # seconds between GET polls
 _POLL_TIMEOUT  = 300  # max seconds to wait for job completion
