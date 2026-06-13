@@ -1,8 +1,7 @@
 import os
 import httpx
 
-# Verify this host from the RapidAPI "Code Snippets" tab for DataCrawler/us-realtor
-_HOST = "us-realtor.p.rapidapi.com"
+_HOST = "realty-us.p.rapidapi.com"
 _BASE = f"https://{_HOST}"
 _HEADERS = {
     "x-rapidapi-host": _HOST,
