@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
 
     steps:
       - name: Checkout repo
@@ -50,3 +51,11 @@ jobs:
             && echo "No listing changes this run — nothing to commit." \
             || git commit -m "data: refresh listings (zillow) $(date -u +%Y-%m-%d)"
           git push
+
+      - name: Trigger Pages rebuild
+        run: |
+          curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-pages.yml/dispatches \
+            -d '{"ref":"main"}'
