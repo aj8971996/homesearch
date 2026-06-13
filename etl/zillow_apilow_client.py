@@ -19,7 +19,7 @@ _GET_PATH  = "/v1/results"
 # (the API's estimated monthly rent for each property) instead of list price.
 _SEARCH    = "Summerlin Las Vegas NV"  # targets our 6 zip codes (89128/34/35/38/44/45)
 _TYPE      = "sale"
-_MAX_ITEMS = 50
+_MAX_ITEMS = 100
 
 _POLL_INTERVAL = 10   # seconds between GET polls
 _POLL_TIMEOUT  = 300  # max seconds to wait for job completion

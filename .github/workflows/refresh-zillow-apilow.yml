@@ -2,10 +2,9 @@ name: Refresh Listings — Zillow Backup (APIllow)
 
 on:
   schedule:
-    # Every 3 days at 10:00 UTC — 2 hours after primary Zillow (08:00) and 1 hour after
-    # Realtor (09:00) to avoid concurrent git pushes.
-    # ~10 runs/month × 2 calls/run = ~20 of 50 monthly API calls.
-    - cron: '0 10 */3 * *'
+    # 1st of each month at 10:00 UTC. With ~10 calls/run (100 items), one scheduled
+    # run uses ~10 of the 50 monthly calls, leaving ~40 for manual re-triggers.
+    - cron: '0 10 1 * *'
   workflow_dispatch:
 
 jobs:
