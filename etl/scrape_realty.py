@@ -71,12 +71,13 @@ def _extract_realty_listing(r: dict, today: str) -> dict | None:
     # ── Property type ──────────────────────────────────────────────────────────
     desc = r.get("description") or {}
     raw_type = str(desc.get("type", "") or "").lower()
-    if "single_family" in raw_type or "single family" in raw_type:
+    if "single_family" in raw_type or "single family" in raw_type or raw_type == "home":
         home_type = "HOUSE"
     elif "town" in raw_type:
         home_type = "TOWNHOUSE"
     else:
-        return None  # apartment, condo, etc.
+        print(f"  [skip] unrecognised type={raw_type!r} — {r.get('property_id')} {((r.get('location') or {}).get('address') or {}).get('line','')}")
+        return None
 
     # ── Beds / baths / sqft ───────────────────────────────────────────────────
     beds = desc.get("beds") or desc.get("beds_min") or 0
@@ -126,15 +127,21 @@ def _extract_realty_listing(r: dict, today: str) -> dict | None:
     full_address = f"{street}, {city}, {state} {postal}".strip(", ")
 
     # ── Photos ────────────────────────────────────────────────────────────────
+    def _upgrade_photo(href: str) -> str:
+        # rdcpix.com URLs end in {id}s.jpg (small thumbnail); strip the 's' for full size
+        if href.endswith("s.jpg"):
+            href = href[:-5] + ".jpg"
+        return href
+
     photos: list[str] = []
     for p in (r.get("photos") or []):
         href = (p.get("href") or "").strip()
         if href:
-            photos.append(href)
+            photos.append(_upgrade_photo(href))
     if not photos:
         primary = (r.get("primary_photo") or {}).get("href", "") or ""
         if primary:
-            photos.append(primary)
+            photos.append(_upgrade_photo(primary))
 
     # ── Days on market ────────────────────────────────────────────────────────
     list_date = r.get("list_date") or ""
@@ -225,6 +232,11 @@ def main() -> None:
         if ((r.get("location") or {}).get("address") or {}).get("postal_code", "") in TARGET_ZIPS
     ]
     print(f"  [realty] {len(in_target)} in target zips (of {len(raw_results)} total)")
+    type_counts: dict[str, int] = {}
+    for r in in_target:
+        t = str(((r.get("description") or {}).get("type") or "unknown")).lower()
+        type_counts[t] = type_counts.get(t, 0) + 1
+    print(f"  [realty] type breakdown in target zips: {type_counts}")
 
     skipped_dedup = skipped_filter = 0
 
