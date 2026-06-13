@@ -31,6 +31,8 @@ ROOT = os.path.join(os.path.dirname(__file__), "..")
 LISTINGS_FILE = os.path.join(ROOT, "public", "data", "listings.json")
 META_FILE = os.path.join(ROOT, "public", "data", "meta.json")
 
+TARGET_ZIPS = {"89134", "89144", "89145", "89128", "89138", "89135"}
+
 # Minimum sqft — skip only when sqft is known AND below threshold (optimistic on missing)
 MIN_SQFT = 1300
 MAX_RENT = 2500
@@ -211,14 +213,22 @@ def main() -> None:
         errors.append(msg)
         raw_results = []
 
-    # Persist raw data for later inspection / offline reprocessing
+    # Persist raw API response immediately — before any filtering or transformation.
+    # Re-runs can call load_latest_raw("realty") to reprocess without hitting the API.
     if raw_results:
         path = save_raw("realty", raw_results)
         print(f"  [raw] saved {len(raw_results)} results → {path}")
 
+    # Zip filter is the first transformation step (after raw save)
+    in_target = [
+        r for r in raw_results
+        if ((r.get("location") or {}).get("address") or {}).get("postal_code", "") in TARGET_ZIPS
+    ]
+    print(f"  [realty] {len(in_target)} in target zips (of {len(raw_results)} total)")
+
     skipped_dedup = skipped_filter = 0
 
-    for r in raw_results:
+    for r in in_target:
         listing = _extract_realty_listing(r, today)
         if listing is None:
             skipped_filter += 1
