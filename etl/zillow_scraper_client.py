@@ -50,10 +50,9 @@ def search_rentals() -> tuple[list[dict], int]:
 
             data = resp.json()
 
+            pagination = data.get("pagination") or {}
             if page == 1:
-                pagination = data.get("pagination") or {}
-                if pagination:
-                    print(f"  [scraper] pagination: {pagination}")
+                print(f"  [scraper] pagination: {pagination}")
 
             results = data.get("results") or []
             print(f"  [scraper] page {page} — {len(results)} results")
@@ -63,8 +62,8 @@ def search_rentals() -> tuple[list[dict], int]:
 
             all_results.extend(results)
 
-            pagination = data.get("pagination") or {}
-            if not pagination.get("has_next", False):
+            total_pages = int(pagination.get("total_pages") or 0)
+            if not pagination.get("has_next", False) or (total_pages and page >= total_pages):
                 break
 
     print(f"\n  [scraper] {len(all_results)} total results across {api_calls} call(s)")
