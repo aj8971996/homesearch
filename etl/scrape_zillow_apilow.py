@@ -1,9 +1,13 @@
 """
 Zillow Property Data (APIllow) ETL — backup source for Zillow rental listings.
 
-Triggers a batch search job via POST /v1/properties, then polls GET /v1/properties
-until the job completes. Each run costs at least 2 API calls (1 POST + 1 GET).
-50 calls/month limit → budget for ~25 runs; scheduled every 3 days (~10 runs = 20 calls).
+The API only supports type='sale', so we fetch for-sale listings and use each
+property's rent_zestimate (Zillow's estimated monthly rent) as the rent value.
+This surfaces homes in our target area that are rentable within budget, which
+is complementary to the active rental listings from the primary Zillow ETL.
+
+Each run costs at least 2 API calls (1 POST + polling GETs).
+50 calls/month limit. Scheduled every 3 days (~10 runs = ~30 calls/month).
 
 Run manually:
   RAPIDAPI_KEY_APILOW=<key> python etl/scrape_zillow_apilow.py
@@ -69,13 +73,16 @@ def _extract_listing(prop: dict, today: str) -> dict | None:
         return None
 
     # ── Numeric fields ────────────────────────────────────────────────────────
-    beds  = int(prop.get("bedrooms")    or 0)
-    baths = float(prop.get("bathrooms") or 0)
-    sqft  = int(prop.get("living_area") or 0)
-    rent  = int(prop.get("price")       or 0)
+    beds  = int(prop.get("bedrooms")       or 0)
+    baths = float(prop.get("bathrooms")    or 0)
+    sqft  = int(prop.get("living_area")    or 0)
+    # API only exposes for-sale listings; use rent_zestimate as the monthly rent.
+    # rent_zestimate is Zillow's model-estimated monthly rental value for the property.
+    rent  = int(prop.get("rent_zestimate") or 0)
 
     print(f"  [debug] candidate: zpid={zpid_raw!r} zip={zipcode!r} "
-          f"beds={beds} baths={baths} sqft={sqft} rent=${rent} "
+          f"beds={beds} baths={baths} sqft={sqft} rent_zestimate=${rent} "
+          f"sale_price=${prop.get('price', 0)} "
           f"addr={prop.get('street_address', '')!r}")
 
     if beds < MIN_BEDS:
@@ -85,7 +92,7 @@ def _extract_listing(prop: dict, today: str) -> dict | None:
         print(f"    [skip] baths={baths} < {MIN_BATHS}")
         return None
     if rent == 0 or rent > MAX_RENT:
-        print(f"    [skip] rent=${rent} (max ${MAX_RENT})")
+        print(f"    [skip] rent_zestimate=${rent} (max ${MAX_RENT})")
         return None
     if sqft > 0 and sqft < MIN_SQFT:
         print(f"    [skip] sqft={sqft} < {MIN_SQFT}")
@@ -206,7 +213,7 @@ def main() -> None:
         print(f"  [debug] first property top-level keys: {list(p0.keys())}")
         print(f"  [debug] sample field values:")
         for k in ("zpid", "street_address", "city", "state", "zipcode",
-                  "price", "bedrooms", "bathrooms", "living_area",
+                  "price", "rent_zestimate", "bedrooms", "bathrooms", "living_area",
                   "property_type", "home_status", "days_on_zillow", "url"):
             print(f"    {k}: {p0.get(k)!r}")
         image_urls = p0.get("image_urls") or []

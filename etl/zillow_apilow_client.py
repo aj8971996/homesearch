@@ -13,15 +13,16 @@ _BASE_HEADERS = {
 _POST_PATH = "/v1/properties"
 _GET_PATH  = "/v1/results"
 
-# "for_rent" matches Zillow's for-rent section.
-# If the API returns 0 results, verify the correct type value
-# (alternatives to try: "rent", "rental", "for-rent").
+# "sale" is the only confirmed valid type from the API docs.
+# Jobs submitted with "for_rent" never complete — the API appears to only
+# support for-sale listings. We fetch sale data and filter by rent_zestimate
+# (the API's estimated monthly rent for each property) instead of list price.
 _SEARCH    = "Las Vegas, NV"
-_TYPE      = "for_rent"
-_MAX_ITEMS = 100
+_TYPE      = "sale"
+_MAX_ITEMS = 25       # start conservative; docs example uses 5
 
-_POLL_INTERVAL = 5    # seconds between GET polls
-_POLL_TIMEOUT  = 120  # max seconds to wait for job completion
+_POLL_INTERVAL = 10   # seconds between GET polls
+_POLL_TIMEOUT  = 300  # max seconds to wait for job completion
 
 
 def _submit_job() -> tuple[str, list[dict]]:
