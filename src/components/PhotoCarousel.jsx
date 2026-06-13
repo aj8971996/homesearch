@@ -1,5 +1,9 @@
 import { useState } from 'react'
 
+function normalizeUrl(url) {
+  return url ? url.replace(/^http:\/\//, 'https://') : url
+}
+
 export default function PhotoCarousel({ photos = [], photoCount = 0 }) {
   const [idx, setIdx]       = useState(0)
   const [errors, setErrors] = useState({})
@@ -33,10 +37,17 @@ export default function PhotoCarousel({ photos = [], photoCount = 0 }) {
             <Placeholder num={i + 1} total={photoCount || n} />
           ) : (
             <img
-              src={url}
+              src={normalizeUrl(url)}
               alt={`Photo ${i + 1} of ${photoCount || n}`}
               className="w-full h-full object-cover"
-              onError={() => markError(i)}
+              onError={(e) => {
+                const src = e.target.src
+                if (!src.endsWith('s.jpg') && src.endsWith('.jpg')) {
+                  e.target.src = src.slice(0, -4) + 's.jpg'
+                } else {
+                  markError(i)
+                }
+              }}
             />
           )}
         </div>
