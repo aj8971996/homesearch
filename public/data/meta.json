@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-13T18:09:17.985794+00:00",
+  "last_updated": "2026-06-13T19:16:27.213305+00:00",
   "total_active": 96,
   "added_this_run": 0,
   "removed_this_run": 0,
@@ -7,7 +7,12 @@
   "realty_added_this_run": 0,
   "realty_removed_this_run": 0,
   "realty_api_calls_used": 1,
-  "errors": [],
+  "errors": [
+    "APIllow fetch failed: Client error '404 Not Found' for url 'https://zillow-property-data1.p.rapidapi.com/v1/properties?job_id=89157a42-58f5-476d-8f85-9e162799194d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+  ],
   "realty_search_calls": 1,
-  "realty_detail_calls": 0
+  "realty_detail_calls": 0,
+  "apilow_added_this_run": 0,
+  "apilow_removed_this_run": 0,
+  "apilow_api_calls": 0
 }
