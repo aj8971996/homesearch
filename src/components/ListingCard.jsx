@@ -22,7 +22,12 @@ export default function ListingCard({ listing, lastRunDate }) {
 
       {/* Photo carousel + pill overlay */}
       <div className="relative">
-        <PhotoCarousel photos={photos ?? []} photoCount={photo_count ?? photos?.length ?? 0} />
+        <PhotoCarousel
+          photos={photos ?? []}
+          photoCount={photo_count ?? photos?.length ?? 0}
+          listingUrl={listing_url}
+          sourceLabel={sourceLabel}
+        />
         <div className="absolute top-2 left-2 flex flex-col items-start gap-1.5 z-20">
           <DaysOnMarketPill daysOnMarket={days_on_market ?? 0} isNew={isNew} />
           <PriceChangePill rent={rent} rentHistory={rent_history} />

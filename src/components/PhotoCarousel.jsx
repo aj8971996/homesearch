@@ -1,47 +1,39 @@
 import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 
-// rdcpix.com CDN: stored URLs end in .jpg (unsized, may 404).
-// Thumbnail: force s.jpg (confirmed working small size).
-// Full-size: try x.jpg (extra large) then s.jpg fallback.
 function thumbUrl(url) {
   if (!url) return url
   const u = url.replace(/^http:\/\//, 'https://')
+  // Ensure we always use the confirmed-working s.jpg thumbnail
   return u.endsWith('s.jpg') ? u : u.replace(/\.jpg$/, 's.jpg')
 }
 
-function fullUrl(url) {
-  if (!url) return url
-  const u = url.replace(/^http:\/\//, 'https://')
-  return u.endsWith('x.jpg') ? u : u.replace(/\.jpg$/, 'x.jpg')
-}
+export default function PhotoCarousel({ photos = [], photoCount = 0, listingUrl = '', sourceLabel = 'Listing' }) {
+  const [lightboxIdx, setLightboxIdx] = useState(null)
 
-function fullFallback(src) {
-  if (src.endsWith('x.jpg')) return src.replace(/x\.jpg$/, 's.jpg')
-  return null
-}
-
-export default function PhotoCarousel({ photos = [], photoCount = 0 }) {
-  const [lightboxIdx, setLightboxIdx] = useState(null) // null = closed
-  const [lbErrors, setLbErrors]       = useState({})
-
-  const n         = photos.length
-  const total     = photoCount || n
-  const isOpen    = lightboxIdx !== null
+  const n     = photos.length
+  const total = photoCount || n
+  const isOpen = lightboxIdx !== null
 
   const lbPrev = (e) => { e?.stopPropagation(); setLightboxIdx(i => (i - 1 + n) % n) }
   const lbNext = (e) => { e?.stopPropagation(); setLightboxIdx(i => (i + 1) % n) }
-  const close  = ()  => { setLightboxIdx(null); setLbErrors({}) }
+  const close  = () => setLightboxIdx(null)
 
+  // Lock body scroll and handle keyboard while lightbox is open
   useEffect(() => {
     if (!isOpen) return
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
     const onKey = (e) => {
-      if (e.key === 'Escape')     close()
-      if (e.key === 'ArrowLeft')  setLightboxIdx(i => (i - 1 + n) % n)
-      if (e.key === 'ArrowRight') setLightboxIdx(i => (i + 1) % n)
+      if (e.key === 'Escape')     { e.preventDefault(); close() }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); setLightboxIdx(i => (i - 1 + n) % n) }
+      if (e.key === 'ArrowRight') { e.preventDefault(); setLightboxIdx(i => (i + 1) % n) }
     }
     window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = prev
+      window.removeEventListener('keydown', onKey)
+    }
   }, [isOpen, n])
 
   if (n === 0) {
@@ -66,16 +58,12 @@ export default function PhotoCarousel({ photos = [], photoCount = 0 }) {
           className="w-full h-full object-cover"
           onError={(e) => { e.target.style.display = 'none' }}
         />
-
-        {/* Photo count badge */}
         {total > 1 && (
           <span className="absolute bottom-2 right-2 bg-black/55 backdrop-blur-sm
             text-white text-[11px] font-medium px-2.5 py-1 rounded-full pointer-events-none">
             📷 {total} photos
           </span>
         )}
-
-        {/* Expand hint */}
         <span className="absolute top-2 right-2 bg-black/40 backdrop-blur-sm
           text-white text-[10px] px-2 py-0.5 rounded-full pointer-events-none">
           click to expand
@@ -85,73 +73,80 @@ export default function PhotoCarousel({ photos = [], photoCount = 0 }) {
       {/* ── Lightbox portal ── */}
       {isOpen && createPortal(
         <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+          className="fixed inset-0 z-[9999] bg-black flex flex-col"
           onClick={close}
         >
-          {/* Close */}
-          <button
-            onClick={close}
-            className="absolute top-4 right-5 text-white/70 hover:text-white text-4xl leading-none z-10"
+          {/* Header bar */}
+          <div
+            className="flex items-center justify-between px-5 py-3 shrink-0"
+            onClick={e => e.stopPropagation()}
           >
-            ×
-          </button>
+            <span className="text-white/50 text-sm tabular-nums select-none">
+              {lightboxIdx + 1} / {n}
+            </span>
+            {listingUrl && (
+              <a
+                href={listingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white text-xs underline underline-offset-2"
+                onClick={e => e.stopPropagation()}
+              >
+                View full quality on {sourceLabel} ↗
+              </a>
+            )}
+            <button
+              onClick={close}
+              className="text-white/70 hover:text-white text-3xl leading-none w-10 h-10
+                flex items-center justify-center"
+            >
+              ×
+            </button>
+          </div>
 
-          {/* Counter */}
-          <span className="absolute top-5 left-1/2 -translate-x-1/2 text-white/50 text-sm tabular-nums select-none">
-            {lightboxIdx + 1} / {n}
-          </span>
+          {/* Image area */}
+          <div className="flex-1 flex items-center justify-center relative min-h-0">
+            <img
+              key={lightboxIdx}
+              src={thumbUrl(photos[lightboxIdx])}
+              alt={`Photo ${lightboxIdx + 1} of ${n}`}
+              className="max-h-full max-w-full object-contain"
+              onClick={e => e.stopPropagation()}
+              onError={(e) => { e.target.style.opacity = '0.2' }}
+            />
 
-          {/* Full-size image — tries x.jpg then falls back to s.jpg */}
-          <div className="flex items-center justify-center max-h-[90vh] max-w-[90vw]" onClick={e => e.stopPropagation()}>
-            {lbErrors[lightboxIdx] ? (
-              <span className="text-white/40 text-sm">Image unavailable</span>
-            ) : (
-              <img
-                key={lightboxIdx}
-                src={fullUrl(photos[lightboxIdx])}
-                alt={`Photo ${lightboxIdx + 1} of ${n}`}
-                className="max-h-[90vh] max-w-[90vw] object-contain rounded shadow-2xl"
-                onError={(e) => {
-                  const fallback = fullFallback(e.target.src)
-                  if (fallback) {
-                    e.target.src = fallback
-                  } else {
-                    setLbErrors(prev => ({ ...prev, [lightboxIdx]: true }))
-                  }
-                }}
-              />
+            {n > 1 && (
+              <>
+                <button
+                  onClick={lbPrev}
+                  className="absolute left-4 w-12 h-12 rounded-full bg-white/10
+                    hover:bg-white/25 text-white text-3xl flex items-center
+                    justify-center transition-colors"
+                >
+                  ‹
+                </button>
+                <button
+                  onClick={lbNext}
+                  className="absolute right-4 w-12 h-12 rounded-full bg-white/10
+                    hover:bg-white/25 text-white text-3xl flex items-center
+                    justify-center transition-colors"
+                >
+                  ›
+                </button>
+              </>
             )}
           </div>
 
-          {/* Prev / Next */}
-          {n > 1 && (
-            <>
-              <button
-                onClick={lbPrev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
-                  bg-white/10 hover:bg-white/25 text-white text-3xl flex items-center
-                  justify-center transition-colors"
-              >
-                ‹
-              </button>
-              <button
-                onClick={lbNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full
-                  bg-white/10 hover:bg-white/25 text-white text-3xl flex items-center
-                  justify-center transition-colors"
-              >
-                ›
-              </button>
-            </>
-          )}
-
-          {/* Dot strip for quick jumping */}
+          {/* Dot strip */}
           {n > 1 && n <= 30 && (
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
+            <div
+              className="flex gap-1.5 justify-center py-3 shrink-0"
+              onClick={e => e.stopPropagation()}
+            >
               {photos.map((_, i) => (
                 <button
                   key={i}
-                  onClick={(e) => { e.stopPropagation(); setLightboxIdx(i) }}
+                  onClick={() => setLightboxIdx(i)}
                   className={`w-1.5 h-1.5 rounded-full transition-all
                     ${i === lightboxIdx ? 'bg-white scale-125' : 'bg-white/30 hover:bg-white/60'}`}
                 />
