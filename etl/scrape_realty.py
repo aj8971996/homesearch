@@ -226,6 +226,12 @@ def main() -> None:
     ]
     print(f"  [realty] {len(in_target)} in target zips (of {len(raw_results)} total)")
 
+    # Debug: print first result's raw structure so we can verify field names match parser
+    if in_target:
+        import json as _json
+        print(f"  [debug] sample result keys: {list(in_target[0].keys())}")
+        print(f"  [debug] sample result:\n{_json.dumps(in_target[0], indent=2, default=str)}")
+
     skipped_dedup = skipped_filter = 0
 
     for r in in_target:
