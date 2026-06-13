@@ -35,11 +35,11 @@ jobs:
           fi
           echo "API key is present (length: ${#RAPIDAPI_KEY})"
         env:
-          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY_REALTOR }}
 
       - name: Run Realtor.com ETL
         env:
-          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY_REALTOR }}
         run: python etl/scrape_realty.py
 
       - name: Commit updated data
