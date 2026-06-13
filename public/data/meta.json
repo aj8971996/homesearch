@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-13T19:34:12.482401+00:00",
-  "total_active": 96,
+  "last_updated": "2026-06-13T19:42:29.654795+00:00",
+  "total_active": 110,
   "added_this_run": 0,
   "removed_this_run": 0,
   "api_calls_used": 0,
@@ -14,7 +14,7 @@
   ],
   "realty_search_calls": 1,
   "realty_detail_calls": 0,
-  "apilow_added_this_run": 0,
+  "apilow_added_this_run": 14,
   "apilow_removed_this_run": 0,
-  "apilow_api_calls": 6
+  "apilow_api_calls": 15
 }
