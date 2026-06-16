@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-16T13:23:15.759021+00:00",
+  "last_updated": "2026-06-16T16:00:11.562639+00:00",
   "total_active": 107,
   "added_this_run": 0,
   "removed_this_run": 0,
@@ -10,7 +10,8 @@
   "errors": [
     "APIllow fetch failed: Client error '404 Not Found' for url 'https://zillow-property-data1.p.rapidapi.com/v1/properties?job_id=89157a42-58f5-476d-8f85-9e162799194d'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
     "APIllow fetch failed: Client error '404 Not Found' for url 'https://zillow-property-data1.p.rapidapi.com/v1/batch-results?job_id=dad614ef-2d75-4293-9c19-aff7acc205a0'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
-    "APIllow fetch failed: APIllow job '52f3a7f9-6d6f-47b4-9c63-31434e85e080' did not complete within 120s"
+    "APIllow fetch failed: APIllow job '52f3a7f9-6d6f-47b4-9c63-31434e85e080' did not complete within 120s",
+    "Zillow scraper fetch failed: Client error '429 Too Many Requests' for url 'https://zillow-com-live-data-scraper-api.p.rapidapi.com/agentForRentProperties?url=https%3A%2F%2Fwww.zillow.com%2Fprofile%2FEhren%2520Alessi%2520CEO&page=2'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
   ],
   "realty_search_calls": 1,
   "realty_detail_calls": 0,
@@ -19,5 +20,5 @@
   "apilow_api_calls": 15,
   "zillow_scraper_added": 0,
   "zillow_scraper_removed": 0,
-  "zillow_scraper_api_calls": 4
+  "zillow_scraper_api_calls": 0
 }
