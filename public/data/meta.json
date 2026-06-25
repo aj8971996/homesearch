@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-22T15:57:28.998278+00:00",
+  "last_updated": "2026-06-25T13:22:36.038839+00:00",
   "total_active": 107,
   "added_this_run": 0,
   "removed_this_run": 0,
@@ -12,6 +12,7 @@
     "APIllow fetch failed: Client error '404 Not Found' for url 'https://zillow-property-data1.p.rapidapi.com/v1/batch-results?job_id=dad614ef-2d75-4293-9c19-aff7acc205a0'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
     "APIllow fetch failed: APIllow job '52f3a7f9-6d6f-47b4-9c63-31434e85e080' did not complete within 120s",
     "Zillow scraper fetch failed: Client error '429 Too Many Requests' for url 'https://zillow-com-live-data-scraper-api.p.rapidapi.com/agentForRentProperties?url=https%3A%2F%2Fwww.zillow.com%2Fprofile%2FEhren%2520Alessi%2520CEO&page=2'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
+    "Zillow scraper fetch failed: Client error '429 Too Many Requests' for url 'https://zillow-com-live-data-scraper-api.p.rapidapi.com/agentForRentProperties?url=https%3A%2F%2Fwww.zillow.com%2Fprofile%2FEhren%2520Alessi%2520CEO&page=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
     "Zillow scraper fetch failed: Client error '429 Too Many Requests' for url 'https://zillow-com-live-data-scraper-api.p.rapidapi.com/agentForRentProperties?url=https%3A%2F%2Fwww.zillow.com%2Fprofile%2FEhren%2520Alessi%2520CEO&page=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429",
     "Zillow scraper fetch failed: Client error '429 Too Many Requests' for url 'https://zillow-com-live-data-scraper-api.p.rapidapi.com/agentForRentProperties?url=https%3A%2F%2Fwww.zillow.com%2Fprofile%2FEhren%2520Alessi%2520CEO&page=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
   ],
