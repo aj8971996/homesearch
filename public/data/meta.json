@@ -1,8 +1,13 @@
 {
-  "last_updated": "2026-08-10T09:40:00.027998+00:00",
+  "last_updated": "2026-08-10T11:50:38.610323+00:00",
   "total_active": 246,
   "added_this_run": 34,
   "removed_this_run": 89,
   "api_calls_used": 6,
-  "errors": []
+  "errors": [
+    "Zillow scraper fetch failed: Client error '429 Too Many Requests' for url 'https://zillow-com-live-data-scraper-api.p.rapidapi.com/agentForRentProperties?url=https%3A%2F%2Fwww.zillow.com%2Fprofile%2FEhren%2520Alessi%2520CEO&page=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+  ],
+  "zillow_scraper_added": 0,
+  "zillow_scraper_removed": 0,
+  "zillow_scraper_api_calls": 0
 }
