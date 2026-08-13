@@ -5553,9 +5553,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 79,
+      "days_on_market": 82,
       "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -5580,9 +5580,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 219,
+      "days_on_market": 222,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -5671,9 +5671,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 150,
+      "days_on_market": 153,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -5701,7 +5701,7 @@
       "days_on_market": 193,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/45c5245df544ed2ee58ebad747f92a08-p_e.jpg"
@@ -5734,33 +5734,6 @@
         "https://photos.zillowstatic.com/fp/74afb2e22e823bd495be938f4f773bb5-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/9021-Faircrest-Dr-Las-Vegas-NV-89134/6939637_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "6966236",
-      "address": "1104 Dusty Creek St, Las Vegas, NV 89128",
-      "zipcode": "89128",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "TOWNHOUSE",
-      "rent": 289000,
-      "rent_history": [],
-      "bedrooms": 3,
-      "bathrooms": 3.0,
-      "sqft": 1320,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 46,
-      "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/abb5eb4b40ffc93ae7d54faecc18c1ea-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/1104-Dusty-Creek-St-Las-Vegas-NV-89128/6966236_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -5815,6 +5788,65 @@
         "https://photos.zillowstatic.com/fp/35257e7b7147e9f0042a9fd8c42f609e-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/8601-Willowrich-Dr-Las-Vegas-NV-89134/6941168_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6966236",
+      "address": "1104 Dusty Creek St, Las Vegas, NV 89128",
+      "zipcode": "89128",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "TOWNHOUSE",
+      "rent": 299000,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 289000
+        }
+      ],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 1320,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 49,
+      "first_seen_date": "2026-07-16",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/abb5eb4b40ffc93ae7d54faecc18c1ea-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/1104-Dusty-Creek-St-Las-Vegas-NV-89128/6966236_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6941235",
+      "address": "2716 Showcase Dr, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "TOWNHOUSE",
+      "rent": 299000,
+      "rent_history": [],
+      "bedrooms": 2,
+      "bathrooms": 2.0,
+      "sqft": 1179,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 1,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/9b7663f75fbb034a7df2156eaea5c0c4-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/2716-Showcase-Dr-Las-Vegas-NV-89134/6941235_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -5892,9 +5924,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 54,
+      "days_on_market": 57,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -5946,9 +5978,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 2,
+      "days_on_market": 5,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -6059,15 +6091,42 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 9,
+      "days_on_market": 12,
       "first_seen_date": "2026-08-01",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/dce4280c2aca01c9818a2d5961c5a47f-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/8612-Prairie-Hill-Dr-Las-Vegas-NV-89134/6946951_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6966292",
+      "address": "8201 Midnight Star Ct, Las Vegas, NV 89145",
+      "zipcode": "89145",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "TOWNHOUSE",
+      "rent": 320000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 1534,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://maps.googleapis.com/maps/api/staticmap?mobile=false&sensor=true&maptype=satellite&size=575x242&zoom=17&center=36.176841735839844,-115.27362060546875&key=AIzaSyBWYJWCA8FNMQvSe_k3LKfDGJaEgdKwsco&signature=7W1dr7yFaBe0pbT7EWQJffZIq10="
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/8201-Midnight-Star-Ct-Las-Vegas-NV-89145/6966292_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -6203,6 +6262,33 @@
         "https://maps.googleapis.com/maps/api/staticmap?mobile=false&sensor=true&maptype=satellite&size=575x242&zoom=17&center=36.213134765625,-115.32292938232422&key=AIzaSyBWYJWCA8FNMQvSe_k3LKfDGJaEgdKwsco&signature=C1CKFVe0PZ655Qi_NlAULWX1Gps="
       ],
       "listing_url": "https://www.zillow.com/homedetails/10413-Junction-Hill-Dr-Las-Vegas-NV-89134/6907678_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6970874",
+      "address": "205 Moose Ln, Las Vegas, NV 89145",
+      "zipcode": "89145",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 349000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 1646,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 1,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/0d355c6fb027cbe223ce76ff7ea549c4-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/205-Moose-Ln-Las-Vegas-NV-89145/6970874_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -6415,10 +6501,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 178,
+      "days_on_market": 184,
       "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/692e2bddd27326f6094198e990a4db98-p_e.jpg"
@@ -6486,7 +6572,7 @@
       "days_on_market": 115,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/77c606b4efbaef9c0a02041472045f24-p_e.jpg"
@@ -6510,9 +6596,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 68,
+      "days_on_market": 71,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -6537,9 +6623,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 349,
+      "days_on_market": 352,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -6567,7 +6653,7 @@
       "days_on_market": 115,
       "first_seen_date": "2026-07-31",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/f3a0a6e321487aeb78c54871f6f7f8df-p_e.jpg"
@@ -6631,6 +6717,33 @@
       "source": "zillow"
     },
     {
+      "zpid": "6939844",
+      "address": "2820 Brianwood Ct, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 375000,
+      "rent_history": [],
+      "bedrooms": 2,
+      "bathrooms": 2.0,
+      "sqft": 1119,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 1,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/8d2506f778731825e6e0cf9acc0b181e-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/2820-Brianwood-Ct-Las-Vegas-NV-89134/6939844_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6965023",
       "address": "8116 Cimarron Ridge Dr, Las Vegas, NV 89128",
       "zipcode": "89128",
@@ -6645,9 +6758,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 5,
+      "days_on_market": 8,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -6680,7 +6793,7 @@
       "days_on_market": 15,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/b25e68cfd00eb40047524bc3604a39f6-p_e.jpg"
@@ -6761,7 +6874,7 @@
       "days_on_market": 26,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/3b0d77bad1426e39a14e8e6129d39f1c-p_e.jpg"
@@ -6839,9 +6952,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 208,
+      "days_on_market": 211,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -6893,15 +7006,42 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 0,
+      "days_on_market": 3,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/e2f1c113382ab73132cb1b42e79a129c-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/217-Moose-Ln-Las-Vegas-NV-89145/6970871_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6942653",
+      "address": "2621 Lotus Hill Dr, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 395000,
+      "rent_history": [],
+      "bedrooms": 2,
+      "bathrooms": 2.0,
+      "sqft": 1374,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 96,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/2cb8c682c5f55a6e282005cd0127317a-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/2621-Lotus-Hill-Dr-Las-Vegas-NV-89134/6942653_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -6957,9 +7097,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 95,
+      "days_on_market": 98,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -6984,10 +7124,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 7,
+      "days_on_market": 13,
       "first_seen_date": "2026-07-31",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/0292204ac4b7d7e382a3bd0445ca131f-p_e.jpg"
@@ -7038,9 +7178,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 2,
+      "days_on_market": 5,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -7122,7 +7262,7 @@
       "days_on_market": 11,
       "first_seen_date": "2026-07-31",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/b0f0468c24ec4920bb33fb341d56834b-p_e.jpg"
@@ -7178,9 +7318,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 28,
+      "days_on_market": 31,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -7205,15 +7345,42 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 72,
+      "days_on_market": 75,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/25edaf8ae16c2ddb697a21038be4e872-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/7608-Haskell-Flats-Dr-Las-Vegas-NV-89128/6950678_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6943063",
+      "address": "9448 January Dr, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "TOWNHOUSE",
+      "rent": 400000,
+      "rent_history": [],
+      "bedrooms": 2,
+      "bathrooms": 2.0,
+      "sqft": 1220,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/1516da0be078f1c8df5a52fe2126b903-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/9448-January-Dr-Las-Vegas-NV-89134/6943063_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -7235,7 +7402,7 @@
       "days_on_market": 17,
       "first_seen_date": "2026-07-25",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://maps.googleapis.com/maps/api/staticmap?mobile=false&sensor=true&maptype=satellite&size=575x242&zoom=17&center=36.09595489501953,-115.31583404541016&key=AIzaSyBWYJWCA8FNMQvSe_k3LKfDGJaEgdKwsco&signature=6-NSrcPAJ5HW28vV5aIKS6qnxSY="
@@ -7316,12 +7483,44 @@
       "days_on_market": 3,
       "first_seen_date": "2026-08-07",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://maps.googleapis.com/maps/api/staticmap?mobile=false&sensor=true&maptype=satellite&size=575x242&zoom=17&center=36.169063568115234,-115.24821472167969&key=AIzaSyBWYJWCA8FNMQvSe_k3LKfDGJaEgdKwsco&signature=gWzmfWn7o25Xsz-wHGuDLZ8jbGs="
       ],
       "listing_url": "https://www.zillow.com/homedetails/329-Santa-Fe-St-Las-Vegas-NV-89145/6976167_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "52225253",
+      "address": "520 Bernini St, Las Vegas, NV 89144",
+      "zipcode": "89144",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 409000,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 415000
+        }
+      ],
+      "bedrooms": 3,
+      "bathrooms": 2.0,
+      "sqft": 975,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 27,
+      "first_seen_date": "2026-07-19",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/263abb2c9e1222002a0debfdf83c85ff-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/520-Bernini-St-Las-Vegas-NV-89144/52225253_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -7367,10 +7566,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 53,
+      "days_on_market": 59,
       "first_seen_date": "2026-08-04",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/5c3969d793d7536788dd7ee470ca249a-p_e.jpg"
@@ -7534,10 +7733,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 20,
+      "days_on_market": 32,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-01",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/40d712fac18af38bc31a42c71cb93ff8-p_e.jpg"
@@ -7597,33 +7796,6 @@
         "https://photos.zillowstatic.com/fp/fa513e30f66531093d0a001831233377-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/432-Capertino-St-Las-Vegas-NV-89145/6976282_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "52225253",
-      "address": "520 Bernini St, Las Vegas, NV 89144",
-      "zipcode": "89144",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 415000,
-      "rent_history": [],
-      "bedrooms": 3,
-      "bathrooms": 2.0,
-      "sqft": 975,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 24,
-      "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/263abb2c9e1222002a0debfdf83c85ff-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/520-Bernini-St-Las-Vegas-NV-89144/52225253_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -7792,15 +7964,42 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 4,
+      "days_on_market": 7,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/04a9cc70189e3cd63e0ad6711d9f0cc0-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/904-Rockaway-St-Las-Vegas-NV-89145/6976848_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6906658",
+      "address": "2833 Breakers Creek Dr, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "TOWNHOUSE",
+      "rent": 419300,
+      "rent_history": [],
+      "bedrooms": 2,
+      "bathrooms": 2.0,
+      "sqft": 1220,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 1,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/509b9373ef35a6cae6db1c90e6427c47-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/2833-Breakers-Creek-Dr-Las-Vegas-NV-89134/6906658_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -7819,9 +8018,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 3,
+      "days_on_market": 6,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -7932,9 +8131,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 17,
+      "days_on_market": 20,
       "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -7964,9 +8163,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 10,
+      "days_on_market": 13,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -7991,10 +8190,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 43,
+      "days_on_market": 49,
       "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/33e0bbdf47ab8433a62e8fb562169d38-p_e.jpg"
@@ -8080,7 +8279,7 @@
       "days_on_market": 26,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/af40bf93cde7552f8307d74926e4fd7f-p_e.jpg"
@@ -8104,9 +8303,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 139,
+      "days_on_market": 142,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -8293,9 +8492,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 0,
+      "days_on_market": 3,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -8329,6 +8528,33 @@
         "https://photos.zillowstatic.com/fp/bcbe775635edfcaec5cd9e66cf9d3de6-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/9130-Haddington-Ln-Las-Vegas-NV-89145/53365344_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6940318",
+      "address": "2405 Burke Ct, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 429999,
+      "rent_history": [],
+      "bedrooms": 2,
+      "bathrooms": 2.0,
+      "sqft": 1804,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 58,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/757bb52cc1f7cf42226654c8efccdc11-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/2405-Burke-Ct-Las-Vegas-NV-89134/6940318_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -8374,10 +8600,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 65,
+      "days_on_market": 71,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/6552a577fcc14ae06d85cd1a7280b698-p_e.jpg"
@@ -8563,9 +8789,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 7,
+      "days_on_market": 10,
       "first_seen_date": "2026-08-04",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -8622,9 +8848,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 38,
+      "days_on_market": 41,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -8649,9 +8875,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 27,
+      "days_on_market": 30,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -8684,7 +8910,7 @@
       "days_on_market": 65,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/ea675390087fffda4e1ab0b062578fd1-p_e.jpg"
@@ -8713,9 +8939,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 22,
+      "days_on_market": 25,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -8821,10 +9047,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 90,
+      "days_on_market": 96,
       "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/f47884a2ee43ed60e08f7bc093683961-p_e.jpg"
@@ -8853,9 +9079,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 27,
+      "days_on_market": 30,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -8939,9 +9165,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 25,
+      "days_on_market": 28,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -8966,10 +9192,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 9,
+      "days_on_market": 15,
       "first_seen_date": "2026-07-31",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/11065eb8f3aed4367c02c48540fbc92f-p_e.jpg"
@@ -9029,6 +9255,38 @@
         "https://photos.zillowstatic.com/fp/46792d18f26d6b375d6f1d0ec048436e-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/12052-Hathaway-Pines-Ln-Las-Vegas-NV-89138/68651146_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6945198",
+      "address": "9740 Double Rock Dr, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 449000,
+      "rent_history": [
+        {
+          "date": "2026-07-31",
+          "rent": 474900
+        }
+      ],
+      "bedrooms": 3,
+      "bathrooms": 2.0,
+      "sqft": 1548,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 64,
+      "first_seen_date": "2026-07-28",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/97780cf097d7e86aec83e980ce21de83-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/9740-Double-Rock-Dr-Las-Vegas-NV-89134/6945198_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -9155,10 +9413,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 49,
+      "days_on_market": 55,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/e342a75c54b52aac4b6c228cdfe609e2-p_e.jpg"
@@ -9268,9 +9526,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 18,
+      "days_on_market": 21,
       "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -9335,6 +9593,33 @@
       "source": "zillow"
     },
     {
+      "zpid": "6943989",
+      "address": "9416 Hershey Ln, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 450000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 2.0,
+      "sqft": 1493,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 2,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/a73181f9ef648800fdd8c8a8ecc0f2b8-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/9416-Hershey-Ln-Las-Vegas-NV-89134/6943989_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "461696517",
       "address": "Sage Plan 2 Plan, Vireo in Summerlin",
       "zipcode": "89138",
@@ -9381,9 +9666,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 23,
+      "days_on_market": 26,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -9462,10 +9747,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 9,
+      "days_on_market": 28,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-07-25",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/6a4b512c88e293357c746d95454a18f8-p_e.jpg"
@@ -9494,9 +9779,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 26,
+      "days_on_market": 0,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -9691,7 +9976,7 @@
       "days_on_market": 0,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/e680d681d5e1ff0abbc016fd9231aac5-p_e.jpg"
@@ -9715,10 +10000,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 59,
+      "days_on_market": 65,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/2f748858f2c38a85fde317a22aef31c5-p_e.jpg"
@@ -9769,9 +10054,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 173,
+      "days_on_market": 176,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -9805,9 +10090,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 121,
+      "days_on_market": 124,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -9862,39 +10147,12 @@
       "days_on_market": 13,
       "first_seen_date": "2026-07-31",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/e7502860bc941813547b27b9c9e20bfa-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/7225-Old-Mission-Dr-Las-Vegas-NV-89128/6952221_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "6945198",
-      "address": "9740 Double Rock Dr, Las Vegas, NV 89134",
-      "zipcode": "89134",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 474900,
-      "rent_history": [],
-      "bedrooms": 3,
-      "bathrooms": 2.0,
-      "sqft": 1548,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 51,
-      "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-07-31",
-      "available": false,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/97780cf097d7e86aec83e980ce21de83-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/9740-Double-Rock-Dr-Las-Vegas-NV-89134/6945198_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -9926,6 +10184,38 @@
       "source": "zillow"
     },
     {
+      "zpid": "6912000",
+      "address": "10505 Prime View Ct, Las Vegas, NV 89144",
+      "zipcode": "89144",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 475000,
+      "rent_history": [
+        {
+          "date": "2026-08-07",
+          "rent": 485000
+        }
+      ],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 1522,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-07-25",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/7443767a455f2da50848c9efd393b09d-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/10505-Prime-View-Ct-Las-Vegas-NV-89144/6912000_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6975230",
       "address": "324 Lakehurst Rd, Las Vegas, NV 89145",
       "zipcode": "89145",
@@ -9943,7 +10233,7 @@
       "days_on_market": 41,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/8d4e7bedb1ccb388bceef88df1856e87-p_e.jpg"
@@ -10051,7 +10341,7 @@
       "days_on_market": 3,
       "first_seen_date": "2026-08-07",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/46bb4ae9aca51ba9e3b65aecf733e42f-p_e.jpg"
@@ -10161,9 +10451,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 17,
+      "days_on_market": 20,
       "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -10201,9 +10491,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 34,
+      "days_on_market": 37,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -10263,7 +10553,7 @@
       "days_on_market": 74,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/6008a14b92e3d3d8eed7bc08c1f94b9e-p_e.jpg"
@@ -10323,33 +10613,6 @@
         "https://photos.zillowstatic.com/fp/4e2acc9650fef5b3c3e2db205df79465-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/10425-Foggy-Glen-Ave-Las-Vegas-NV-89135/59435624_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "6912000",
-      "address": "10505 Prime View Ct, Las Vegas, NV 89144",
-      "zipcode": "89144",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 485000,
-      "rent_history": [],
-      "bedrooms": 3,
-      "bathrooms": 3.0,
-      "sqft": 1522,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 241,
-      "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/7443767a455f2da50848c9efd393b09d-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/10505-Prime-View-Ct-Las-Vegas-NV-89144/6912000_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -10522,9 +10785,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 2,
+      "days_on_market": 5,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -10608,9 +10871,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 4,
+      "days_on_market": 7,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -10644,6 +10907,109 @@
         "https://photos.zillowstatic.com/fp/aa2008759b1a8c6b75f69ce86c518bdf-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/505-Bernini-St-Las-Vegas-NV-89144/52225236_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6974352",
+      "address": "7700 Peacock Ave, Las Vegas, NV 89145",
+      "zipcode": "89145",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 489000,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 494000
+        },
+        {
+          "date": "2026-07-31",
+          "rent": 499000
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 2.0,
+      "sqft": 1664,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 1,
+      "first_seen_date": "2026-07-16",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/0b1dabf2de465ed80b38a1941d3c2fa1-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/7700-Peacock-Ave-Las-Vegas-NV-89145/6974352_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6942645",
+      "address": "2652 Youngdale Dr, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 489900,
+      "rent_history": [],
+      "bedrooms": 2,
+      "bathrooms": 2.0,
+      "sqft": 1533,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 53,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/4cc29a2a8168e9e47d623610ed5ddb15-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/2652-Youngdale-Dr-Las-Vegas-NV-89134/6942645_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6974636",
+      "address": "7100 Raincloud Dr, Las Vegas, NV 89145",
+      "zipcode": "89145",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 490000,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 510000
+        },
+        {
+          "date": "2026-08-01",
+          "rent": 520000
+        },
+        {
+          "date": "2026-07-25",
+          "rent": 540000
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 4.0,
+      "sqft": 1956,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 21,
+      "first_seen_date": "2026-07-25",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/176d682c8e001fbb80f3d8c838ea58cf-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/7100-Raincloud-Dr-Las-Vegas-NV-89145/6974636_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -10702,38 +11068,6 @@
       "source": "zillow"
     },
     {
-      "zpid": "6974352",
-      "address": "7700 Peacock Ave, Las Vegas, NV 89145",
-      "zipcode": "89145",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 494000,
-      "rent_history": [
-        {
-          "date": "2026-07-31",
-          "rent": 499000
-        }
-      ],
-      "bedrooms": 4,
-      "bathrooms": 2.0,
-      "sqft": 1664,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 9,
-      "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/0b1dabf2de465ed80b38a1941d3c2fa1-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/7700-Peacock-Ave-Las-Vegas-NV-89145/6974352_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
       "zpid": "53364617",
       "address": "10334 Juniper Creek Ln, Las Vegas, NV 89145",
       "zipcode": "89145",
@@ -10751,7 +11085,7 @@
       "days_on_market": 9,
       "first_seen_date": "2026-08-01",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/4da6ba521de42ced5ab66c57d54d8332-p_e.jpg"
@@ -10780,9 +11114,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 6,
+      "days_on_market": 9,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -10915,15 +11249,42 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 10,
+      "days_on_market": 13,
       "first_seen_date": "2026-07-31",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/c4ea0272063383a360b69a960341f361-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/9232-Pitching-Wedge-Dr-Las-Vegas-NV-89134/6969221_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "66846733",
+      "address": "9240 Worsley Park Pl, Las Vegas, NV 89145",
+      "zipcode": "89145",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 499000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 2674,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 3,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/71463bf248b041383c418cc99d7e97b5-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/9240-Worsley-Park-Pl-Las-Vegas-NV-89145/66846733_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -10942,9 +11303,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 9,
+      "days_on_market": 12,
       "first_seen_date": "2026-08-01",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -10974,15 +11335,47 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 13,
+      "days_on_market": 16,
       "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/8501614044dd432bfd39c9ceac213883-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/1064-Calvia-St-Las-Vegas-NV-89138/66846336_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "53364308",
+      "address": "11108 Desert Dove Ave, Las Vegas, NV 89144",
+      "zipcode": "89144",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 499900,
+      "rent_history": [
+        {
+          "date": "2026-07-22",
+          "rent": 525000
+        }
+      ],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 1614,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 61,
+      "first_seen_date": "2026-07-22",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/e1350a5c10ba5a1ffd4cf7c47fd9b388-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/11108-Desert-Dove-Ave-Las-Vegas-NV-89144/53364308_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -11176,6 +11569,33 @@
       "source": "zillow"
     },
     {
+      "zpid": "60555107",
+      "address": "10291 Garden State Dr, Las Vegas, NV 89135",
+      "zipcode": "89135",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 500000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 1651,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 2,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/90ed8dd4d588f09dd3555085c1587377-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/10291-Garden-State-Dr-Las-Vegas-NV-89135/60555107_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6909075",
       "address": "2011 Capestone St, Las Vegas, NV 89134",
       "zipcode": "89134",
@@ -11271,10 +11691,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 45,
+      "days_on_market": 54,
       "first_seen_date": "2026-08-04",
-      "last_confirmed_date": "2026-08-04",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/7e1c2d8f942f8e13f25e8239b3beb1a3-p_e.jpg"
@@ -11298,10 +11718,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 199,
+      "days_on_market": 205,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/1b80b2a1b35162d9401002dab82add09-p_e.jpg"
@@ -11392,6 +11812,33 @@
       "source": "zillow"
     },
     {
+      "zpid": "53364387",
+      "address": "11004 Linden Leaf Ave, Las Vegas, NV 89144",
+      "zipcode": "89144",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 510000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 1683,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/57b9fe8f1692611f2107150bfe868d46-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/11004-Linden-Leaf-Ave-Las-Vegas-NV-89144/53364387_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6945617",
       "address": "2213 White Mist Dr, Las Vegas, NV 89134",
       "zipcode": "89134",
@@ -11436,48 +11883,12 @@
       "days_on_market": 5,
       "first_seen_date": "2026-08-07",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/15584ffdcdabfdcd31fcdcfc8e4fec52-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/2421-Ivy-Garden-Ct-Las-Vegas-NV-89134/6943754_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "6974636",
-      "address": "7100 Raincloud Dr, Las Vegas, NV 89145",
-      "zipcode": "89145",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 510000,
-      "rent_history": [
-        {
-          "date": "2026-08-01",
-          "rent": 520000
-        },
-        {
-          "date": "2026-07-25",
-          "rent": 540000
-        }
-      ],
-      "bedrooms": 4,
-      "bathrooms": 4.0,
-      "sqft": 1956,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 18,
-      "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/176d682c8e001fbb80f3d8c838ea58cf-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/7100-Raincloud-Dr-Las-Vegas-NV-89145/6974636_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -11496,10 +11907,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 5,
+      "days_on_market": 11,
       "first_seen_date": "2026-08-04",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/a9f45a04b6881c45f4a894e6873922b8-p_e.jpg"
@@ -11555,9 +11966,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 3,
+      "days_on_market": 6,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -11641,9 +12052,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 17,
+      "days_on_market": 20,
       "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -11673,9 +12084,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 11,
+      "days_on_market": 14,
       "first_seen_date": "2026-07-31",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -11705,9 +12116,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 8,
+      "days_on_market": 11,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -11826,29 +12237,29 @@
       "source": "zillow"
     },
     {
-      "zpid": "53364308",
-      "address": "11108 Desert Dove Ave, Las Vegas, NV 89144",
+      "zpid": "53364377",
+      "address": "10929 Esta Ponia Ct, Las Vegas, NV 89144",
       "zipcode": "89144",
       "city": "Las Vegas",
       "state": "NV",
       "home_type": "HOUSE",
-      "rent": 525000,
+      "rent": 524999,
       "rent_history": [],
       "bedrooms": 3,
       "bathrooms": 3.0,
-      "sqft": 1614,
+      "sqft": 2011,
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 39,
-      "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-07-22",
-      "available": false,
+      "days_on_market": 46,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
-        "https://photos.zillowstatic.com/fp/e1350a5c10ba5a1ffd4cf7c47fd9b388-p_e.jpg"
+        "https://photos.zillowstatic.com/fp/dd488b3a29c160f5fba4fef68de9cee4-p_e.jpg"
       ],
-      "listing_url": "https://www.zillow.com/homedetails/11108-Desert-Dove-Ave-Las-Vegas-NV-89144/53364308_zpid/",
+      "listing_url": "https://www.zillow.com/homedetails/10929-Esta-Ponia-Ct-Las-Vegas-NV-89144/53364377_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -11902,7 +12313,7 @@
       "days_on_market": 79,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/ae55c8eef9aad20167c0c93040354695-p_e.jpg"
@@ -11970,7 +12381,7 @@
       "days_on_market": 45,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/4c0b055402fc390e2eab043fd516edbf-p_e.jpg"
@@ -12039,6 +12450,38 @@
         "https://photos.zillowstatic.com/fp/42e1b47cf2c57a746991b16994fa66a0-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/1052-Brinkman-St-Las-Vegas-NV-89138/63192277_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "337613625",
+      "address": "11553 Cedar Shore Ave, Las Vegas, NV 89138",
+      "zipcode": "89138",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "TOWNHOUSE",
+      "rent": 529000,
+      "rent_history": [
+        {
+          "date": "2026-08-04",
+          "rent": 535000
+        }
+      ],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 1747,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 13,
+      "first_seen_date": "2026-08-04",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/69af174c1e452dc338f1b090a707e711-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/11553-Cedar-Shore-Ave-Las-Vegas-NV-89138/337613625_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -12242,33 +12685,6 @@
       "source": "zillow"
     },
     {
-      "zpid": "337613625",
-      "address": "11553 Cedar Shore Ave, Las Vegas, NV 89138",
-      "zipcode": "89138",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "TOWNHOUSE",
-      "rent": 535000,
-      "rent_history": [],
-      "bedrooms": 3,
-      "bathrooms": 3.0,
-      "sqft": 1747,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 4,
-      "first_seen_date": "2026-08-04",
-      "last_confirmed_date": "2026-08-04",
-      "available": false,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/69af174c1e452dc338f1b090a707e711-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/11553-Cedar-Shore-Ave-Las-Vegas-NV-89138/337613625_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
       "zpid": "6948010",
       "address": "8245 Aqua Spray Ave, Las Vegas, NV 89128",
       "zipcode": "89128",
@@ -12291,7 +12707,7 @@
       "days_on_market": 60,
       "first_seen_date": "2026-07-19",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/c4f64224c32368023c361dac9d074c0a-p_e.jpg"
@@ -12315,15 +12731,74 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 41,
+      "days_on_market": 44,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/63bded3ad1cd1e4704f74ce134386c7d-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/908-Siena-Hills-Ln-Las-Vegas-NV-89144/6913516_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "443857355",
+      "address": "1437 Whistling Kite St, Las Vegas, NV 89138",
+      "zipcode": "89138",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 539000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 4.0,
+      "sqft": 1821,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 21,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/a53349a68de58bca3b0d4413b2411f30-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/1437-Whistling-Kite-St-Las-Vegas-NV-89138/443857355_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "318350443",
+      "address": "372 Soubrette Ct, Las Vegas, NV 89145",
+      "zipcode": "89145",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 539000,
+      "rent_history": [
+        {
+          "date": "2026-07-31",
+          "rent": 554900
+        }
+      ],
+      "bedrooms": 5,
+      "bathrooms": 3.0,
+      "sqft": 2622,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 61,
+      "first_seen_date": "2026-07-25",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/c31cbcfce5cb6c55df3530eb076972f5-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/372-Soubrette-Ct-Las-Vegas-NV-89145/318350443_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -12372,12 +12847,44 @@
       "days_on_market": 18,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/48345eaec69b816e5edfd5b5a673f8f9-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/11437-Ogden-Mills-Dr-UNIT-101-Las-Vegas-NV-89135/89792051_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6950797",
+      "address": "1601 Ghost Flower Ct, Las Vegas, NV 89128",
+      "zipcode": "89128",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 539999,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 550000
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 2437,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 89,
+      "first_seen_date": "2026-07-25",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/2a83eacc676b7658fd2be5970e63e679-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/1601-Ghost-Flower-Ct-Las-Vegas-NV-89128/6950797_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -12405,6 +12912,33 @@
         "https://photos.zillowstatic.com/fp/44d319cea05d763626ae3365a2cb96c8-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/1193-Blossom-Point-St-Las-Vegas-NV-89135/351921829_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "337618928",
+      "address": "600 N Carriage Hill Dr #1035, Las Vegas, NV 89138",
+      "zipcode": "89138",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "TOWNHOUSE",
+      "rent": 542500,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 1771,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/a58a58de8572b71fdad0355cfea7a7e2-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/600-N-Carriage-Hill-Dr-1035-Las-Vegas-NV-89138/337618928_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -12463,6 +12997,33 @@
       "source": "zillow"
     },
     {
+      "zpid": "6969223",
+      "address": "9240 Pitching Wedge Dr, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "TOWNHOUSE",
+      "rent": 545000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 2261,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 2,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/7e34c7747c0fe4de39f6414ec7d438e0-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/9240-Pitching-Wedge-Dr-Las-Vegas-NV-89134/6969223_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6907997",
       "address": "2705 Byron Dr, Las Vegas, NV 89134",
       "zipcode": "89134",
@@ -12513,9 +13074,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 36,
+      "days_on_market": 39,
       "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -12549,6 +13110,38 @@
         "https://photos.zillowstatic.com/fp/b6152064301a4ab72ede43211511ba37-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/10298-Profeta-Ct-Las-Vegas-NV-89135/55108642_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6914779",
+      "address": "10921 Calistoga Springs Ct, Las Vegas, NV 89144",
+      "zipcode": "89144",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 549000,
+      "rent_history": [
+        {
+          "date": "2026-08-07",
+          "rent": 559000
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 1737,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 155,
+      "first_seen_date": "2026-07-28",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/c8e64aeafacf93c8c4eafaafdee507d4-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/10921-Calistoga-Springs-Ct-Las-Vegas-NV-89144/6914779_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -12638,7 +13231,7 @@
       "days_on_market": 23,
       "first_seen_date": "2026-07-22",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/d9128e335b59bcd61088ea8eb8c1c0bb-p_e.jpg"
@@ -12719,7 +13312,7 @@
       "days_on_market": 0,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/2dd6075752e3d82f8fe0d72fc6295d1a-p_e.jpg"
@@ -12797,10 +13390,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 24,
+      "days_on_market": 33,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-04",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/a79b281651f2f283eef5c3c764e8e418-p_e.jpg"
@@ -12908,7 +13501,7 @@
       "days_on_market": 50,
       "first_seen_date": "2026-08-07",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/163d49ed0aef8f55a4caa30d6630a78e-p_e.jpg"
@@ -12945,33 +13538,6 @@
       "source": "zillow"
     },
     {
-      "zpid": "6950797",
-      "address": "1601 Ghost Flower Ct, Las Vegas, NV 89128",
-      "zipcode": "89128",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 550000,
-      "rent_history": [],
-      "bedrooms": 4,
-      "bathrooms": 3.0,
-      "sqft": 2437,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 86,
-      "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/2a83eacc676b7658fd2be5970e63e679-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/1601-Ghost-Flower-Ct-Las-Vegas-NV-89128/6950797_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
       "zpid": "61454640",
       "address": "2460 Summer Home St, Las Vegas, NV 89135",
       "zipcode": "89135",
@@ -12995,33 +13561,6 @@
         "https://photos.zillowstatic.com/fp/200d8018b01847c8e310490e173de203-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/2460-Summer-Home-St-Las-Vegas-NV-89135/61454640_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "318350443",
-      "address": "372 Soubrette Ct, Las Vegas, NV 89145",
-      "zipcode": "89145",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 554900,
-      "rent_history": [],
-      "bedrooms": 5,
-      "bathrooms": 3.0,
-      "sqft": 2622,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 48,
-      "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-07-31",
-      "available": false,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/c31cbcfce5cb6c55df3530eb076972f5-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/372-Soubrette-Ct-Las-Vegas-NV-89145/318350443_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -13067,9 +13606,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 1,
+      "days_on_market": 4,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -13094,9 +13633,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 4,
+      "days_on_market": 7,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -13130,33 +13669,6 @@
         "https://photos.zillowstatic.com/fp/9f89c59045de8513a07fe649d0a83eb1-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/9229-Spruce-Mountain-Way-Las-Vegas-NV-89134/6946184_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "6914779",
-      "address": "10921 Calistoga Springs Ct, Las Vegas, NV 89144",
-      "zipcode": "89144",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 559000,
-      "rent_history": [],
-      "bedrooms": 4,
-      "bathrooms": 3.0,
-      "sqft": 1737,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 149,
-      "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/c8e64aeafacf93c8c4eafaafdee507d4-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/10921-Calistoga-Springs-Ct-Las-Vegas-NV-89144/6914779_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -13234,15 +13746,42 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 91,
+      "days_on_market": 103,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-01",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/71515c201fdfaebf6379a90a2a14e2db-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/3682-Moonlit-Rain-Dr-Las-Vegas-NV-89135/58732036_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6966119",
+      "address": "1004 Washington Oaks St, Las Vegas, NV 89128",
+      "zipcode": "89128",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 568000,
+      "rent_history": [],
+      "bedrooms": 4,
+      "bathrooms": 4.0,
+      "sqft": 2556,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 2,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/e848969eaeb40cf8cc1aafa5dd4fa795-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/1004-Washington-Oaks-St-Las-Vegas-NV-89128/6966119_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -13315,9 +13854,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 23,
+      "days_on_market": 26,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -13351,6 +13890,38 @@
         "https://photos.zillowstatic.com/fp/b30ae2d41d64d573fbc0cf8eb676d42d-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/1960-Solvang-Mill-Dr-Las-Vegas-NV-89135/121089066_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6945746",
+      "address": "9412 Sierra Summit Ave, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 570000,
+      "rent_history": [
+        {
+          "date": "2026-07-28",
+          "rent": 595000
+        }
+      ],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 2271,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 110,
+      "first_seen_date": "2026-07-28",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/76b61c73c3ba623f56e5817c3ff19b4b-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/9412-Sierra-Summit-Ave-Las-Vegas-NV-89134/6945746_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -13396,10 +13967,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 3,
+      "days_on_market": 22,
       "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-07-25",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/423780a1df3237bd6a4e3f5b13d9579d-p_e.jpg"
@@ -13453,7 +14024,7 @@
       "days_on_market": 42,
       "first_seen_date": "2026-08-07",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/f3ffd65ae00a5b1eec65a3cbf238e389-p_e.jpg"
@@ -13480,7 +14051,7 @@
       "days_on_market": 16,
       "first_seen_date": "2026-07-25",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/7f306f9031034f6728278da3489afca9-p_e.jpg"
@@ -13517,6 +14088,33 @@
       "source": "zillow"
     },
     {
+      "zpid": "7151255",
+      "address": "10291 Songsparrow Ct, Las Vegas, NV 89135",
+      "zipcode": "89135",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 580000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 2.0,
+      "sqft": 1994,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 98,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/9c4cd642174796b7c35682cde94a844a-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/10291-Songsparrow-Ct-Las-Vegas-NV-89135/7151255_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6912266",
       "address": "1017 Royal Birch Ln, Las Vegas, NV 89144",
       "zipcode": "89144",
@@ -13534,7 +14132,7 @@
       "days_on_market": 49,
       "first_seen_date": "2026-07-28",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/e60c9f4a0f191231e2b3d3e9355d289a-p_e.jpg"
@@ -13567,6 +14165,33 @@
         "https://photos.zillowstatic.com/fp/a8f549233b9e99fd684635c1aadfc619-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/9109-Cotton-Rose-Way-Las-Vegas-NV-89134/6946356_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "440912706",
+      "address": "11390 Crimson Ledge Ave, Las Vegas, NV 89138",
+      "zipcode": "89138",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "TOWNHOUSE",
+      "rent": 589000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 1854,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/077bfb068eac08f19ae552c6f438e0d6-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/11390-Crimson-Ledge-Ave-Las-Vegas-NV-89138/440912706_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -13642,39 +14267,12 @@
       "days_on_market": 0,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/591598e17f9a4da2398954b4ede4f1ab-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/2324-Sterling-Heights-Dr-Las-Vegas-NV-89134/6945278_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "6945746",
-      "address": "9412 Sierra Summit Ave, Las Vegas, NV 89134",
-      "zipcode": "89134",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 595000,
-      "rent_history": [],
-      "bedrooms": 3,
-      "bathrooms": 3.0,
-      "sqft": 2271,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 94,
-      "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-07-28",
-      "available": false,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/76b61c73c3ba623f56e5817c3ff19b4b-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/9412-Sierra-Summit-Ave-Las-Vegas-NV-89134/6945746_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -13720,10 +14318,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 13,
+      "days_on_market": 19,
       "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/60fda5d957ac6f75e569b67fcd77ee88-p_e.jpg"
@@ -13747,9 +14345,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 66,
+      "days_on_market": 69,
       "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -13855,9 +14453,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 44,
+      "days_on_market": 47,
       "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -13882,9 +14480,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 19,
+      "days_on_market": 22,
       "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -13909,9 +14507,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 87,
+      "days_on_market": 90,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -13963,9 +14561,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 7,
+      "days_on_market": 10,
       "first_seen_date": "2026-08-04",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -14044,9 +14642,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 34,
+      "days_on_market": 37,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -14135,9 +14733,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 3,
+      "days_on_market": 6,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -14165,7 +14763,7 @@
       "days_on_market": 45,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/0bdaa7502cd48308b5b4923b5fa30e37-p_e.jpg"
@@ -14221,9 +14819,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 19,
+      "days_on_market": 22,
       "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -14383,9 +14981,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 1,
+      "days_on_market": 4,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -14415,9 +15013,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 39,
+      "days_on_market": 42,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -14455,6 +15053,33 @@
       "source": "zillow"
     },
     {
+      "zpid": "6940598",
+      "address": "3108 Endeavor Ct, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 640000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 2.0,
+      "sqft": 2486,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 52,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/4a0868f43c585a4e3f030d12c72a79eb-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/3108-Endeavor-Ct-Las-Vegas-NV-89134/6940598_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6947989",
       "address": "8240 Tivoli Cove Dr, Las Vegas, NV 89128",
       "zipcode": "89128",
@@ -14477,7 +15102,7 @@
       "days_on_market": 44,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/791159b877b914bf1b7eb8b1cea13d00-p_e.jpg"
@@ -14555,9 +15180,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 72,
+      "days_on_market": 75,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -14609,9 +15234,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 94,
+      "days_on_market": 97,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -14703,6 +15328,33 @@
       "source": "zillow"
     },
     {
+      "zpid": "246596821",
+      "address": "11250 Cactus Tower Ave Unit 102, Summerlin, NV 89135",
+      "zipcode": "89135",
+      "city": "Summerlin",
+      "state": "NV",
+      "home_type": "TOWNHOUSE",
+      "rent": 650000,
+      "rent_history": [],
+      "bedrooms": 2,
+      "bathrooms": 2.0,
+      "sqft": 2054,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 1,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/f82a7b48d730c079a376a9c688fb9ce7-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/11250-Cactus-Tower-Ave-UNIT-102-Summerlin-NV-89135/246596821_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6947525",
       "address": "1717 Double Arrow Pl, Las Vegas, NV 89128",
       "zipcode": "89128",
@@ -14722,9 +15374,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 213,
+      "days_on_market": 216,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -14749,15 +15401,47 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 5,
+      "days_on_market": 8,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/6347d6088db30547679433e388ba71d1-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/2413-Rockford-St-Las-Vegas-NV-89134/6908238_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6912611",
+      "address": "425 Emerald Heights St, Las Vegas, NV 89144",
+      "zipcode": "89144",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 650000,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 688888
+        }
+      ],
+      "bedrooms": 5,
+      "bathrooms": 3.0,
+      "sqft": 2674,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 21,
+      "first_seen_date": "2026-07-25",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/6115785dc2e2c8359f17eaf4fe3c7bf2-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/425-Emerald-Heights-St-Las-Vegas-NV-89144/6912611_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -14776,9 +15460,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 46,
+      "days_on_market": 49,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -14803,9 +15487,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 3,
+      "days_on_market": 6,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -14830,9 +15514,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 2,
+      "days_on_market": 5,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -14862,9 +15546,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 94,
+      "days_on_market": 97,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -14892,7 +15576,7 @@
       "days_on_market": 31,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/ae6c3aaa7e454c8a0c6a2c88e1c026ca-p_e.jpg"
@@ -14919,7 +15603,7 @@
       "days_on_market": 73,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/c24b07f48718a2ecbb02737df4bfcd43-p_e.jpg"
@@ -14956,6 +15640,60 @@
       "source": "zillow"
     },
     {
+      "zpid": "6970528",
+      "address": "8604 Grandbank Dr, Las Vegas, NV 89145",
+      "zipcode": "89145",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 659990,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 2242,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/1aae568364ad60bae2b08f0ba16f1579-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/8604-Grandbank-Dr-Las-Vegas-NV-89145/6970528_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "243079647",
+      "address": "11423 Gravitation Dr, Las Vegas, NV 89135",
+      "zipcode": "89135",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "TOWNHOUSE",
+      "rent": 665000,
+      "rent_history": [],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 2298,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 21,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/ed990690a220d1b431976a879188ceb2-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/11423-Gravitation-Dr-Las-Vegas-NV-89135/243079647_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6944882",
       "address": "1832 Spring Summit Ln, Las Vegas, NV 89134",
       "zipcode": "89134",
@@ -14970,9 +15708,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 19,
+      "days_on_market": 22,
       "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -15021,7 +15759,7 @@
       "days_on_market": 4,
       "first_seen_date": "2026-07-19",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/bf1f515825e1b32e67b8298b550f9a15-p_e.jpg"
@@ -15048,12 +15786,39 @@
       "days_on_market": 10,
       "first_seen_date": "2026-07-31",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/e3cf5e04f8689af6092d68a2cd21f7c0-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/10028-Keysborough-Dr-Las-Vegas-NV-89134/6942540_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "112481487",
+      "address": "10326 Mystic Pine Rd, Las Vegas, NV 89135",
+      "zipcode": "89135",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 674999,
+      "rent_history": [],
+      "bedrooms": 5,
+      "bathrooms": 4.0,
+      "sqft": 2784,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 4,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/4cff9c467f2717067c8eae865ca467f6-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/10326-Mystic-Pine-Rd-Las-Vegas-NV-89135/112481487_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -15107,7 +15872,7 @@
       "days_on_market": 30,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/1fb9d90b95c8164a6e911dc666cda1ec-p_e.jpg"
@@ -15131,9 +15896,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 6,
+      "days_on_market": 9,
       "first_seen_date": "2026-08-04",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -15166,7 +15931,7 @@
       "days_on_market": 61,
       "first_seen_date": "2026-07-28",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/8d2e31c26374d13e4ce9a612c21123f5-p_e.jpg"
@@ -15222,9 +15987,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 26,
+      "days_on_market": 29,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -15375,33 +16140,6 @@
       "source": "zillow"
     },
     {
-      "zpid": "6912611",
-      "address": "425 Emerald Heights St, Las Vegas, NV 89144",
-      "zipcode": "89144",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 688888,
-      "rent_history": [],
-      "bedrooms": 5,
-      "bathrooms": 3.0,
-      "sqft": 2674,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 18,
-      "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/6115785dc2e2c8359f17eaf4fe3c7bf2-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/425-Emerald-Heights-St-Las-Vegas-NV-89144/6912611_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
       "zpid": "66831374",
       "address": "612 El Loro St, Las Vegas, NV 89138",
       "zipcode": "89138",
@@ -15425,6 +16163,38 @@
         "https://photos.zillowstatic.com/fp/bd98b7ada05f75bfc462937df65eaac9-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/612-El-Loro-St-Las-Vegas-NV-89138/66831374_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6912784",
+      "address": "340 Summer Palace Way, Las Vegas, NV 89144",
+      "zipcode": "89144",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 690000,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 695000
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 2359,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 18,
+      "first_seen_date": "2026-07-28",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/474eefdfb85142143d0731e20e305834-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/340-Summer-Palace-Way-Las-Vegas-NV-89144/6912784_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -15456,33 +16226,6 @@
       "source": "zillow"
     },
     {
-      "zpid": "6912784",
-      "address": "340 Summer Palace Way, Las Vegas, NV 89144",
-      "zipcode": "89144",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 695000,
-      "rent_history": [],
-      "bedrooms": 4,
-      "bathrooms": 3.0,
-      "sqft": 2359,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 15,
-      "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/474eefdfb85142143d0731e20e305834-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/340-Summer-Palace-Way-Las-Vegas-NV-89144/6912784_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
       "zpid": "295538202",
       "address": "713 Foreign Reef Way, Las Vegas, NV 89138",
       "zipcode": "89138",
@@ -15497,9 +16240,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 61,
+      "days_on_market": 64,
       "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -15559,7 +16302,7 @@
       "days_on_market": 52,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/10202385d1173ab9072f65fc700229d1-p_e.jpg"
@@ -15615,9 +16358,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 65,
+      "days_on_market": 68,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -15655,6 +16398,38 @@
       "source": "zillow"
     },
     {
+      "zpid": "61746472",
+      "address": "5110 Vincitor St, Las Vegas, NV 89135",
+      "zipcode": "89135",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 699000,
+      "rent_history": [
+        {
+          "date": "2026-07-22",
+          "rent": 725000
+        }
+      ],
+      "bedrooms": 2,
+      "bathrooms": 3.0,
+      "sqft": 2100,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 41,
+      "first_seen_date": "2026-07-16",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/c6983f17724bd84e731840daa7259f32-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/5110-Vincitor-St-Las-Vegas-NV-89135/61746472_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "121078959",
       "address": "5401 Alden Glen Dr, Las Vegas, NV 89135",
       "zipcode": "89135",
@@ -15672,7 +16447,7 @@
       "days_on_market": 52,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/dac051d48302666e40c5778fed07421a-p_e.jpg"
@@ -15723,9 +16498,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 29,
+      "days_on_market": 32,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -15804,9 +16579,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 1,
+      "days_on_market": 4,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -15836,9 +16611,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 31,
+      "days_on_market": 34,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -15930,6 +16705,33 @@
       "source": "zillow"
     },
     {
+      "zpid": "6912810",
+      "address": "200 Depaul Ct, Las Vegas, NV 89144",
+      "zipcode": "89144",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 700000,
+      "rent_history": [],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 2359,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 1,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/54a98e2d6fc4aa5e8cdb26765a53b8c3-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/200-Depaul-Ct-Las-Vegas-NV-89144/6912810_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "53373752",
       "address": "2766 Grande Valley Dr, Las Vegas, NV 89135",
       "zipcode": "89135",
@@ -15957,6 +16759,33 @@
       "source": "zillow"
     },
     {
+      "zpid": "121087474",
+      "address": "10313 Aragon Crown Rd, Las Vegas, NV 89135",
+      "zipcode": "89135",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 720000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 2618,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 3,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/184f0f462ea7653b00b530fd62ed6107-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/10313-Aragon-Crown-Rd-Las-Vegas-NV-89135/121087474_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6911215",
       "address": "10220 Glen Ora Ave, Las Vegas, NV 89134",
       "zipcode": "89134",
@@ -15976,9 +16805,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 122,
+      "days_on_market": 125,
       "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -16030,9 +16859,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 59,
+      "days_on_market": 62,
       "first_seen_date": "2026-08-04",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -16129,6 +16958,38 @@
       "source": "zillow"
     },
     {
+      "zpid": "66846217",
+      "address": "12012 Prada Verde Dr, Las Vegas, NV 89138",
+      "zipcode": "89138",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 725000,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 750000
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 2528,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 35,
+      "first_seen_date": "2026-07-16",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/3b2316f046b17db05281e7b772dab0b6-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/12012-Prada-Verde-Dr-Las-Vegas-NV-89138/66846217_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6949202",
       "address": "1717 Double Arch Ct, Las Vegas, NV 89128",
       "zipcode": "89128",
@@ -16148,9 +17009,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 44,
+      "days_on_market": 47,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -16180,42 +17041,15 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 88,
+      "days_on_market": 91,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/2a9b11ea285e1c57cc0ad3e63fb16808-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/3283-Squire-St-Las-Vegas-NV-89135/53373881_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "61746472",
-      "address": "5110 Vincitor St, Las Vegas, NV 89135",
-      "zipcode": "89135",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 725000,
-      "rent_history": [],
-      "bedrooms": 2,
-      "bathrooms": 3.0,
-      "sqft": 2100,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 19,
-      "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-07-22",
-      "available": false,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/c6983f17724bd84e731840daa7259f32-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/5110-Vincitor-St-Las-Vegas-NV-89135/61746472_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -16350,7 +17184,7 @@
       "days_on_market": 1,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/22a2d09aaa8a6c0498f39da3916514af-p_e.jpg"
@@ -16413,7 +17247,7 @@
       "days_on_market": 123,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/7d7c61f15b600170ae0bba00c5732add-p_e.jpg"
@@ -16472,7 +17306,7 @@
       "days_on_market": 3,
       "first_seen_date": "2026-08-07",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/5be6c6d0bdfb3276f1d39b5876d6cac4-p_e.jpg"
@@ -16604,9 +17438,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 23,
+      "days_on_market": 26,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -16698,33 +17532,6 @@
       "source": "zillow"
     },
     {
-      "zpid": "66846217",
-      "address": "12012 Prada Verde Dr, Las Vegas, NV 89138",
-      "zipcode": "89138",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 750000,
-      "rent_history": [],
-      "bedrooms": 4,
-      "bathrooms": 3.0,
-      "sqft": 2528,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 32,
-      "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/3b2316f046b17db05281e7b772dab0b6-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/12012-Prada-Verde-Dr-Las-Vegas-NV-89138/66846217_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
       "zpid": "6939436",
       "address": "7956 Marbella Cir, Las Vegas, NV 89128",
       "zipcode": "89128",
@@ -16739,9 +17546,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 22,
+      "days_on_market": 25,
       "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -16823,12 +17630,39 @@
       "days_on_market": 58,
       "first_seen_date": "2026-07-28",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/61f5487588f32d0ff84c5c28f042e5bd-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/12161-Las-Hurdes-Ave-Las-Vegas-NV-89138/68651591_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6946528",
+      "address": "2021 Waterbury Ln, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 765000,
+      "rent_history": [],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 3063,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/b0659f3fe8e5bf39fc3b6c5300617160-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/2021-Waterbury-Ln-Las-Vegas-NV-89134/6946528_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -16877,7 +17711,7 @@
       "days_on_market": 34,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/ba08709f670ecf2accc8f319a784131b-p_e.jpg"
@@ -16901,10 +17735,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 2,
+      "days_on_market": 8,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/a532313149fc5f435eae39fa658151ad-p_e.jpg"
@@ -16928,9 +17762,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 34,
+      "days_on_market": 37,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -16958,12 +17792,44 @@
       "days_on_market": 3,
       "first_seen_date": "2026-08-07",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/f48643f29d7afec20c97864fb220d16e-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/2597-Belgreen-St-Las-Vegas-NV-89135/52211004_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "66839133",
+      "address": "820 Colina Alta Pl, Las Vegas, NV 89138",
+      "zipcode": "89138",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 794900,
+      "rent_history": [
+        {
+          "date": "2026-08-04",
+          "rent": 795000
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 2648,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 84,
+      "first_seen_date": "2026-07-16",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/49fb04b3627b8a44c5ea2d31d94d066a-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/820-Colina-Alta-Pl-Las-Vegas-NV-89138/66839133_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -16991,33 +17857,6 @@
         "https://photos.zillowstatic.com/fp/1cd48402553e6f04b839b768780f5c31-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/441-Eternity-St-Las-Vegas-NV-89138/60957833_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "66839133",
-      "address": "820 Colina Alta Pl, Las Vegas, NV 89138",
-      "zipcode": "89138",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 795000,
-      "rent_history": [],
-      "bedrooms": 4,
-      "bathrooms": 3.0,
-      "sqft": 2648,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 75,
-      "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-04",
-      "available": false,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/49fb04b3627b8a44c5ea2d31d94d066a-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/820-Colina-Alta-Pl-Las-Vegas-NV-89138/66839133_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -17117,9 +17956,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 2,
+      "days_on_market": 5,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -17144,9 +17983,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 9,
+      "days_on_market": 12,
       "first_seen_date": "2026-08-04",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -17212,6 +18051,42 @@
         "https://photos.zillowstatic.com/fp/3978f5a4c1135a138c68959976f54400-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/10548-Meadow-Mist-Ave-Las-Vegas-NV-89135/7150984_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6912252",
+      "address": "10600 Olivebranch Ave, Las Vegas, NV 89144",
+      "zipcode": "89144",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 799900,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 825000
+        },
+        {
+          "date": "2026-07-16",
+          "rent": 849900
+        }
+      ],
+      "bedrooms": 5,
+      "bathrooms": 3.0,
+      "sqft": 2518,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-07-16",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/876d0675f1f433a3aaa693d98dfe3b51-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/10600-Olivebranch-Ave-Las-Vegas-NV-89144/6912252_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -17324,7 +18199,7 @@
       "days_on_market": 103,
       "first_seen_date": "2026-07-22",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/0631d721fe2490125bf8f78c6efe2c0c-p_e.jpg"
@@ -17356,44 +18231,12 @@
       "days_on_market": 82,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/f999b64246c5b433a78ee3166dc465be-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/909-Riverlawn-Pl-Las-Vegas-NV-89138/141738973_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "6912252",
-      "address": "10600 Olivebranch Ave, Las Vegas, NV 89144",
-      "zipcode": "89144",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 825000,
-      "rent_history": [
-        {
-          "date": "2026-07-16",
-          "rent": 849900
-        }
-      ],
-      "bedrooms": 5,
-      "bathrooms": 3.0,
-      "sqft": 2518,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 23,
-      "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/876d0675f1f433a3aaa693d98dfe3b51-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/10600-Olivebranch-Ave-Las-Vegas-NV-89144/6912252_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -17555,7 +18398,7 @@
       "days_on_market": 24,
       "first_seen_date": "2026-07-19",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/44fec435c46310042c98d0e6f17f40f3-p_e.jpg"
@@ -17706,8 +18549,12 @@
       "city": "Las Vegas",
       "state": "NV",
       "home_type": "HOUSE",
-      "rent": 864888,
+      "rent": 858000,
       "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 864888
+        },
         {
           "date": "2026-08-07",
           "rent": 864988
@@ -17723,15 +18570,47 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 16,
+      "days_on_market": 19,
       "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/0385484257943b74389026d77777127b-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/121-Torchwood-Ln-Las-Vegas-NV-89144/50218805_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6949029",
+      "address": "8253 Ruby Mountain Way, Las Vegas, NV 89128",
+      "zipcode": "89128",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 864995,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 874995
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 2294,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 1,
+      "first_seen_date": "2026-07-31",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/aa4e8592380444b1183c8a7ccfb8a1d3-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/8253-Ruby-Mountain-Way-Las-Vegas-NV-89128/6949029_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -17809,9 +18688,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 16,
+      "days_on_market": 19,
       "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -17849,33 +18728,6 @@
       "source": "zillow"
     },
     {
-      "zpid": "6949029",
-      "address": "8253 Ruby Mountain Way, Las Vegas, NV 89128",
-      "zipcode": "89128",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 874995,
-      "rent_history": [],
-      "bedrooms": 4,
-      "bathrooms": 3.0,
-      "sqft": 2294,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 12,
-      "first_seen_date": "2026-07-31",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/aa4e8592380444b1183c8a7ccfb8a1d3-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/8253-Ruby-Mountain-Way-Las-Vegas-NV-89128/6949029_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
       "zpid": "141740115",
       "address": "5880 Glory Heights Dr, Las Vegas, NV 89135",
       "zipcode": "89135",
@@ -17893,7 +18745,7 @@
       "days_on_market": 24,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/829492884e1442dc51d7296c16a80378-p_e.jpg"
@@ -17920,7 +18772,7 @@
       "days_on_market": 27,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/1a91672b461dc1d247423e9095cff531-p_e.jpg"
@@ -18028,7 +18880,7 @@
       "days_on_market": 37,
       "first_seen_date": "2026-07-19",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/191315fa3193ee98b0b208fa281ea49a-p_e.jpg"
@@ -18060,7 +18912,7 @@
       "days_on_market": 73,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/efe7771d9027ce49ea2b72025d4872f3-p_e.jpg"
@@ -18114,7 +18966,7 @@
       "days_on_market": 27,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/5488e66f8e695f06fdd99e18e194f0d3-p_e.jpg"
@@ -18200,7 +19052,7 @@
       "days_on_market": 18,
       "first_seen_date": "2026-07-25",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/d3092bda7c60c3cc01d5daf0a9ed777e-p_e.jpg"
@@ -18232,7 +19084,7 @@
       "days_on_market": 31,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/43f03ba5cf457e53c43ce5f5f6ecc870-p_e.jpg"
@@ -18283,9 +19135,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 22,
+      "days_on_market": 24,
       "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -18367,7 +19219,7 @@
       "days_on_market": 4,
       "first_seen_date": "2026-08-07",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/bdd261a459038e83f5afd0ef19c89d23-p_e.jpg"
@@ -18475,7 +19327,7 @@
       "days_on_market": 20,
       "first_seen_date": "2026-07-22",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/6a61ed990662bb92ea0da113ddda7593-p_e.jpg"
@@ -18502,12 +19354,39 @@
       "days_on_market": 36,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/745ac98d5d09639ab08583fb8668e133-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/11341-Via-Spiga-Dr-Las-Vegas-NV-89138/60541179_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "247457540",
+      "address": "2720 Free Formed Ct, Las Vegas, NV 89138",
+      "zipcode": "89138",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 950000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 2.0,
+      "sqft": 2013,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 2,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/efa9878fdb4fb2835da1e61013390fae-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/2720-Free-Formed-Ct-Las-Vegas-NV-89138/247457540_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -18529,7 +19408,7 @@
       "days_on_market": 110,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/d8b07c36074c00c4fb6f1b102e575fe9-p_e.jpg"
@@ -18585,15 +19464,55 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 32,
+      "days_on_market": 35,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/f8d07f6e06171f6e201d42a76cd15c5b-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/8121-Sunset-Cove-Dr-Las-Vegas-NV-89128/6938598_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6908310",
+      "address": "2404 Quartz Peak St, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 974000,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 979000
+        },
+        {
+          "date": "2026-07-28",
+          "rent": 984000
+        },
+        {
+          "date": "2026-07-16",
+          "rent": 989000
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 3291,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 76,
+      "first_seen_date": "2026-07-16",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/8c54da0009da334aac7c99a8d3e71908-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/2404-Quartz-Peak-St-Las-Vegas-NV-89134/6908310_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -18621,42 +19540,6 @@
         "https://photos.zillowstatic.com/fp/f7afe75d36111d993058a0c1b66d9c5a-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/11021-Edina-Ct-Las-Vegas-NV-89144/52225436_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "6908310",
-      "address": "2404 Quartz Peak St, Las Vegas, NV 89134",
-      "zipcode": "89134",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 979000,
-      "rent_history": [
-        {
-          "date": "2026-07-28",
-          "rent": 984000
-        },
-        {
-          "date": "2026-07-16",
-          "rent": 989000
-        }
-      ],
-      "bedrooms": 4,
-      "bathrooms": 3.0,
-      "sqft": 3291,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 73,
-      "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/8c54da0009da334aac7c99a8d3e71908-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/2404-Quartz-Peak-St-Las-Vegas-NV-89134/6908310_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -18702,15 +19585,42 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 4,
+      "days_on_market": 7,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/56742084fa302b1613c9d179ebe9e00c-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/6044-Andezano-Dr-Las-Vegas-NV-89135/243079915_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6938776",
+      "address": "8024 Shorecrest Dr, Las Vegas, NV 89128",
+      "zipcode": "89128",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 989900,
+      "rent_history": [],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 2803,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 2,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/e8aceca0a9c295f626163fb73b868b19-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/8024-Shorecrest-Dr-Las-Vegas-NV-89128/6938776_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -18732,7 +19642,7 @@
       "days_on_market": 67,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/6774d2a4f635064f876119e32cb5087d-p_e.jpg"
@@ -18792,9 +19702,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 101,
+      "days_on_market": 104,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -18846,9 +19756,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 139,
+      "days_on_market": 142,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -18873,10 +19783,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 70,
+      "days_on_market": 76,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/a1e991c6cfa01e276492fde684b2098d-p_e.jpg"
@@ -18905,9 +19815,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 1,
+      "days_on_market": 4,
       "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -18959,9 +19869,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 77,
+      "days_on_market": 80,
       "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -19040,9 +19950,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 96,
+      "days_on_market": 99,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -19124,7 +20034,7 @@
       "days_on_market": 16,
       "first_seen_date": "2026-07-28",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/21db0e8547df8bbe279bdc29713b318e-p_e.jpg"
@@ -19153,9 +20063,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 4,
+      "days_on_market": 7,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -19345,7 +20255,7 @@
       "days_on_market": 4,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/0a909630359c9d43b542c11e6b4c33a6-p_e.jpg"
@@ -19374,9 +20284,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 9,
+      "days_on_market": 12,
       "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -19401,10 +20311,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 19,
+      "days_on_market": 28,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-04",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/c4056d150e311f153452ed6f3fe2ada9-p_e.jpg"
@@ -19441,6 +20351,38 @@
       "source": "zillow"
     },
     {
+      "zpid": "53365252",
+      "address": "304 Terrace View Ct, Las Vegas, NV 89144",
+      "zipcode": "89144",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 1199000,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 1249000
+        }
+      ],
+      "bedrooms": 3,
+      "bathrooms": 2.0,
+      "sqft": 2551,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 17,
+      "first_seen_date": "2026-07-28",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/352ce7b4d786be215fe4274a4e57f399-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/304-Terrace-View-Ct-Las-Vegas-NV-89144/53365252_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "126250522",
       "address": "5851 Glory Heights Dr, Las Vegas, NV 89135",
       "zipcode": "89135",
@@ -19455,9 +20397,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 2,
+      "days_on_market": 5,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -19491,6 +20433,74 @@
         "https://photos.zillowstatic.com/fp/09a2f6be1022807006ba4f9ae8422ae7-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/10937-White-Alder-Pl-Las-Vegas-NV-89138/295537998_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6968636",
+      "address": "444 Pinnacle Heights Ln, Las Vegas, NV 89144",
+      "zipcode": "89144",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 1199900,
+      "rent_history": [
+        {
+          "date": "2026-07-31",
+          "rent": 1225000
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 4.0,
+      "sqft": 3556,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 2,
+      "first_seen_date": "2026-07-22",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/df841f62a63e8dd94277dda5e98db6f3-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/444-Pinnacle-Heights-Ln-Las-Vegas-NV-89144/6968636_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6969781",
+      "address": "925 Granger Farm Way, Las Vegas, NV 89145",
+      "zipcode": "89145",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 1199995,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 1229995
+        },
+        {
+          "date": "2026-07-16",
+          "rent": 1249995
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 2471,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-07-16",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/d8dde2e67633688a853c30770af9c920-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/925-Granger-Farm-Way-Las-Vegas-NV-89145/6969781_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -19625,71 +20635,12 @@
       "days_on_market": 1,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/dc4190318b2614cfa9171b7c40a94887-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/373-Jackalberry-St-Las-Vegas-NV-89138/337611194_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "6968636",
-      "address": "444 Pinnacle Heights Ln, Las Vegas, NV 89144",
-      "zipcode": "89144",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 1225000,
-      "rent_history": [],
-      "bedrooms": 4,
-      "bathrooms": 4.0,
-      "sqft": 3556,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 84,
-      "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-07-31",
-      "available": false,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/df841f62a63e8dd94277dda5e98db6f3-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/444-Pinnacle-Heights-Ln-Las-Vegas-NV-89144/6968636_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "6969781",
-      "address": "925 Granger Farm Way, Las Vegas, NV 89145",
-      "zipcode": "89145",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 1229995,
-      "rent_history": [
-        {
-          "date": "2026-07-16",
-          "rent": 1249995
-        }
-      ],
-      "bedrooms": 4,
-      "bathrooms": 3.0,
-      "sqft": 2471,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 24,
-      "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/d8dde2e67633688a853c30770af9c920-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/925-Granger-Farm-Way-Las-Vegas-NV-89145/6969781_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -19767,42 +20718,15 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 57,
+      "days_on_market": 60,
       "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/9d519d846f732bb91cd1c4d8f7b15a8e-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/11412-Rancho-Villa-Verde-Pl-Las-Vegas-NV-89138/59433361_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "53365252",
-      "address": "304 Terrace View Ct, Las Vegas, NV 89144",
-      "zipcode": "89144",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 1249000,
-      "rent_history": [],
-      "bedrooms": 3,
-      "bathrooms": 2.0,
-      "sqft": 2551,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 14,
-      "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/352ce7b4d786be215fe4274a4e57f399-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/304-Terrace-View-Ct-Las-Vegas-NV-89144/53365252_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -19848,9 +20772,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 3,
+      "days_on_market": 6,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -19907,9 +20831,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 32,
+      "days_on_market": 35,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -19988,9 +20912,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 23,
+      "days_on_market": 26,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -20018,7 +20942,7 @@
       "days_on_market": 89,
       "first_seen_date": "2026-07-22",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/c4d22d672d7ffc2aa45584095db7c523-p_e.jpg"
@@ -20096,9 +21020,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 12,
+      "days_on_market": 15,
       "first_seen_date": "2026-07-31",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -20153,7 +21077,7 @@
       "days_on_market": 9,
       "first_seen_date": "2026-08-01",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/1a2172efc16865fa96e4065e53fe35c4-p_e.jpg"
@@ -20190,9 +21114,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 46,
+      "days_on_market": 49,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -20230,6 +21154,33 @@
       "source": "zillow"
     },
     {
+      "zpid": "141709660",
+      "address": "181 Elder View Dr, Las Vegas, NV 89138",
+      "zipcode": "89138",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 1350000,
+      "rent_history": [],
+      "bedrooms": 4,
+      "bathrooms": 4.0,
+      "sqft": 3302,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 1,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/3e00723bfbf4a3dc5969411b9b09441b-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/181-Elder-View-Dr-Las-Vegas-NV-89138/141709660_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6969922",
       "address": "720 Sir James Bridge Way, Las Vegas, NV 89145",
       "zipcode": "89145",
@@ -20244,15 +21195,42 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 3,
+      "days_on_market": 6,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/411b356ec61447eec8ce2e09f0888f75-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/720-Sir-James-Bridge-Way-Las-Vegas-NV-89145/6969922_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6907098",
+      "address": "2742 Darby Falls Dr, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 1370000,
+      "rent_history": [],
+      "bedrooms": 2,
+      "bathrooms": 3.0,
+      "sqft": 2934,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 4,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/825365f0b9eb2216a398178154211824-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/2742-Darby-Falls-Dr-Las-Vegas-NV-89134/6907098_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -20303,10 +21281,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 349,
+      "days_on_market": 355,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/24805660c8c961991e8b635354205e37-p_e.jpg"
@@ -20330,9 +21308,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 3,
+      "days_on_market": 6,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -20384,9 +21362,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 3,
+      "days_on_market": 6,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -20441,12 +21419,71 @@
       "days_on_market": 38,
       "first_seen_date": "2026-07-28",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/0b897df39cce15078d6d0553aebd8761-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/5523-Kyle-Peak-Ct-Las-Vegas-NV-89135/141740059_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6946739",
+      "address": "1708 Wincanton Dr, Las Vegas, NV 89134",
+      "zipcode": "89134",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 1429000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 3259,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/42c841b58f10685f680bcef8461de289-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/1708-Wincanton-Dr-Las-Vegas-NV-89134/6946739_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "6936971",
+      "address": "2933 Harbor Cove Dr, Las Vegas, NV 89128",
+      "zipcode": "89128",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 1445000,
+      "rent_history": [
+        {
+          "date": "2026-08-07",
+          "rent": 1499999
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 2648,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 44,
+      "first_seen_date": "2026-07-16",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/7fa703156d4b2498caafa9b08e83c18d-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/2933-Harbor-Cove-Dr-Las-Vegas-NV-89128/6936971_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -20465,15 +21502,42 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 23,
+      "days_on_market": 26,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/f722f8fbe372c102cf64fab7b7ba96ab-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/9253-Canyon-Mesa-Dr-Las-Vegas-NV-89144/53365279_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "141172584",
+      "address": "449 Paso De Montana St, Las Vegas, NV 89138",
+      "zipcode": "89138",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 1455888,
+      "rent_history": [],
+      "bedrooms": 6,
+      "bathrooms": 5.0,
+      "sqft": 3934,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 93,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/94fb61acc35b26f88d08f0984882b7e5-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/449-Paso-De-Montana-St-Las-Vegas-NV-89138/141172584_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -20492,9 +21556,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 66,
+      "days_on_market": 69,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -20519,9 +21583,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 5,
+      "days_on_market": 8,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -20559,33 +21623,6 @@
       "source": "zillow"
     },
     {
-      "zpid": "6936971",
-      "address": "2933 Harbor Cove Dr, Las Vegas, NV 89128",
-      "zipcode": "89128",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 1499999,
-      "rent_history": [],
-      "bedrooms": 4,
-      "bathrooms": 3.0,
-      "sqft": 2648,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 38,
-      "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/7fa703156d4b2498caafa9b08e83c18d-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/2933-Harbor-Cove-Dr-Las-Vegas-NV-89128/6936971_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
       "zpid": "6969887",
       "address": "9624 Camden Hills Ave, Las Vegas, NV 89145",
       "zipcode": "89145",
@@ -20613,9 +21650,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 4,
+      "days_on_market": 7,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -20672,9 +21709,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 57,
+      "days_on_market": 60,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -20766,6 +21803,38 @@
       "source": "zillow"
     },
     {
+      "zpid": "6911971",
+      "address": "1412 Chambolle Ct, Las Vegas, NV 89144",
+      "zipcode": "89144",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 1588888,
+      "rent_history": [
+        {
+          "date": "2026-08-07",
+          "rent": 1888888
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 4.0,
+      "sqft": 4203,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 187,
+      "first_seen_date": "2026-08-07",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/20d7f89244c1dadf4596b1e3a5377279-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/1412-Chambolle-Ct-Las-Vegas-NV-89144/6911971_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6968653",
       "address": "425 Proud Eagle Ln, Las Vegas, NV 89144",
       "zipcode": "89144",
@@ -20834,10 +21903,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 7,
+      "days_on_market": 20,
       "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-07-31",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/ec4746fcc1e4f7e6debf8bc142750d5a-p_e.jpg"
@@ -20861,10 +21930,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 8,
+      "days_on_market": 36,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-07-16",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/08b58c72614136ab74e39ed17b0f0b91-p_e.jpg"
@@ -20888,9 +21957,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 16,
+      "days_on_market": 19,
       "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -20945,7 +22014,7 @@
       "days_on_market": 32,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/e2aca6995f9d095aded4353aee4230a1-p_e.jpg"
@@ -21077,9 +22146,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 31,
+      "days_on_market": 34,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -21107,7 +22176,7 @@
       "days_on_market": 5,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/2c9a4ca81e3a455b1a6624e7974e25fc-p_e.jpg"
@@ -21144,6 +22213,69 @@
       "source": "zillow"
     },
     {
+      "zpid": "243071475",
+      "address": "480 Bosco Di Fiore St, Las Vegas, NV 89138",
+      "zipcode": "89138",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 1699999,
+      "rent_history": [],
+      "bedrooms": 5,
+      "bathrooms": 7.0,
+      "sqft": 4065,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 55,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/e6133440d092f97ca738f30dab62ba27-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/480-Bosco-Di-Fiore-St-Las-Vegas-NV-89138/243071475_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "52225657",
+      "address": "305 Prince Charming Ct, Las Vegas, NV 89145",
+      "zipcode": "89145",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 1735000,
+      "rent_history": [
+        {
+          "date": "2026-08-10",
+          "rent": 1749000
+        },
+        {
+          "date": "2026-07-22",
+          "rent": 1749500
+        }
+      ],
+      "bedrooms": 4,
+      "bathrooms": 5.0,
+      "sqft": 3798,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-07-16",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/6b2729928cd248ac66f3140e996074c8-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/305-Prince-Charming-Ct-Las-Vegas-NV-89145/52225657_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "55108487",
       "address": "4596 Bersaglio St, Las Vegas, NV 89135",
       "zipcode": "89135",
@@ -21161,7 +22293,7 @@
       "days_on_market": 0,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/d535cb9ff11e33bef17e72d5e9392b5f-p_e.jpg"
@@ -21188,44 +22320,12 @@
       "days_on_market": 0,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/07635b83da093418dae94f00e45c2e48-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/4574-Fiore-Bella-Blvd-Summerlin-NV-89135/55108793_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "52225657",
-      "address": "305 Prince Charming Ct, Las Vegas, NV 89145",
-      "zipcode": "89145",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 1749000,
-      "rent_history": [
-        {
-          "date": "2026-07-22",
-          "rent": 1749500
-        }
-      ],
-      "bedrooms": 4,
-      "bathrooms": 5.0,
-      "sqft": 3798,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 16,
-      "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
-      "available": true,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/6b2729928cd248ac66f3140e996074c8-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/305-Prince-Charming-Ct-Las-Vegas-NV-89145/52225657_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -21357,42 +22457,15 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 34,
+      "days_on_market": 37,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/515f63fa491bd3a48f2c29367288f048-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/10100-Crescent-Mesa-Ln-Las-Vegas-NV-89145/6916290_zpid/",
-      "description": "",
-      "source": "zillow"
-    },
-    {
-      "zpid": "6911971",
-      "address": "1412 Chambolle Ct, Las Vegas, NV 89144",
-      "zipcode": "89144",
-      "city": "Las Vegas",
-      "state": "NV",
-      "home_type": "HOUSE",
-      "rent": 1888888,
-      "rent_history": [],
-      "bedrooms": 4,
-      "bathrooms": 4.0,
-      "sqft": 4203,
-      "has_ac": true,
-      "has_washer_dryer": true,
-      "cats_ok": true,
-      "days_on_market": 181,
-      "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
-      "photo_count": 1,
-      "photos": [
-        "https://photos.zillowstatic.com/fp/20d7f89244c1dadf4596b1e3a5377279-p_e.jpg"
-      ],
-      "listing_url": "https://www.zillow.com/homedetails/1412-Chambolle-Ct-Las-Vegas-NV-89144/6911971_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -21446,7 +22519,7 @@
       "days_on_market": 48,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/1429ba6d329850defbb5fea8208d4634-p_e.jpg"
@@ -21478,7 +22551,7 @@
       "days_on_market": 24,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/4ec0d94cd98db40f055b3d3e70081851-p_e.jpg"
@@ -21534,9 +22607,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 57,
+      "days_on_market": 60,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -21615,9 +22688,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 14,
+      "days_on_market": 17,
       "first_seen_date": "2026-07-28",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -21645,7 +22718,7 @@
       "days_on_market": 113,
       "first_seen_date": "2026-07-28",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/4fe18a823bf15fbe112e784cfb98abe1-p_e.jpg"
@@ -21674,9 +22747,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 150,
+      "days_on_market": 153,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -21704,7 +22777,7 @@
       "days_on_market": 32,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/e5603fc0e3bf43ee13241cc009c3f2cc-p_e.jpg"
@@ -21755,9 +22828,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 135,
+      "days_on_market": 138,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -21898,7 +22971,7 @@
       "days_on_market": 11,
       "first_seen_date": "2026-08-01",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/cdc6883c5f7d16c1c7f22cf4c012a041-p_e.jpg"
@@ -21931,6 +23004,33 @@
         "https://photos.zillowstatic.com/fp/dba9c1ea263b995f916246faff4e5950-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/11468-Snow-Creek-Ave-Las-Vegas-NV-89135/59435724_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "443615404",
+      "address": "11115 Rolling Vista Dr, Las Vegas, NV 89135",
+      "zipcode": "89135",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 2150000,
+      "rent_history": [],
+      "bedrooms": 4,
+      "bathrooms": 3.0,
+      "sqft": 2358,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/672e63d2ee090240a3cababc30dd73e4-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/11115-Rolling-Vista-Dr-Las-Vegas-NV-89135/443615404_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -22003,9 +23103,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 51,
+      "days_on_market": 54,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -22030,9 +23130,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 3,
+      "days_on_market": 6,
       "first_seen_date": "2026-08-07",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -22259,6 +23359,60 @@
       "source": "zillow"
     },
     {
+      "zpid": "339486198",
+      "address": "556 Vista Sunset Ave, Las Vegas, NV 89138",
+      "zipcode": "89138",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 2395000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 3.0,
+      "sqft": 2826,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 1,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/3356b41fd216cba91ebeb0b55a51647d-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/556-Vista-Sunset-Ave-Las-Vegas-NV-89138/339486198_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "247456953",
+      "address": "6178 Petroglyph Ave, Summerlin, NV 89135",
+      "zipcode": "89135",
+      "city": "Summerlin",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 2399000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 4.0,
+      "sqft": 3157,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 0,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/ac15aea052cc158f21acbc77b4f25724-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/6178-Petroglyph-Ave-Summerlin-NV-89135/247456953_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "2060700647",
       "address": "472 Sand Dune Arch St, Las Vegas, NV 89138",
       "zipcode": "89138",
@@ -22286,6 +23440,33 @@
       "source": "zillow"
     },
     {
+      "zpid": "318350312",
+      "address": "795 Keyland St, Las Vegas, NV 89138",
+      "zipcode": "89138",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 2400000,
+      "rent_history": [],
+      "bedrooms": 3,
+      "bathrooms": 4.0,
+      "sqft": 3255,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 182,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/36ea7519ee2c97351c14fe7a867b5128-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/795-Keyland-St-Las-Vegas-NV-89138/318350312_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "6938919",
       "address": "8101 Moonstone Cir, Las Vegas, NV 89128",
       "zipcode": "89128",
@@ -22300,9 +23481,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 111,
+      "days_on_market": 114,
       "first_seen_date": "2026-08-04",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -22354,10 +23535,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 21,
+      "days_on_market": 30,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-04",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/4e13e2842c2e37e9ff142c2f46fb5314-p_e.jpg"
@@ -22408,9 +23589,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 2,
+      "days_on_market": 5,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -22435,10 +23616,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 6,
+      "days_on_market": 28,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-07-22",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/2088a0e88b8c868f3a6f935bd0f6b39f-p_e.jpg"
@@ -22502,6 +23683,33 @@
       "source": "zillow"
     },
     {
+      "zpid": "53373782",
+      "address": "10736 Penhurst Way, Las Vegas, NV 89135",
+      "zipcode": "89135",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 2599000,
+      "rent_history": [],
+      "bedrooms": 6,
+      "bathrooms": 6.0,
+      "sqft": 4730,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 79,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/26de714d71c8e4fe9e5021ec3ec8a35f-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/10736-Penhurst-Way-Las-Vegas-NV-89135/53373782_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
       "zpid": "453879840",
       "address": "10824 Agate Cliffs Ave, Las Vegas, NV 89135",
       "zipcode": "89135",
@@ -22546,7 +23754,7 @@
       "days_on_market": 4,
       "first_seen_date": "2026-08-07",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/b085db6fca0f8cf6197ff1fa5c1cbba9-p_e.jpg"
@@ -22570,9 +23778,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 2,
+      "days_on_market": 5,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -22602,9 +23810,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 30,
+      "days_on_market": 33,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -22710,9 +23918,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 11,
+      "days_on_market": 14,
       "first_seen_date": "2026-08-01",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -22764,10 +23972,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 29,
+      "days_on_market": 38,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-04",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/a0d4349b8ee2766978954a253e495f48-p_e.jpg"
@@ -22794,7 +24002,7 @@
       "days_on_market": 61,
       "first_seen_date": "2026-07-19",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/fc559c8f9a4b7d3dac335ebef5f827d1-p_e.jpg"
@@ -22845,9 +24053,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 10,
+      "days_on_market": 13,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -22872,9 +24080,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 31,
+      "days_on_market": 34,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -23007,9 +24215,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 17,
+      "days_on_market": 20,
       "first_seen_date": "2026-07-25",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -23034,9 +24242,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 80,
+      "days_on_market": 83,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -23064,7 +24272,7 @@
       "days_on_market": 17,
       "first_seen_date": "2026-07-19",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/e2afec21719b217a2cef30320af0befc-p_e.jpg"
@@ -23091,7 +24299,7 @@
       "days_on_market": 32,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/26838b27f1e66965815869ddbf034b82-p_e.jpg"
@@ -23120,10 +24328,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 41,
+      "days_on_market": 50,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-04",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/48b1faaa2191631e8b1a3c514e1d0c32-p_e.jpg"
@@ -23177,7 +24385,7 @@
       "days_on_market": 45,
       "first_seen_date": "2026-07-25",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/0a93b26d8329aaed310859f90e0d7397-p_e.jpg"
@@ -23201,9 +24409,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 32,
+      "days_on_market": 35,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -23233,9 +24441,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 52,
+      "days_on_market": 55,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -23341,9 +24549,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 125,
+      "days_on_market": 128,
       "first_seen_date": "2026-07-22",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -23371,7 +24579,7 @@
       "days_on_market": 32,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/7ae2dffa275a9c743cb7929a8aef832f-p_e.jpg"
@@ -23398,7 +24606,7 @@
       "days_on_market": 1,
       "first_seen_date": "2026-08-10",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/24a47d9ae5d46b12dd2c7f6c6d4fadf3-p_e.jpg"
@@ -23422,9 +24630,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 2,
+      "days_on_market": 5,
       "first_seen_date": "2026-08-10",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -23449,9 +24657,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 30,
+      "days_on_market": 33,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -23479,7 +24687,7 @@
       "days_on_market": 6,
       "first_seen_date": "2026-08-04",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/1526d00d5d9ec6b94d83d086d928d4ed-p_e.jpg"
@@ -23506,7 +24714,7 @@
       "days_on_market": 38,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/252b58d2afa8f906c6a07c922f8ad38d-p_e.jpg"
@@ -23584,10 +24792,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 2,
+      "days_on_market": 27,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-07-19",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/7f56487d0c62ddf1e239a1bba0149fc5-p_e.jpg"
@@ -23614,7 +24822,7 @@
       "days_on_market": 250,
       "first_seen_date": "2026-07-19",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/7f6da9fb97815fe285920d63e676cf19-p_e.jpg"
@@ -23697,9 +24905,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 107,
+      "days_on_market": 110,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -23727,7 +24935,7 @@
       "days_on_market": 62,
       "first_seen_date": "2026-07-16",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/be27a3cba6c5cce458a6697a4cfa28a3-p_e.jpg"
@@ -23754,7 +24962,7 @@
       "days_on_market": 144,
       "first_seen_date": "2026-07-19",
       "last_confirmed_date": "2026-08-10",
-      "available": true,
+      "available": false,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/763df82e9598fc92e607c3d2ffe4c4e2-p_e.jpg"
@@ -23778,9 +24986,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 41,
+      "days_on_market": 44,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -23814,6 +25022,33 @@
         "https://photos.zillowstatic.com/fp/c4a01ed0a269f9ff4b0ed4d999844a15-p_e.jpg"
       ],
       "listing_url": "https://www.zillow.com/homedetails/48-Panorama-Crest-Ave-Las-Vegas-NV-89135/59436094_zpid/",
+      "description": "",
+      "source": "zillow"
+    },
+    {
+      "zpid": "7149973",
+      "address": "2885 Red Arrow Dr, Las Vegas, NV 89135",
+      "zipcode": "89135",
+      "city": "Las Vegas",
+      "state": "NV",
+      "home_type": "HOUSE",
+      "rent": 5499000,
+      "rent_history": [],
+      "bedrooms": 5,
+      "bathrooms": 6.0,
+      "sqft": 6157,
+      "has_ac": true,
+      "has_washer_dryer": true,
+      "cats_ok": true,
+      "days_on_market": 2,
+      "first_seen_date": "2026-08-13",
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
+      "photo_count": 1,
+      "photos": [
+        "https://photos.zillowstatic.com/fp/a3fcad852e481be41b1dca48bcef64c6-p_e.jpg"
+      ],
+      "listing_url": "https://www.zillow.com/homedetails/2885-Red-Arrow-Dr-Las-Vegas-NV-89135/7149973_zpid/",
       "description": "",
       "source": "zillow"
     },
@@ -23886,9 +25121,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 56,
+      "days_on_market": 59,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -23940,9 +25175,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 144,
+      "days_on_market": 147,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -23967,9 +25202,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 52,
+      "days_on_market": 55,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -24075,10 +25310,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 6,
+      "days_on_market": 12,
       "first_seen_date": "2026-08-01",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/466e9eea702df5b17a9fb2663ad944bd-p_e.jpg"
@@ -24102,10 +25337,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 143,
+      "days_on_market": 149,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/035a8c63532e105b9b85c830a063012c-p_e.jpg"
@@ -24129,9 +25364,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 324,
+      "days_on_market": 327,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -24156,10 +25391,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 141,
+      "days_on_market": 147,
       "first_seen_date": "2026-07-19",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/36c4dee3823fc69e98cd235402e2198d-p_e.jpg"
@@ -24237,9 +25472,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 170,
+      "days_on_market": 173,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -24291,10 +25526,10 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 167,
+      "days_on_market": 173,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-07",
-      "available": false,
+      "last_confirmed_date": "2026-08-13",
+      "available": true,
       "photo_count": 1,
       "photos": [
         "https://photos.zillowstatic.com/fp/1f6482c3dd3c514be453920c524d2000-p_e.jpg"
@@ -24345,9 +25580,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 180,
+      "days_on_market": 183,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -24372,9 +25607,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 153,
+      "days_on_market": 156,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -24399,9 +25634,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 47,
+      "days_on_market": 50,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -24426,9 +25661,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 132,
+      "days_on_market": 135,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
@@ -24453,9 +25688,9 @@
       "has_ac": true,
       "has_washer_dryer": true,
       "cats_ok": true,
-      "days_on_market": 171,
+      "days_on_market": 174,
       "first_seen_date": "2026-07-16",
-      "last_confirmed_date": "2026-08-10",
+      "last_confirmed_date": "2026-08-13",
       "available": true,
       "photo_count": 1,
       "photos": [
