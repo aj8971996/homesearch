@@ -1,8 +1,11 @@
 {
-  "last_updated": "2026-09-25T13:32:33.196840+00:00",
+  "last_updated": "2026-09-25T15:45:50.096004+00:00",
   "total_active": 246,
   "added_this_run": 34,
   "removed_this_run": 95,
   "api_calls_used": 6,
-  "errors": []
+  "errors": [],
+  "zillow_scraper_added": 0,
+  "zillow_scraper_removed": 0,
+  "zillow_scraper_api_calls": 2
 }
