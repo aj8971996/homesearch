@@ -1,13 +1,8 @@
 {
-  "last_updated": "2026-10-19T17:22:27.545598+00:00",
+  "last_updated": "2026-10-22T13:40:25.184345+00:00",
   "total_active": 246,
-  "added_this_run": 21,
-  "removed_this_run": 77,
+  "added_this_run": 25,
+  "removed_this_run": 93,
   "api_calls_used": 6,
-  "errors": [
-    "Zillow scraper fetch failed: Server error '502 Bad Gateway' for url 'https://zillow-com-live-data-scraper-api.p.rapidapi.com/agentForRentProperties?url=https%3A%2F%2Fwww.zillow.com%2Fprofile%2FEhren%2520Alessi%2520CEO&page=1'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/502"
-  ],
-  "zillow_scraper_added": 0,
-  "zillow_scraper_removed": 0,
-  "zillow_scraper_api_calls": 0
+  "errors": []
 }
