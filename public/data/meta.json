@@ -1,8 +1,11 @@
 {
-  "last_updated": "2026-11-01T14:54:16.916152+00:00",
+  "last_updated": "2026-11-01T16:34:53.019853+00:00",
   "total_active": 246,
   "added_this_run": 5,
   "removed_this_run": 48,
   "api_calls_used": 6,
-  "errors": []
+  "errors": [],
+  "apilow_added_this_run": 0,
+  "apilow_removed_this_run": 0,
+  "apilow_api_calls": 4
 }
